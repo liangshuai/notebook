@@ -753,7 +753,7 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 
 Vim-surround
 
-
+```markdown
 普通模式
 --------
 |    | 命令                   | 说明 + 示例                                                                          |
@@ -785,6 +785,7 @@ Vim-surround
 |  例 | 选中world: `S(`  | `Hello world!` =><br> `Hello (world)!`                                |
 |    | gS             | 选中的括起来，括号内文本做新一行                                             |
 |  例 | 选中world: `gS{` | `Hello world!` =><br> `Hello {` <br> &nbsp;&nbsp; ` world` <br> `}! ` |
+```
 
 ----
 
