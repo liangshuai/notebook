@@ -11,10 +11,8 @@ git init
 git config user.name "Liang Shuai"
 git config user.email "mail@liangshuai.me"
 
-git remote add upstream "https://${GH_TOKEN}@github.com/liangshuai/notebook.git"
-git fetch upstream
-git reset upstream/gh-pages
+git remote add origin "https://${GH_TOKEN}@github.com/liangshuai/notebook.git"
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
-git push -q upstream HEAD:gh-pages
+git push  --force --quiet master:gh-pages
