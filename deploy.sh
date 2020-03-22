@@ -11,7 +11,7 @@ git init
 git config user.name "Liang Shuai"
 git config user.email "mail@liangshuai.me"
 
-git remote add upstream "https://$GH_TOKEN@github.com/liangshuai/notebook.git"
+git remote add upstream "https://${GH_TOKEN}@github.com/liangshuai/notebook.git"
 git fetch upstream
 git reset upstream/gh-pages
 
