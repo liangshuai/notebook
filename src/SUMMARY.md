@@ -1,5 +1,6 @@
 # Summary
 
+- [Rust](./rust/rust_way.md)
 - [工具](./tools/README.md)
     - [Tmux](./tools/Tmux.md)
 - [unix](./unix/README.md)
