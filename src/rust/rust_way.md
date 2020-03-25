@@ -62,7 +62,7 @@ let 关键字声明的位置表达式默认不可变，为不可变绑定。 可
 每个变量绑定实际上都拥有该存储单元的所有权， 引用赋值给其它变量， 这种转移内存地址的行为就是所有权的转移， 有时不需要转移所有权， Rust提供引用操作符 `&` 可以直接获取表达式的存储单元地址，即内存位置，可以通过内存位置对存储进行读取。
 
 ```rust
-func main() {
+fn main() {
   let a = [1, 2, 3];
   let b = &a; // 这不会引起所有权的转移， 因为右侧变为了位置上下文， 而非默认的值上下文
   println!("{:p}", b); // 0x7ffXXXXXXX 这个{：p} 格式打印指针地址
@@ -71,7 +71,7 @@ func main() {
   d.push(4);
   println!("{:?}", d); // [1, 2, 3, 4];
   let e = &42;
-  assert_eq!(42, *e)
+  assert_eq!(42, *e);
 }
 ```
 
@@ -116,9 +116,9 @@ CTFE编译时函数执行， Compile-Time Function Execution
 fn main() {
   let out = 42;
   // fn add(i: i32, j: i32) -> i32 { i + j + out } 报错
-  let closure_annotatedd = |i: i32, j: i32| -> i32 { i + j + out }
-  let closure_inferred = |i, j| i + j + out
-  assert_eq!(45, closure_inferred(1, 2))
+  let closure_annotatedd = |i: i32, j: i32| -> i32 { i + j + out };
+  let closure_inferred = |i, j| i + j + out;
+  assert_eq!(45, closure_inferred(1, 2));
 }
 ```
 
