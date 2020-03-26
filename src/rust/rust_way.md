@@ -152,3 +152,107 @@ fn two_times_impl () -> impl Fn(i32) -> i32 {
 ```
 
 返回闭包时使用了move关键字， 这是因为一般情况下， 闭包默认会按引用捕获变量， 如果将闭包返回， 引用也会跟着返回， 但是在整个函数调用完毕后， 函数内的本地变量i就会被销毁， 那么随闭包返回的变量i的引用就会成为悬垂指针， 使用move关键字将捕获变量i的所有权转移到闭包中， 就不会按引用进行捕获变量
+
+
+
+## 2.5 流程控制
+
+rust中不叫流程控制语句， 而叫流程控制表达式
+
+条件表达式
+
+if表达式的分支必须返回同一个类型的值才可以， 这也是rust没有三元运算符的原因。
+
+```rust
+fn main() {
+  let n = 13;
+  let big_n = if (n < 10 && n > -10) {
+    10 * n
+  } else {
+    n / 2
+  };
+  assert_eq!(big_n, 6)
+}
+```
+
+for...in表达式
+
+```rust
+fn main () {
+  for n in 1..101 {
+    println!("{}", n);
+  }
+}
+```
+
+while表达式
+
+```rust
+fn while_true(x: i32) -> i32 {
+  while true {
+    return x + 1;
+  }
+  // x
+}
+```
+
+上面的代码会报错， 因为while true循环返回的时单元值， 而函数返回值是i32， 所以不匹配
+
+这是因为Rust编译器在对while循环做流分析 Flow Sensitive的时候不会检查循环条件， 编译器会认为while循环条件可真可假， 所以循环体内的表达式就会被忽略， 因此只知道while_true 返回的是单元值
+
+, 可以在最后一行加x变量
+
+match表达式
+
+```rust
+fn main() {
+  let number = 42;
+  match number {
+    0 => println!("origin"),
+    1...3 => println!("all"),
+    | 5 | 7 | 13 => println!("bad luck"),
+    n @ 42 => println!("{}", n),
+    _ => println!("common"),
+  }
+}
+```
+
+上面的例子演示了 单个值、范围、多个值、匹配并绑定给变量（绑定模式）、通配符的情况
+
+```rust
+fn main() {
+  let mut v = vec![1,2,3,4,5];
+  loop {
+    match v.pop() {
+      Some(x) => println!("{}", x),
+      None => break;
+    }
+  }
+}
+```
+
+
+
+if let 表达式
+
+```rust
+let boolean = true;
+let mut binary = 0;
+if let true = boolean {
+  binary = 1;
+}
+```
+
+
+
+While let表达式
+
+```rust
+fn main() {
+  let mut v = vec![1,2,3,4,5];
+  while let Some(x) = v.pop() {
+    println!("{}", x);
+  }
+}
+```
+
