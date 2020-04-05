@@ -9,7 +9,7 @@
     - [Linux shell脚本自动化编程实战 笔记](./unix/shell.md)
 - [Vim](./Vim/Vim.md)
 - [代码片段](./snippet/README.md)
-    * JavaScript
+    * [JavaScript](./snippet/javascript/README.md)
       * [bind的模拟实现](./snippet/javascript/bind.md)
 
 
