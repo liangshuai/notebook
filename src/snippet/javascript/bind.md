@@ -3,8 +3,8 @@
 第一版
 
 ```js
-const toString = Object.prototype.toString
-const slice = Array.prototype.slice
+const toString = Object.prototype.toString;
+const slice = Array.prototype.slice;
 Function.prototype.bind2 = function (ctx) {
     const self = this;
     if (typeof self !== 'function' || toString.call(self) !== '[object Function]') {
@@ -12,8 +12,8 @@ Function.prototype.bind2 = function (ctx) {
     }
     const args = slice.call(arguments, 1);
     const binder = function () {
-        const otherArgs = slice.call(arguments, 0)
-        return self.apply(ctx, args.concat(otherArgs))
+        const otherArgs = slice.call(arguments, 0);
+        return self.apply(ctx, args.concat(otherArgs));
     }
     return binder
 }
@@ -34,9 +34,9 @@ function User () {
 const user = {
     value: 'wizard'
 }
-const bindUser = User.bind2(user)
-const binduser = new bindUser() // 应该输出undefined
-bindUser() // 应该输出wizard
+const bindUser = User.bind2(user);
+const binduser = new bindUser(); // 应该输出undefined
+bindUser(); // 应该输出wizard
 ```
 
 所以在apply的时候使用instanceof来判断是否是通过new操作符创建对象调用的,  并修改binder的prototype指向原函数的protottype
@@ -49,11 +49,11 @@ Function.prototype.bind2 = function (ctx) {
     }
     const args = slice.call(arguments, 1);
     const binder = function () {
-        const otherArgs =slice.call(arguments, 0)
-        return self.apply(this instanceof binder ? this : ctx, args.concat(otherArgs))
+        const otherArgs =slice.call(arguments, 0);
+        return self.apply(this instanceof binder ? this : ctx, args.concat(otherArgs));
     }
     binder.prototype = self.prototype;
-    return binder
+    return binder;
 }
 ```
 
@@ -70,14 +70,14 @@ Function.prototype.bind2 = function (ctx) {
         throw new Error('bind must be called on a Function');
     }
     const args = slice.call(arguments, 1);
-    const NOOP = function () {}
+    const NOOP = function () {};
     const binder = function () {
-        const otherArgs =slice.call(arguments, 0)
-        return self.apply(this instanceof NOOP ? this : ctx, args.concat(otherArgs))
+        const otherArgs =slice.call(arguments, 0);
+        return self.apply(this instanceof NOOP ? this : ctx, args.concat(otherArgs));
     }
-    NOOP.prototype = self.prototype
+    NOOP.prototype = self.prototype;
     binder.prototype = new NOOP();
-    return binder
+    return binder;
 }
 ```
 
