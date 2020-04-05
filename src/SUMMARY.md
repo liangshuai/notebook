@@ -11,6 +11,9 @@
 - [代码片段](./snippet/README.md)
     * [JavaScript](./snippet/javascript/README.md)
       * [bind的模拟实现](./snippet/javascript/bind.md)
+      * [call的模拟实现](./snippet/javascript/call.md)
+
+
 
 
 
