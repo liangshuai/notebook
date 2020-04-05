@@ -8,4 +8,9 @@
     - [Bash](./unix/Bash.md)
     - [Linux shell脚本自动化编程实战 笔记](./unix/shell.md)
 - [Vim](./Vim/Vim.md)
+- [代码片段](./snippet/README.md)
+    * JavaScript
+      * [bind的模拟实现](./snippet/javascript/bind.md)
+
+
 
