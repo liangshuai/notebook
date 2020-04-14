@@ -4,6 +4,7 @@
 - [JavaScript](./Javascript/README.md)
     * [Composition](./JavaScript/composition.md)
     * [Selection](./JavaScript/selection.md)
+    * [正则表达式](./JavaScript/regexp.md)
 - [工具](./tools/README.md)
     - [Tmux](./tools/Tmux.md)
 - [unix](./unix/README.md)
