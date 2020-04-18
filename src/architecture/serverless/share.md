@@ -113,7 +113,7 @@ https://thirsty-austin-f10d08.netlify.com/.netlify/functions/helloworld
 
 ![functions-log](../../assets/functions-log.png)
 
-![functions-setting]()	
+![functions-setting](../../assets/functions-setting-7218898.png)
 
 
 ## Zapier定时任务监控股票价格
