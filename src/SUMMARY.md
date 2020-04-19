@@ -8,7 +8,7 @@
 - [工程化](./engineer/README.md)
     - [Webpack](./engineer/webpack/README.md)
         - [require.context](./engineer/webpack/require-context.md)
-        - [export default object](./engineer/webpack/disable-export-default-object.md)
+        - [disable export default object](./engineer/webpack/disable-export-default-object.md)
 - [架构](./architecture/README.md)
     - [serverless](./architecture/serverless/share.md)
 - [工具](./tools/README.md)
