@@ -1,6 +1,5 @@
 # Summary
 
-- 
 - [JavaScript](./Javascript/README.md)
     * [Composition](./JavaScript/composition.md)
     * [Selection](./JavaScript/selection.md)
