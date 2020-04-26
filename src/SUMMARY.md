@@ -7,6 +7,7 @@
 - [Rust](./rust/rust_way.md)
 - [Go](./go/README.md)
     - [Go语言圣经读书笔记](./go/gopl/README.md)
+      - [2、程序结构](./go/gopl/chapter02.md)
       - [10、包和工具](./go/gopl/chapter10.md)
 - [工程化](./engineer/README.md)
     - [Webpack](./engineer/webpack/README.md)
