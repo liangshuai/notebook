@@ -20,6 +20,7 @@
 - [工具](./tools/README.md)
     - [Tmux](./tools/Tmux.md)
     - [ag文本搜索](./tools/ag.md)
+    - [pkg](./tools/pkg.md)
 - [unix](./unix/README.md)
     - [awk](./unix/awk.md)
     - [Bash](./unix/Bash.md)
