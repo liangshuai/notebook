@@ -1,9 +1,12 @@
 # Summary
 
 - [JavaScript](./Javascript/README.md)
-    * [Composition](./JavaScript/composition.md)
-    * [Selection](./JavaScript/selection.md)
-    * [正则表达式](./JavaScript/regexp.md)
+    - [事件循环](./JavaScript/event-loop.md)
+    - [Composition](./JavaScript/composition.md)
+    - [Selection](./JavaScript/selection.md)
+    - [正则表达式](./JavaScript/regexp.md)
+- [算法](./algorithm/README.md)
+    - [leetcode-155](./algorithm/leetcode-155.md)
 - [Rust](./rust/rust_way.md)
 - [Go](./go/README.md)
     - [Go语言圣经读书笔记](./go/gopl/README.md)
