@@ -5,6 +5,7 @@
     - [Composition](./JavaScript/composition.md)
     - [Selection](./JavaScript/selection.md)
     - [正则表达式](./JavaScript/regexp.md)
+    - [节流防抖](./JavaScript/throttle-debounce.md)
 - [算法](./algorithm/README.md)
     - [leetcode-155](./algorithm/leetcode-155.md)
 - [Rust](./rust/rust_way.md)
