@@ -7,7 +7,7 @@
     - [正则表达式](./JavaScript/regexp.md)
     - [节流防抖](./JavaScript/throttle-debounce.md)
 - [算法](./algorithm/README.md)
-    - [topK问题](./algorithm/topk.md)
+    - [topK问题](./algorithm/topK.md)
     - [leetcode-155](./algorithm/leetcode-155.md)
 - [Rust](./rust/rust_way.md)
 - [Go](./go/README.md)
