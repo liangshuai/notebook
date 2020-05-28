@@ -8,6 +8,7 @@
     - [节流防抖](./JavaScript/throttle-debounce.md)
 - [算法](./algorithm/README.md)
     - [topK问题](./algorithm/topK.md)
+    - [leetcode-144-先序遍历](./algorithm/leetcode-144.md)
     - [leetcode-155](./algorithm/leetcode-155.md)
 - [Rust](./rust/rust_way.md)
 - [Go](./go/README.md)
