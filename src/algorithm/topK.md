@@ -57,3 +57,4 @@ var arr = [4, 2, 5, 6, 77, 33, 21, 44, 55, 22], k = 5;
 console.log(topKMaxOfArr(k, arr));//返回数组[22, 33, 44, 55, 77]
 ```
 
+file:///Applications/Typora.app/Contents/Resources/TypeMark/app/main.js
