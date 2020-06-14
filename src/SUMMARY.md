@@ -7,6 +7,7 @@
     - [正则表达式](./js/regexp.md)
     - [节流防抖](./js/throttle-debounce.md)
     - [node.js](./js/nodejs.md)
+    - [ESM与CommonJS](./js/commonjs-esm.md)
 - [协议](./protocol/README.md)
     - [HTTP权威指南](./protocol/HTTP权威指南笔记.md)
 - [算法](./algorithm/README.md)
@@ -41,8 +42,10 @@
     * [JavaScript](./snippet/javascript/README.md)
       * [bind的模拟实现](./snippet/javascript/bind.md)
       * [call的模拟实现](./snippet/javascript/call.md)
+      * [LazyMan的实现](./snippet/javascript/lazyman.md)
 
 
 
 
 
+-
