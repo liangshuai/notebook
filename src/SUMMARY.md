@@ -6,7 +6,6 @@
     - [Selection](./js/selection.md)
     - [正则表达式](./js/regexp.md)
     - [节流防抖](./js/throttle-debounce.md)
-    - [node.js](./js/nodejs.md)
     - [ESM与CommonJS](./js/commonjs-esm.md)
 - [协议](./protocol/README.md)
     - [HTTP权威指南](./protocol/HTTP权威指南笔记.md)
