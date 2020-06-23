@@ -16,6 +16,7 @@
     - [leetcode-94-中序遍历](./algorithm/leetcode-94.md)
     - [leetcode-144-先序遍历](./algorithm/leetcode-144.md)
     - [leetcode-155](./algorithm/leetcode-155.md)
+    - [leetcode-322-硬币兑换](./algorithm/leetcode-322.md)
 - [Rust](./rust/rust_way.md)
 - [Go](./go/README.md)
     - [Go语言圣经读书笔记](./go/gopl/README.md)
