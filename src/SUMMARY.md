@@ -1,7 +1,7 @@
 # Summary
 
-- [JavaScript](./js/README.md)
-    - [事件循环](./js/event-loop.md)
+- [JavaScript](js/README.md)
+    - [事件循环](js/event-loop.md)
     - [Composition](./js/composition.md)
     - [Selection](./js/selection.md)
     - [正则表达式](./js/regexp.md)
