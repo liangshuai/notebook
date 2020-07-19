@@ -1,7 +1,7 @@
 # Summary
 
-- [JavaScript](./js/README.md)
-    - [事件循环](./js/event-loop.md)
+- [JavaScript](js/README.md)
+    - [事件循环](js/event-loop.md)
     - [Composition](./js/composition.md)
     - [Selection](./js/selection.md)
     - [正则表达式](./js/regexp.md)
@@ -14,10 +14,12 @@
     - [HTTP权威指南](./protocol/HTTP权威指南笔记.md)
 - [算法](./algorithm/README.md)
     - [topK问题](./algorithm/topK.md)
+    - [leetcode-3-最长无重复子串](./algorithm/leetcode-3.md)
     - [leetcode-46-数字翻译字符串](./algorithm/leetcode-46.md)
     - [leetcode-94-中序遍历](./algorithm/leetcode-94.md)
     - [leetcode-144-先序遍历](./algorithm/leetcode-144.md)
     - [leetcode-155](./algorithm/leetcode-155.md)
+- [leetcode-322-硬币兑换](./algorithm/leetcode-322.md)
     - [leetcode-875-KoKo吃香蕉](./algorithm/leetcode-875.md)
 - [Rust](./rust/rust_way.md)
 - [Go](./go/README.md)
@@ -46,9 +48,3 @@
       * [bind的模拟实现](./snippet/javascript/bind.md)
       * [call的模拟实现](./snippet/javascript/call.md)
       * [LazyMan的实现](./snippet/javascript/lazyman.md)
-
-
-
-
-
--
