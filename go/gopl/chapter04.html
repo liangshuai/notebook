@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>复合数据类型 - my personal notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../js/index.html"><strong aria-hidden="true">1.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/event-loop.html"><strong aria-hidden="true">1.1.</strong> 事件循环</a></li><li class="chapter-item expanded "><a href="../../js/composition.html"><strong aria-hidden="true">1.2.</strong> Composition</a></li><li class="chapter-item expanded "><a href="../../js/selection.html"><strong aria-hidden="true">1.3.</strong> Selection</a></li><li class="chapter-item expanded "><a href="../../js/regexp.html"><strong aria-hidden="true">1.4.</strong> 正则表达式</a></li><li class="chapter-item expanded "><a href="../../js/throttle-debounce.html"><strong aria-hidden="true">1.5.</strong> 节流防抖</a></li><li class="chapter-item expanded "><a href="../../js/commonjs-esm.html"><strong aria-hidden="true">1.6.</strong> ESM与CommonJS</a></li><li class="chapter-item expanded "><a href="../../js/nodejs/index.html"><strong aria-hidden="true">1.7.</strong> node.js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/nodejs.html"><strong aria-hidden="true">1.7.1.</strong> node.js架构</a></li><li class="chapter-item expanded "><a href="../../js/nodejs/stream.html"><strong aria-hidden="true">1.7.2.</strong> stream</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../protocol/index.html"><strong aria-hidden="true">2.</strong> 协议</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../protocol/HTTP权威指南笔记.html"><strong aria-hidden="true">2.1.</strong> HTTP权威指南</a></li></ol></li><li class="chapter-item expanded "><a href="../../algorithm/index.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../algorithm/topK.html"><strong aria-hidden="true">3.1.</strong> topK问题</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-3.html"><strong aria-hidden="true">3.2.</strong> leetcode-3-最长无重复子串</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-46.html"><strong aria-hidden="true">3.3.</strong> leetcode-46-数字翻译字符串</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-94.html"><strong aria-hidden="true">3.4.</strong> leetcode-94-中序遍历</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-144.html"><strong aria-hidden="true">3.5.</strong> leetcode-144-先序遍历</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-155.html"><strong aria-hidden="true">3.6.</strong> leetcode-155</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-167.html"><strong aria-hidden="true">3.7.</strong> leetcode-167-twoSum有序</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-322.html"><strong aria-hidden="true">3.8.</strong> leetcode-322-硬币兑换</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-875.html"><strong aria-hidden="true">3.9.</strong> leetcode-875-KoKo吃香蕉</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/rust_way.html"><strong aria-hidden="true">4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../../go/index.html"><strong aria-hidden="true">5.</strong> Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../go/gopl/index.html"><strong aria-hidden="true">5.1.</strong> Go语言圣经读书笔记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../go/gopl/chapter02.html"><strong aria-hidden="true">5.1.1.</strong> 程序结构</a></li><li class="chapter-item expanded "><a href="../../go/gopl/chapter03.html"><strong aria-hidden="true">5.1.2.</strong> 基础数据类型</a></li><li class="chapter-item expanded "><a href="../../go/gopl/chapter04.html" class="active"><strong aria-hidden="true">5.1.3.</strong> 复合数据类型</a></li><li class="chapter-item expanded "><a href="../../go/gopl/chapter10.html"><strong aria-hidden="true">5.1.4.</strong> 包和工具</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../engineer/index.html"><strong aria-hidden="true">6.</strong> 工程化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../engineer/webpack/index.html"><strong aria-hidden="true">6.1.</strong> Webpack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../engineer/webpack/require-context.html"><strong aria-hidden="true">6.1.1.</strong> require.context</a></li><li class="chapter-item expanded "><a href="../../engineer/webpack/disable-export-default-object.html"><strong aria-hidden="true">6.1.2.</strong> disable export default object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../architecture/index.html"><strong aria-hidden="true">7.</strong> 架构</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../architecture/serverless/share.html"><strong aria-hidden="true">7.1.</strong> serverless</a></li></ol></li><li class="chapter-item expanded "><a href="../../tools/index.html"><strong aria-hidden="true">8.</strong> 工具</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tools/Tmux.html"><strong aria-hidden="true">8.1.</strong> Tmux</a></li><li class="chapter-item expanded "><a href="../../tools/ag.html"><strong aria-hidden="true">8.2.</strong> ag文本搜索</a></li><li class="chapter-item expanded "><a href="../../tools/pkg.html"><strong aria-hidden="true">8.3.</strong> pkg</a></li></ol></li><li class="chapter-item expanded "><a href="../../unix/index.html"><strong aria-hidden="true">9.</strong> unix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../unix/awk.html"><strong aria-hidden="true">9.1.</strong> awk</a></li><li class="chapter-item expanded "><a href="../../unix/Bash.html"><strong aria-hidden="true">9.2.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../../unix/shell.html"><strong aria-hidden="true">9.3.</strong> Linux shell脚本自动化编程实战 笔记</a></li></ol></li><li class="chapter-item expanded "><a href="../../Vim/Vim.html"><strong aria-hidden="true">10.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../../snippet/index.html"><strong aria-hidden="true">11.</strong> 代码片段</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../snippet/javascript/index.html"><strong aria-hidden="true">11.1.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../snippet/javascript/bind.html"><strong aria-hidden="true">11.1.1.</strong> bind的模拟实现</a></li><li class="chapter-item expanded "><a href="../../snippet/javascript/call.html"><strong aria-hidden="true">11.1.2.</strong> call的模拟实现</a></li><li class="chapter-item expanded "><a href="../../snippet/javascript/lazyman.html"><strong aria-hidden="true">11.1.3.</strong> LazyMan的实现</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">my personal notes</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#复合数据类型" id="复合数据类型">复合数据类型</a></h1>
+<p>数组和结构体是聚合类型， 数组由完全相同类型的元素组成， 结构体则是由异构的元素组成的，它们都是固定内存大小的数据结构。 而slice和map是动态数据结构， 动态增加大小</p>
+<h2><a class="header" href="#41-数组" id="41-数组">4.1 数组</a></h2>
+<p>Go语言中很少直接使用数组， 更多使用的是slice</p>
+<pre><code class="language-Go">var a [3]int 
+fmt.Println(a[len(a)-1])
+for i, v := range a {
+    fmt.Printf(&quot;%d %d\n&quot;, i, v)
+}
+var q [3]int = [3]int{1, 2, 3}
+var r [3]int = [3]int{1, 2}
+fmt.Println(r[2]) // &quot;0&quot;
+
+q := [...]int{1, 2, 3} // 根据初始值计算长度
+r := [...]int{99: -1}  // 长度100， 前99个是初始值0， 最后一个是-1
+</code></pre>
+<pre><code class="language-Go">a := [2]int{1, 2}
+b := [...]int{1, 2}
+c := [2]int{1, 3}
+fmt.Println(a == b, a == c, b == c) // &quot;true false false&quot;
+d := [3]int{1, 2}
+fmt.Println(a == d) // compile error: cannot compare [2]int == [3]int
+</code></pre>
+<p>当调用一个函数时， 函数的每个调用参数将会被赋值给函数内部的参数变量， 函数接收到的时复制的副本， 并不是原始的变量， 因此传递大的数组类型是低效的， 并且任何修改只发生在复制出来的数组上， 并不能直接修改调用时的原始数组变量， 这跟其它语言作为引用或指针对象传入调用函数的方式是不一样的。</p>
+<p>所以也可以传入一个数组指针的方式</p>
+<pre><code class="language-Go">func zero(ptr *[32]byte) {
+    for i := range ptr {
+        ptr[i] = 0
+    }
+}
+</code></pre>
+<h2><a class="header" href="#42-slice" id="42-slice">4.2 Slice</a></h2>
+<p>Slice代表变长的序列， 序列的每个元素都有相同的类型， 语法跟数组很像。 一个slice包含指针、长度、容量</p>
+<pre><code class="language-go">Q2 := months[4:7]
+for idx, q := range Q2 {
+    .....
+}
+</code></pre>
+<p>如果切片操作cap(s) 超出了上限，将会导致一个panic异常。</p>
+<p>slice的切片操作s[i:j]，其中0 ≤ i≤ j≤ cap(s)，用于创建一个新的slice，引用s的从第i个元素开始到第j-1个元素的子序列</p>
+<p>字符串也有x[m:n] 返回原始字节系列的子序列</p>
+<pre><code class="language-go">func reverse(s []int) {
+    for i, j := 0, len(s)-1; i &lt; j; i, j = i+1, j-1 {
+        s[i], s[j] = s[j], s[i]
+    }
+}
+</code></pre>
+<pre><code class="language-Go">a := [...]int{0, 1, 2, 3, 4, 5}
+reverse(a[:])
+fmt.Println(a) // &quot;[5 4 3 2 1 0]&quot;
+</code></pre>
+<p>向函数传递slice将允许在函数内部修改底层数组的元素</p>
+<p>一种将slice元素循环向左旋转n个元素的方法是三次调用reverse反转函数，第一次是反转开头的n个元素，然后是反转剩下的元素，最后是反转整个slice的元素</p>
+<pre><code class="language-Go">s := []int{0, 1, 2, 3, 4, 5}
+// Rotate s left by two positions.
+reverse(s[:2])
+reverse(s[2:])
+reverse(s)
+fmt.Println(s) // &quot;[2 3 4 5 0 1]&quot;
+</code></pre>
+<p>slice跟数组声明比较像， 不过没有指定长度</p>
+<p>和数组不同的是slice不能比较， 不能通过 ==操作符来判断两个slice是否含有全部相同的元素。 slice唯一合法的比较操作是和nil 比较</p>
+<p>slice长度为0 不等于就是nil</p>
+<pre><code class="language-Go">var s []int    // len(s) == 0, s == nil
+s = nil        // len(s) == 0, s == nil
+s = []int(nil) // len(s) == 0, s == nil
+s = []int{}    // len(s) == 0, s != nil
+</code></pre>
+<h3><a class="header" href="#append函数" id="append函数">append函数</a></h3>
+<p>append(slice, T) 可用于向slice追加元素 </p>
+<p>可以使用make来扩容</p>
+<pre><code class="language-Go">make([]T, len)
+make([]T, len, cap) // same as make([]T, cap)[:len]
+</code></pre>
+<pre><code class="language-Go">copy(z, x)
+</code></pre>
+<p>copy会将slice内容从x拷贝到目标slice z</p>
+<p>内置的append函数可以追加多个元素</p>
+<pre><code class="language-Go">var x []int
+x = append(x, 4, 5, 6)
+x = append(x, x...) // append the slice x
+</code></pre>
+<pre><code class="language-Go">func appendInt(x []int, y ...int) []int {
+    var z []int
+    zlen := len(x) + len(y)
+    // ...expand z to at least zlen...
+    copy(z[len(x):], y)
+    return z
+}
+</code></pre>
+<h2><a class="header" href="#43-map" id="43-map">4.3 Map</a></h2>
+<p>map中所有的key都有相同的类型， 所有的value也有相同的类型， key必须是支持==比较运算符的数据类型</p>
+<pre><code class="language-Go">ages := make(map[string]int) // mapping from strings to ints
+ages[&quot;alice&quot;] = 31
+ages[&quot;charlie&quot;] = 34
+// 等价于
+ages := map[string]int{
+    &quot;alice&quot;:   31,
+    &quot;charlie&quot;: 34,
+}
+fmt.Println(ages[&quot;alice&quot;]) // &quot;32&quot;
+delete(ages, &quot;alice&quot;) // remove element ages[&quot;alice&quot;]
+ages[&quot;bob&quot;] = ages[&quot;bob&quot;] + 1 // 即使bob不存在也不会报错， 等价于ages[&quot;bob&quot;]++
+for name, age := range ages {
+    fmt.Printf(&quot;%s\t%d\n&quot;, name, age)
+}
+</code></pre>
+<p>不能对map元素进行取址<code>&amp;ages[&quot;bob&quot;]</code> ， map可能随着元素数量的增长而重新分配更大的内存空间， 导致之前的地址无效</p>
+<p>map遍历顺序并不固定， 因此可以遍历出keys， 然后使用 对其进行排序， 在遍历</p>
+<pre><code class="language-Go">if age, ok := ages[&quot;bob&quot;]; !ok { /* ... */ }
+</code></pre>
+<p>和slice一样，map之间也不能进行相等比较；唯一的例外是和nil进行比较。要判断两个map是否包含相同的key和value，我们必须通过一个循环实现</p>
+<pre><code class="language-Go">func equal(x, y map[string]int) bool {
+    if len(x) != len(y) {
+        return false
+    }
+    for k, xv := range x {
+        if yv, ok := y[k]; !ok || yv != xv {
+            return false
+        }
+    }
+    return true
+}
+</code></pre>
+<h2><a class="header" href="#44-结构体" id="44-结构体">4.4 结构体</a></h2>
+<p>结构体是由零个或多个任意类型的值聚合成的实体</p>
+<pre><code class="language-Go">type Employee struct {
+    ID        int
+    Name, Address string
+   	Age   	  int
+    DoB       time.Time
+}
+var dilbert Employee
+dilbert.Age = 18
+name = &amp;dilbert.Name
+*name = &quot;Mr &quot; + *name
+</code></pre>
+<p>如果结构体成员名字是以大写字母开头的， 那么成员就是导出的</p>
+<p>命名为S的结构体不能再包含S类型的成员， 但是可以包含*s类型的指针， 可以创建递归的数据结构</p>
+<pre><code class="language-Go">type tree struct {
+    value       int
+    left, right *tree
+}
+</code></pre>
+<h3><a class="header" href="#结构体字面量" id="结构体字面量">结构体字面量</a></h3>
+<pre><code class="language-Go">type Point struct{ X, Y int }
+p := Point{1, 2}
+anim := gif.GIF{LoopCount: nframes}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../go/gopl/chapter03.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../go/gopl/chapter10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../go/gopl/chapter03.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../go/gopl/chapter10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

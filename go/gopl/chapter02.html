@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>程序结构 - my personal notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../js/index.html"><strong aria-hidden="true">1.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/event-loop.html"><strong aria-hidden="true">1.1.</strong> 事件循环</a></li><li class="chapter-item expanded "><a href="../../js/composition.html"><strong aria-hidden="true">1.2.</strong> Composition</a></li><li class="chapter-item expanded "><a href="../../js/selection.html"><strong aria-hidden="true">1.3.</strong> Selection</a></li><li class="chapter-item expanded "><a href="../../js/regexp.html"><strong aria-hidden="true">1.4.</strong> 正则表达式</a></li><li class="chapter-item expanded "><a href="../../js/throttle-debounce.html"><strong aria-hidden="true">1.5.</strong> 节流防抖</a></li><li class="chapter-item expanded "><a href="../../js/commonjs-esm.html"><strong aria-hidden="true">1.6.</strong> ESM与CommonJS</a></li><li class="chapter-item expanded "><a href="../../js/nodejs/index.html"><strong aria-hidden="true">1.7.</strong> node.js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/nodejs.html"><strong aria-hidden="true">1.7.1.</strong> node.js架构</a></li><li class="chapter-item expanded "><a href="../../js/nodejs/stream.html"><strong aria-hidden="true">1.7.2.</strong> stream</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../protocol/index.html"><strong aria-hidden="true">2.</strong> 协议</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../protocol/HTTP权威指南笔记.html"><strong aria-hidden="true">2.1.</strong> HTTP权威指南</a></li></ol></li><li class="chapter-item expanded "><a href="../../algorithm/index.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../algorithm/topK.html"><strong aria-hidden="true">3.1.</strong> topK问题</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-3.html"><strong aria-hidden="true">3.2.</strong> leetcode-3-最长无重复子串</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-46.html"><strong aria-hidden="true">3.3.</strong> leetcode-46-数字翻译字符串</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-94.html"><strong aria-hidden="true">3.4.</strong> leetcode-94-中序遍历</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-144.html"><strong aria-hidden="true">3.5.</strong> leetcode-144-先序遍历</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-155.html"><strong aria-hidden="true">3.6.</strong> leetcode-155</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-167.html"><strong aria-hidden="true">3.7.</strong> leetcode-167-twoSum有序</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-322.html"><strong aria-hidden="true">3.8.</strong> leetcode-322-硬币兑换</a></li><li class="chapter-item expanded "><a href="../../algorithm/leetcode-875.html"><strong aria-hidden="true">3.9.</strong> leetcode-875-KoKo吃香蕉</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/rust_way.html"><strong aria-hidden="true">4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../../go/index.html"><strong aria-hidden="true">5.</strong> Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../go/gopl/index.html"><strong aria-hidden="true">5.1.</strong> Go语言圣经读书笔记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../go/gopl/chapter02.html" class="active"><strong aria-hidden="true">5.1.1.</strong> 程序结构</a></li><li class="chapter-item expanded "><a href="../../go/gopl/chapter03.html"><strong aria-hidden="true">5.1.2.</strong> 基础数据类型</a></li><li class="chapter-item expanded "><a href="../../go/gopl/chapter04.html"><strong aria-hidden="true">5.1.3.</strong> 复合数据类型</a></li><li class="chapter-item expanded "><a href="../../go/gopl/chapter10.html"><strong aria-hidden="true">5.1.4.</strong> 包和工具</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../engineer/index.html"><strong aria-hidden="true">6.</strong> 工程化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../engineer/webpack/index.html"><strong aria-hidden="true">6.1.</strong> Webpack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../engineer/webpack/require-context.html"><strong aria-hidden="true">6.1.1.</strong> require.context</a></li><li class="chapter-item expanded "><a href="../../engineer/webpack/disable-export-default-object.html"><strong aria-hidden="true">6.1.2.</strong> disable export default object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../architecture/index.html"><strong aria-hidden="true">7.</strong> 架构</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../architecture/serverless/share.html"><strong aria-hidden="true">7.1.</strong> serverless</a></li></ol></li><li class="chapter-item expanded "><a href="../../tools/index.html"><strong aria-hidden="true">8.</strong> 工具</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tools/Tmux.html"><strong aria-hidden="true">8.1.</strong> Tmux</a></li><li class="chapter-item expanded "><a href="../../tools/ag.html"><strong aria-hidden="true">8.2.</strong> ag文本搜索</a></li><li class="chapter-item expanded "><a href="../../tools/pkg.html"><strong aria-hidden="true">8.3.</strong> pkg</a></li></ol></li><li class="chapter-item expanded "><a href="../../unix/index.html"><strong aria-hidden="true">9.</strong> unix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../unix/awk.html"><strong aria-hidden="true">9.1.</strong> awk</a></li><li class="chapter-item expanded "><a href="../../unix/Bash.html"><strong aria-hidden="true">9.2.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../../unix/shell.html"><strong aria-hidden="true">9.3.</strong> Linux shell脚本自动化编程实战 笔记</a></li></ol></li><li class="chapter-item expanded "><a href="../../Vim/Vim.html"><strong aria-hidden="true">10.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../../snippet/index.html"><strong aria-hidden="true">11.</strong> 代码片段</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../snippet/javascript/index.html"><strong aria-hidden="true">11.1.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../snippet/javascript/bind.html"><strong aria-hidden="true">11.1.1.</strong> bind的模拟实现</a></li><li class="chapter-item expanded "><a href="../../snippet/javascript/call.html"><strong aria-hidden="true">11.1.2.</strong> call的模拟实现</a></li><li class="chapter-item expanded "><a href="../../snippet/javascript/lazyman.html"><strong aria-hidden="true">11.1.3.</strong> LazyMan的实现</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">my personal notes</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#程序结构" id="程序结构">程序结构</a></h1>
+<h2><a class="header" href="#21-命名" id="21-命名">2.1 命名</a></h2>
+<p>Go语言的命名规则：</p>
+<blockquote>
+<p>一个名字必须以字母或下划线开头， 后面可以跟任意数量的字母、数字、下划线， 大小写敏感。</p>
+</blockquote>
+<p>Go语言的关键字有</p>
+<pre><code>break      default       func     interface   select
+case       defer         go       map         struct
+chan       else          goto     package     switch
+const      fallthrough   if       range       type
+continue   for           import   return      var
+</code></pre>
+<p>此外还有30个预定义的名字， 主要对应内建的常量、类型、函数</p>
+<pre><code>内建常量: true false iota nil
+
+内建类型: int int8 int16 int32 int64
+         uint uint8 uint16 uint32 uint64 uintptr
+         float32 float64 complex128 complex64
+         bool byte rune string error
+
+内建函数: make len cap new append copy close delete
+          complex real imag
+          panic recover
+</code></pre>
+<p>这些预定义的名字并不是关键字， 可以在定义中重新使用它们</p>
+<p>名字定义在函数内部， 只有函数内生效。 </p>
+<p>如果定义在函数外部， 那么当前包所有的文件都可以访问</p>
+<p>名字开头字母的大小写决定了名字在包外的可见性</p>
+<p>包名一般总是小写字母</p>
+<p>名字长度没有限制， 但尽量使用短小的名字， 推荐驼峰式命名</p>
+<h2><a class="header" href="#22-声明" id="22-声明">2.2 声明</a></h2>
+<p>Go语言中主要有四种类型的声明语句： <code>var</code> 、<code>const</code> 、<code>type</code> 、<code>func</code> 分别对应变量、常量、类型和函数实体对象的声明。</p>
+<p>每个go源文件以包声明语句开始， 其后跟import语句导入依赖的其它包， 然后是包一级的类型、变量、常量、函数声明语句。 </p>
+<p>包级别声明的语句在整个包的每个源文件中都可以访问， 而不仅仅在其声明语句所在的源文件中</p>
+<p>一个函数的声明由函数名字、参数列表、一个可选的返回值列表 和包含函数定义的函数体组成</p>
+<pre><code class="language-go">func fToC(f float64) float64 {
+    return (f - 32) * 5 / 9
+}
+</code></pre>
+<h2><a class="header" href="#23-变量" id="23-变量">2.3 变量</a></h2>
+<pre><code class="language-Go">var 变量名字 类型 = 表达式
+</code></pre>
+<p>类型和表达式可以省略其中的一个， 如果不声明表达式， 那么将使用零值初始化该变量。 数值类型为0， 布尔false，字符串为空字符串， 接口或引用类型为nil</p>
+<p>零值初始化机制可以确保每个声明的变量总是有一个良好定义的值， 因此Go中不存在未初始化的变量</p>
+<p>也可以在声明语句中同时声明一组变量或用一组初始化表达式声明并初始化一组变量， 如果省略每个变量的类型，将可以同时声明多个类型不同的变量</p>
+<pre><code class="language-go">var i, j, k int                 // int, int, int
+var b, f, s = true, 2.3, &quot;four&quot; // bool, float64, string
+</code></pre>
+<p>初始化表达式可以是字面量或任意表达式， 在包级别声明的变量会在main函数执行前完成初始化， 局部变量将在声明语句被执行到的时候进行初始化</p>
+<p>一组变量也可以通过调用一个函数， 由函数返回的多个返回值初始化</p>
+<pre><code class="language-go">var f, err = os.Open(name)
+</code></pre>
+<p>在函数内部有一种称为简短变量声明语句的形式可以用于声明和初始化局部变量。</p>
+<pre><code class="language-go">anim := gif.GIF{LoopCount: nframes}
+freq := rand.Float64() * 3.0
+i, j := 0, 1
+f, err := os.Open(name)
+</code></pre>
+<p>简短变量声明被广泛用于大部分的局部变量的声明和初始化，var形式的声明通常用于需要显示指定变量类型的地方或者变量稍后才会被赋值的地方</p>
+<p>简短变量声明语句中必须至少要声明一个新的变量， 否则代码不能编译通过</p>
+<pre><code class="language-go">f, err := os.Open(infile)
+// ...
+f, err := os.Create(outfile)
+</code></pre>
+<p>解决办法是第二个简短变量声明语句改成普通的多重赋值语句</p>
+<h3><a class="header" href="#指针" id="指针">指针</a></h3>
+<p>并不是每个值都会有一个内存地址， 但是对于每一个变量必然有对应的内存地址， 通过指针， 我们可以读取或更新对应变量的值， 而不需要知道变量的名字。</p>
+<p>果用“var x int”声明语句声明一个x变量，那么&amp;x表达式（取x变量的内存地址）将产生一个指向该整数变量的指针，指针对应的数据类型是<code>*int</code>，指针被称之为“指向int类型的指针”。如果指针名字为p，那么可以说“p指针指向变量x”，或者说“p指针保存了x变量的内存地址”。同时<code>*p</code>表达式对应p指针指向的变量的值。一般<code>*p</code>表达式读取指针指向的变量的值，这里为int类型的值，同时因为<code>*p</code>对应一个变量，所以该表达式也可以出现在赋值语句的左边，表示更新指针所指向的变量的值</p>
+<pre><code class="language-Go">x := 1
+p := &amp;x         // p, of type *int, points to x
+fmt.Println(*p) // &quot;1&quot;
+*p = 2          // equivalent to x = 2
+fmt.Println(x)  // &quot;2&quot;
+</code></pre>
+<p>变量有时候被称为可寻址的值</p>
+<p>任何类型的指针的零值都是nil， 如果是有效变量那么 p  != nil</p>
+<pre><code class="language-go">var x, y int
+fmt.Println(&amp;x == &amp;x, &amp;x == &amp;y, &amp;x == nil) // &quot;true false false&quot;
+</code></pre>
+<pre><code class="language-go">func f() *int {
+    v := 1
+    return &amp;v
+}
+fmt.Println(f() == f()) // &quot;false&quot;
+</code></pre>
+<pre><code class="language-go">func incr(p *int) int {
+    *p++ // 非常重要：只是增加p指向的变量的值，并不改变p指针！！！
+    return *p
+}
+</code></pre>
+<p>每次对一个变量取地址或者复制指针， 就为原变量创建了一个新的别名，所以我们可以不用名字而访问到一个变量</p>
+<h3><a class="header" href="#new函数" id="new函数">new函数</a></h3>
+<p>另一个创建变量的方法是调用内建的new函数， <code>new(T)</code>  将创建一个T类型的匿名变量， 初始化为T类型的零值， 返回变量地址，即指针类型 *T</p>
+<pre><code class="language-go">p := new(int)   // p, *int 类型, 指向匿名的 int 变量
+fmt.Println(*p) // &quot;0&quot;
+*p = 2          // 设置 int 匿名变量的值为 2
+fmt.Println(*p) // &quot;2&quot;
+</code></pre>
+<h3><a class="header" href="#变量的声明周期" id="变量的声明周期">变量的声明周期</a></h3>
+<p>包一级声明的变量生命周期和整个程序的运行周期一致</p>
+<p>局部变量的生命周期是动态的，不再引用时被垃圾回收机制回收</p>
+<p>局部变量可能在函数返回之后依然存在， 只要是有效引用</p>
+<pre><code class="language-Go">var global *int
+
+func f() {
+    var x int
+    x = 1
+    global = &amp;x
+}
+</code></pre>
+<p>x会从函数f中逃逸了</p>
+<h2><a class="header" href="#24-赋值" id="24-赋值">2.4 赋值</a></h2>
+<pre><code class="language-Go">x = 1                       // 命名变量的赋值
+*p = true                   // 通过指针间接赋值
+person.name = &quot;bob&quot;         // 结构体字段赋值
+count[x] = count[x] * scale // 数组、slice或map的元素赋值
+</code></pre>
+<h3><a class="header" href="#元组赋值" id="元组赋值">元组赋值</a></h3>
+<pre><code class="language-Go">x, y = y, x
+a[i], a[j] = a[j], a[i]
+f, err = os.Open(&quot;foo.txt&quot;)
+_, err = io.Copy(dst, src) // 丢弃字节数
+</code></pre>
+<h3><a class="header" href="#可赋值性" id="可赋值性">可赋值性</a></h3>
+<p>除了显示赋值形式， 还有很多隐式赋值， 比如函数调用对参数变量赋值， 返回语句将结果赋值给结果变量，复合类型的字面量赋值行为</p>
+<pre><code class="language-Go">medals := []string{&quot;gold&quot;, &quot;silver&quot;, &quot;bronze&quot;}
+</code></pre>
+<p>这些 必须满足赋值语句左边的变量和右边最终求值必须有相同的类型，赋值才是被允许的， nil可以赋值给任何指针或引用类型的变量</p>
+<p>两个值是否可以用 == 和 !=  进行相等比较的能力也和可赋值能力有关系， 第二个值必须是对第一个值对应的变量是可赋值性的。</p>
+<h2><a class="header" href="#25-类型" id="25-类型">2.5 类型</a></h2>
+<p>一个类型声明语句创建了一个新的类型名称， 可以用来分割不同概念的类型， 这样即使他们的底层类型相同也是不兼容的</p>
+<pre><code class="language-go">type 类型名字 底层类型
+</code></pre>
+<p>类型声明一般出现在包一级， 如果类型名字首字母大写， 在外部也可以使用</p>
+<pre><code class="language-go">type Celsius float64
+type Fahrenheit float64 // 华氏温度
+
+const (
+    AbsoluteZeroC Celsius = -273.15 // 绝对零度
+    FreezingC     Celsius = 0       // 结冰点温度
+    BoilingC      Celsius = 100     // 沸水温度
+)
+func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
+</code></pre>
+<h2><a class="header" href="#26-包和文件" id="26-包和文件">2.6 包和文件</a></h2>
+<p>按照惯例，一个包的名字和包的导入路径的最后一个字段相同</p>
+<p>包的初始化首先是解决包级变量的依赖顺序， 然后按照包级变量声明出现的顺序依次初始化</p>
+<pre><code class="language-Go">var a = b + c // a 第三个初始化, 为 3
+var b = f()   // b 第二个初始化, 为 2, 通过调用 f (依赖c)
+var c = 1     // c 第一个初始化, 为 1
+
+func f() int { return c + 1 }
+</code></pre>
+<p>如果包中有多个go源文件， 他们将按照发给编译器的顺序进行初始化，go构建工具首先对文件名进行排序， 然后依次调用编译器编译</p>
+<p>每个文件中可以包含多个init初始化函数， 该函数除了不能被调用和引用外， 其它行为和普通函数类似，它们按照声明的顺序被自动调用</p>
+<p>包在解决依赖的前提下， 以导入声明的顺序初始化， 每个包初始化一次</p>
+<p>有时也可以用匿名函数进行初始化处理</p>
+<pre><code class="language-Go">var pc [256]byte = func() (pc [256]byte) {
+    for i := range pc {
+        pc[i] = pc[i/2] + byte(i&amp;1)
+    }
+    return
+}()
+</code></pre>
+<h2><a class="header" href="#27-作用域" id="27-作用域">2.7 作用域</a></h2>
+<pre><code class="language-Go">func main() {
+    x := &quot;hello&quot;
+    for _, x := range x {
+        x := x + 'A' - 'a'
+        fmt.Printf(&quot;%c&quot;, x) // &quot;HELLO&quot; (one letter per iteration)
+    }
+}
+</code></pre>
+<p>x每个声明在不同的词法域，一个在函数体词法域，一个在for隐式的初始化词法域，一个在for循环体词法域；只有两个块是显式创建的：</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../go/gopl/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../go/gopl/chapter03.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../go/gopl/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../go/gopl/chapter03.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

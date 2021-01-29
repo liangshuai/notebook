@@ -1,0 +1,3148 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>my personal notes</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="js/index.html"><strong aria-hidden="true">1.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="js/event-loop.html"><strong aria-hidden="true">1.1.</strong> 事件循环</a></li><li class="chapter-item expanded "><a href="js/composition.html"><strong aria-hidden="true">1.2.</strong> Composition</a></li><li class="chapter-item expanded "><a href="js/selection.html"><strong aria-hidden="true">1.3.</strong> Selection</a></li><li class="chapter-item expanded "><a href="js/regexp.html"><strong aria-hidden="true">1.4.</strong> 正则表达式</a></li><li class="chapter-item expanded "><a href="js/throttle-debounce.html"><strong aria-hidden="true">1.5.</strong> 节流防抖</a></li><li class="chapter-item expanded "><a href="js/commonjs-esm.html"><strong aria-hidden="true">1.6.</strong> ESM与CommonJS</a></li><li class="chapter-item expanded "><a href="js/nodejs/index.html"><strong aria-hidden="true">1.7.</strong> node.js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="js/nodejs.html"><strong aria-hidden="true">1.7.1.</strong> node.js架构</a></li><li class="chapter-item expanded "><a href="js/nodejs/stream.html"><strong aria-hidden="true">1.7.2.</strong> stream</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="protocol/index.html"><strong aria-hidden="true">2.</strong> 协议</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="protocol/HTTP权威指南笔记.html"><strong aria-hidden="true">2.1.</strong> HTTP权威指南</a></li></ol></li><li class="chapter-item expanded "><a href="algorithm/index.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="algorithm/topK.html"><strong aria-hidden="true">3.1.</strong> topK问题</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-3.html"><strong aria-hidden="true">3.2.</strong> leetcode-3-最长无重复子串</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-46.html"><strong aria-hidden="true">3.3.</strong> leetcode-46-数字翻译字符串</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-94.html"><strong aria-hidden="true">3.4.</strong> leetcode-94-中序遍历</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-144.html"><strong aria-hidden="true">3.5.</strong> leetcode-144-先序遍历</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-155.html"><strong aria-hidden="true">3.6.</strong> leetcode-155</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-167.html"><strong aria-hidden="true">3.7.</strong> leetcode-167-twoSum有序</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-322.html"><strong aria-hidden="true">3.8.</strong> leetcode-322-硬币兑换</a></li><li class="chapter-item expanded "><a href="algorithm/leetcode-875.html"><strong aria-hidden="true">3.9.</strong> leetcode-875-KoKo吃香蕉</a></li></ol></li><li class="chapter-item expanded "><a href="rust/rust_way.html"><strong aria-hidden="true">4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="go/index.html"><strong aria-hidden="true">5.</strong> Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="go/gopl/index.html"><strong aria-hidden="true">5.1.</strong> Go语言圣经读书笔记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="go/gopl/chapter02.html"><strong aria-hidden="true">5.1.1.</strong> 程序结构</a></li><li class="chapter-item expanded "><a href="go/gopl/chapter03.html"><strong aria-hidden="true">5.1.2.</strong> 基础数据类型</a></li><li class="chapter-item expanded "><a href="go/gopl/chapter04.html"><strong aria-hidden="true">5.1.3.</strong> 复合数据类型</a></li><li class="chapter-item expanded "><a href="go/gopl/chapter10.html"><strong aria-hidden="true">5.1.4.</strong> 包和工具</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="engineer/index.html"><strong aria-hidden="true">6.</strong> 工程化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="engineer/webpack/index.html"><strong aria-hidden="true">6.1.</strong> Webpack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="engineer/webpack/require-context.html"><strong aria-hidden="true">6.1.1.</strong> require.context</a></li><li class="chapter-item expanded "><a href="engineer/webpack/disable-export-default-object.html"><strong aria-hidden="true">6.1.2.</strong> disable export default object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="architecture/index.html"><strong aria-hidden="true">7.</strong> 架构</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="architecture/serverless/share.html"><strong aria-hidden="true">7.1.</strong> serverless</a></li></ol></li><li class="chapter-item expanded "><a href="tools/index.html"><strong aria-hidden="true">8.</strong> 工具</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tools/Tmux.html"><strong aria-hidden="true">8.1.</strong> Tmux</a></li><li class="chapter-item expanded "><a href="tools/ag.html"><strong aria-hidden="true">8.2.</strong> ag文本搜索</a></li><li class="chapter-item expanded "><a href="tools/pkg.html"><strong aria-hidden="true">8.3.</strong> pkg</a></li></ol></li><li class="chapter-item expanded "><a href="unix/index.html"><strong aria-hidden="true">9.</strong> unix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="unix/awk.html"><strong aria-hidden="true">9.1.</strong> awk</a></li><li class="chapter-item expanded "><a href="unix/Bash.html"><strong aria-hidden="true">9.2.</strong> Bash</a></li><li class="chapter-item expanded "><a href="unix/shell.html"><strong aria-hidden="true">9.3.</strong> Linux shell脚本自动化编程实战 笔记</a></li></ol></li><li class="chapter-item expanded "><a href="Vim/Vim.html"><strong aria-hidden="true">10.</strong> Vim</a></li><li class="chapter-item expanded "><a href="snippet/index.html"><strong aria-hidden="true">11.</strong> 代码片段</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="snippet/javascript/index.html"><strong aria-hidden="true">11.1.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="snippet/javascript/bind.html"><strong aria-hidden="true">11.1.1.</strong> bind的模拟实现</a></li><li class="chapter-item expanded "><a href="snippet/javascript/call.html"><strong aria-hidden="true">11.1.2.</strong> call的模拟实现</a></li><li class="chapter-item expanded "><a href="snippet/javascript/lazyman.html"><strong aria-hidden="true">11.1.3.</strong> LazyMan的实现</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">my personal notes</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <pre><code class="language-js">async function async1() {
+    console.log(&quot;async1 start&quot;); // 同步代码2
+    await async2(); // 调用async2(),async2()的返回值是promise，不执行promise的resolve,让出线程
+    console.log(&quot;async1 end&quot;);
+}
+async function async2() {
+    console.log(&quot;async2&quot;); // 同步代码3
+}
+console.log(&quot;script start&quot;); // 同步代码1
+
+setTimeout(function() {
+    // 异步 setTimeout放入event-loop中的macro-tasks队列，暂不执行
+    console.log(&quot;setTimeout&quot;);
+}, 0);
+
+async1();
+
+new Promise(function(resolve) {
+    console.log(&quot;promise1&quot;); // 同步代码4
+    resolve();
+}).then(function() {
+    console.log(&quot;promise end&quot;); // 不执行
+});
+console.log(&quot;script end&quot;); // 同步代码5
+</code></pre>
+<p>Promise构造函数中的是同步代码</p>
+<p>await之后的为微任务</p>
+<pre><code>script start
+async1 start
+async2
+promise1
+script end
+async1 end
+promise end
+setTimeout
+</code></pre>
+<pre><code class="language-js">new Promise(resolve =&gt; {
+    resolve(1);
+    Promise.resolve().then(() =&gt; console.log(2));
+    console.log(4)
+}).then(t =&gt; console.log(t));
+console.log(3);
+</code></pre>
+<p>node.js 返回</p>
+<pre><code>4
+3
+2
+1
+</code></pre>
+<p>Chrome</p>
+<pre><code>4
+3
+1
+2
+</code></pre>
+<p>Promise.resolve 方法允许调用时不带参数或者参数是个非 thenable 对象或者不是一个对象，直接返回一个resolved 状态的 Promise 对象。立即 resolved 的 Promise 对象，是在本轮“事件循环”（event loop）的结束时，而不是在下一轮“事件循环”的开始时</p>
+<p>因此 <code>() =&gt; console.log(2)</code> 被先push进了微任务队列</p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/47bb1e6f-a492-47bd-8785-85b085fd4d24/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200512%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20200512T135604Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=80109ea6373e098a0f30ab82ffbea1a14aeffde9d6704b7cf339ff9b808ccfe6&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22" alt="img" /></p>
+<p>requestAnimationFrame既不属于macrotask， 也不属于microtask，而且浏览器对其处理顺序也不一致</p>
+<ul>
+<li><strong>Chrome</strong>: microtask, requestAnimationFrame, macrotask</li>
+<li><strong>Firefox</strong>: microtask, macrotask, requestAnimationFrame</li>
+</ul>
+<p><strong><code>compositionstart</code></strong> 事件触发于一段文字的输入之前（类似于 <code>keydown</code> 事件，但是该事件仅在若干可见字符的输入之前，而这些可见字符的输入可能需要一连串的键盘操作、语音识别或者点击输入法的备选词）。</p>
+<p>比如在输入拼音时 经常会拼音的输入过程中也会触发到input事件， 而我们往往需要的是选完中文之后再触发事件</p>
+<p><code>compositionstart</code> 事件在用户开始进行非直接输入的时候触发，而在非直接输入结束，也即用户点选候选词或者点击「选定」按钮之后，会触发 <code>compositionend</code> 事件</p>
+<pre><code class="language-js">var inputLock = false;
+function do(inputElement) {
+    var regex = /[^1-9a-zA-Z]/g;
+    inputElement.value = inputElement.value.replace(regex, '');
+}
+
+inputElement.addEventListener('compositionstart', function() {
+  inputLock = true;
+});
+
+
+inputElement.addEventListener('compositionend', function(event) {
+  inputLock = false;
+  do(event.target);
+})
+
+
+inputElement.addEventListener('input', function(event) {
+  if (!inputLock) {
+    do(event.target);
+    event.returnValue = false;
+  }
+});
+</code></pre>
+<h2><a class="header" href="#selection" id="selection">Selection</a></h2>
+<p><code>Selection</code> 对象表示用户选择的文本范围或插入符号的当前位置。 它代表页面中的文本选区， 可以跨越多个元素， 有拖拽鼠标经过文字而产生。 要获取用于检查或修改的Selection对象可以调用<code>window.getSelection()</code></p>
+<p>插入光标的位置可以通过Selection获取， 它有一个 <code>isCollapsed</code> 表示是否选区被压缩到一点， 即光标位置</p>
+<p><code>anchorNode</code> 表示开始选择的地方所在的节点</p>
+<p><code>focusNode</code> 表示结束选择的地方所在的节点</p>
+<p><code>anchorOffset</code> 返回一个数字， 表示的是选区起点在anchorNode中的位置偏移量</p>
+<p>如果anchorNode是文本节点， 那么返回的就是该文本节点的第一个字开始， 直到被选中的第一个字之间的字数</p>
+<p>如果anchorNode是一个元素， 那么返回的是选区第一个节点之前的同级节点总数</p>
+<p><code>focusOffset</code> 返回一个数字，表示选区终点在focusNode 中的位置偏移量</p>
+<p>如果focusNode是文本节点， 那么选区末尾未选中的第一个字在该文字节点中是第几个字就返回它</p>
+<p>如果focusNode是一个元素， 那么返回的就是选区末尾之后第一个节点之前的同级节点数</p>
+<p><code>anchor</code> 和 <code>focus</code> 指用户开始选择的地方和结束选择的地方， 这两个不能和选区的起始位置和终止位置混淆， 因为anchor可能在focus之前或之后</p>
+<p>Selection对象对应的是用户选择的<code>ranges</code> 区域， 默认情况下改哈纳树只针对一个选区， 可以这样使用</p>
+<pre><code class="language-js">var selObj = window.getSelection();
+var range = selObj.getRangeAt(0);
+</code></pre>
+<p><code>rangeCount</code> 返回该选区所包含的连续范围的数量</p>
+<ul>
+<li>selection.collapseToStart() 作用是取消当前选区， 并把光标定位在原选区的最开始处， 如果此时光标所在的位置是可编辑的， 且它获得了焦点， 那么光标会在原地闪烁</li>
+<li>selection.collapseToEnd() 作用是取消当前选区， 并把光标定位在原选区的最末尾处， 如果此时光标所在的位置是可编辑的， 且它获得了焦点， 则光标会在原地闪烁</li>
+<li>selection.containsNode(aNode, aPartlyContained) 判断指定的节点是否包含在Selection中， aNode是节点， aPartlyContained 是否允许部分包含</li>
+</ul>
+<h1><a class="header" href="#js正则表达式" id="js正则表达式">JS正则表达式</a></h1>
+<p>1、字符匹配</p>
+<p>​	1.1、常⽤的元字符
+​	1.2、量词
+​	1.3、字符组
+​	1.4、分⽀
+​	1.5、字符匹配⽅式</p>
+<p>2、位置匹配
+2.1、什么是位置匹配
+2.2、^和$
+2.3、\b和\B
+2.4、(?=p)和(?!p)
+3、修饰符
+3.1、g
+3.2、i
+3.3、m
+4、贪婪和惰性
+4.1、贪婪（尽可能多匹配）
+4.2、惰性（尽可能少匹配）
+5、括号的作⽤
+5.1、分组(⼦表达式)
+5.2、分⽀
+5.3、捕获分组
+5.4、⾮捕获分组
+6、零宽断⾔（前瞻）
+7、正则表达式匹配原理
+7.1、原理
+7.2、没有回溯的匹配
+7.3、有回溯匹配
+8、常⽤API
+8.1 search和match
+8.2 match返回结果
+8.3 exec
+8.4 replace</p>
+<h2><a class="header" href="#1字符匹配" id="1字符匹配">1、字符匹配</a></h2>
+<h3><a class="header" href="#11常的元字符" id="11常的元字符">1.1、常⽤的元字符</a></h3>
+<p>元字符				 含义
+\b 						匹配⼀个单词边界(boundary)
+\B 						匹配⼀个⾮单词边界
+\d 						匹配⼀个数字字符(digit)
+\D 						匹配⼀个⾮数字字符
+\s 						匹配⼀个空⽩字符(space)
+\S 						匹配⼀个⾮空⽩字符
+\w 						匹配⼀个字⺟或者⼀个数字或者⼀个下划线(word)
+\W 						匹配⼀个字⺟、数字和下划线之外的字符
+\n 						匹配换⾏
+. 							匹配除换⾏符以外的任意字符
+^ 							匹配字符串开始位置
+$ 							匹配字符串结束位置
+\ 							字符串转义</p>
+<h3><a class="header" href="#12量词" id="12量词">1.2、量词</a></h3>
+<p>量词也属于元字符。表示字符重复的次数。表示⽅式{m, n}。如：/\d{2,5}/，表示匹配数字，
+重复2-5次。</p>
+<p>量词			等价于							描述</p>
+<p>{m,} 		  										表示出现m次或以上</p>
+<p>{m} 			等价于{m,m} 				表示出现m次
+? 				等价于{0,1} 					表示出现0次或1次</p>
+<p>+                 等价于{1,} 					 表示出现⾄少⼀次</p>
+<p>* 				等价于{0,} 					 表示出现0次或多次</p>
+<h3><a class="header" href="#13-字符组" id="13-字符组">1.3 字符组</a></h3>
+<p>⽤[]表示，或的逻辑，即匹配字符组⾥任意⼀个字符，例如[abc]，它可以是“a”、“b”、“c”之⼀。</p>
+<p>字符组范围
+连字符“-”表示范围。如：[a-zA-Z0-9]，表示匹配⼤⼩写字⺟和数字0-9。
+要匹配字符“-”⾃身，则要转义或者放到字符组前⾯或后⾯。如果：[a-b]或[ab-]
+字符组取反</p>
+<p>字符组开头⽤^, 表示取反。如：'aregex'.match(/<sup class="footnote-reference"><a href="#ae">1</a></sup>/g)，表示匹配除ae外的字符</p>
+<p>特殊字符
+字符组⾥⾯特殊字符可以不转义，[.^$／-]。</p>
+<h3><a class="header" href="#14-分支" id="14-分支">1.4 分支</a></h3>
+<p>分⽀⽤|分隔，表示匹配⼦模式中任意⼀个。表示⽅式：(p1|p2|p3)，其中p1、p2和p3是⼦模式。
+如果每个分⽀值匹配⼀个字符，等价于[]。</p>
+<p>分⽀⼦模式可以是多个字符</p>
+<h3><a class="header" href="#15-字符匹配式" id="15-字符匹配式">1.5 字符匹配⽅式</a></h3>
+<p>横向匹配
+匹配字符串，某个或者某⼏个字符出现的次数是不固定的，即⽤量词表示{m, n};
+如：/ab{2}/ 匹配b出现2次
+/(ab){2, 5}/ 匹配ab出现2-5次。
+纵向匹配
+单个字符的纵向匹配，⽤字符组。如：[abc]，表示a、b、c任意⼀个。
+多个字符的纵向匹配，则要使⽤分⽀。如：/(ab|ac)a/ 表示aba、aca</p>
+<h2><a class="header" href="#2-位置匹配" id="2-位置匹配">2 位置匹配</a></h2>
+<p>位置是相邻字符之间的位置。</p>
+<h3><a class="header" href="#22和" id="22和">2.2、^和$</a></h3>
+<p>^匹配开头，在多⾏匹配中匹配⾏开头。
+$匹配结尾，在多⾏匹配中匹配⾏结尾。</p>
+<h3><a class="header" href="#23b和b" id="23b和b">2.3、\b和\B</a></h3>
+<p>\b是单词边界，即\w和\W之间的位置，也包括\w和^之间的位置，也包括\w和$之间的位置。
+\B就是\b的反⾯的意思，⾮单词边界。例如在字符串中所有位置中，扣掉\b，剩下的都是\B的。</p>
+<h3><a class="header" href="#24p-和p" id="24p-和p">2.4、(?=p) 和(?!p)</a></h3>
+<p>零宽断⾔</p>
+<h2><a class="header" href="#3-修饰符" id="3-修饰符">3、 修饰符</a></h2>
+<h3><a class="header" href="#31g" id="31g">3.1、g</a></h3>
+<p>默认从坐到右匹配，匹配到⼀个结果就停⽌。g开启全局匹配，会找到所有的匹配，单词是global</p>
+<h3><a class="header" href="#32-i" id="32-i">3.2、 i</a></h3>
+<p>忽略字⺟⼤⼩写，单词ingoreCase</p>
+<h3><a class="header" href="#33m" id="33m">3.3、m</a></h3>
+<p>多⾏匹配，遇到\n则分⾏，每⼀⾏都能匹配开始结束位置。单词是multiline</p>
+<h3><a class="header" href="#4贪婪和惰性" id="4贪婪和惰性">4、贪婪和惰性</a></h3>
+<p>量词（*, ?, +, {n}, {n,}, {n,m}）匹配是分贪婪和惰性的，默是贪婪匹配。量词后⾯加？则表示惰性。</p>
+<h3><a class="header" href="#41贪婪尽可能多匹配" id="41贪婪尽可能多匹配">4.1、贪婪（尽可能多匹配）</a></h3>
+<p>匹配到⼀个结果后，继续往后匹配，直到不满⾜条件为⽌。</p>
+<pre><code class="language-js">'123456xx'.match(/\d+/g);
+// =&gt; [&quot;123456&quot;]
+'123456xx'.match(/\d{2,5}/g);
+// =&gt; [&quot;12345&quot;]
+var str = '&lt;img src=&quot;1.jpg&quot; /&gt;aaa&lt;img src=&quot;2.jpg&quot; /&gt;';
+var reg = /&lt;img.*&gt;/g;
+str.match(reg);
+// =&gt; [&quot;&lt;img src=&quot;1.jpg&quot; /&gt;aaa&lt;img src=&quot;2.jpg&quot; /&gt;&quot;]
+</code></pre>
+<h3><a class="header" href="#42惰性尽可能少匹配" id="42惰性尽可能少匹配">4.2、惰性（尽可能少匹配）</a></h3>
+<p>匹配到⼀个结果后则停⽌。</p>
+<pre><code class="language-js">// 匹配数字
+'123456xx'.match(/\d+?/g);
+// =&gt; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;]
+'123456xx'.match(/\d{2,5}?/g);
+// =&gt; [&quot;12&quot;, &quot;34&quot;, &quot;56&quot;]
+// 匹配img标签
+var str = '&lt;img src=&quot;1.jpg&quot; /&gt;aaa&lt;img src=&quot;2.jpg&quot; /&gt;';
+var reg = /&lt;img.*?&gt;/g;
+str.match(reg);
+// [&quot;&lt;img src=&quot;1.jpg&quot; /&gt;&quot;, &quot;&lt;img src=&quot;2.jpg&quot; /&gt;&quot;]
+// 也可以这样写
+// var reg = /&lt;img[^&gt;]*&gt;/g;
+</code></pre>
+<h2><a class="header" href="#5括号的作" id="5括号的作">5、括号的作⽤</a></h2>
+<h3><a class="header" href="#51分组表达式" id="51分组表达式">5.1、分组(⼦表达式)</a></h3>
+<p>如果需要匹配多个字符，则需使⽤分组，括号⾥⾯的表达式则叫⼦表达式。</p>
+<pre><code class="language-js">1 var reg = /(ab)+/g;
+2 var str = &quot;ababa abbb ababab&quot;;
+3 str.match(reg)
+4 // =&gt; [&quot;abab&quot;, &quot;ab&quot;, &quot;ababab&quot;]
+</code></pre>
+<h3><a class="header" href="#52分" id="52分">5.2、分⽀</a></h3>
+<p>可以作为⼀个分⽀使⽤。
+如：匹配北京座机(010-xxxxxxx)和⼴州座机(020-xxxxxxxx)</p>
+<pre><code class="language-js">1 var reg = /^((010)|(020))-\d{8}$/g;
+2 // var reg = /^(0[12]0)-\d{8}$/g
+3 reg.test('020-23456784');
+</code></pre>
+<h3><a class="header" href="#53捕获分组" id="53捕获分组">5.3、捕获分组</a></h3>
+<ul>
+<li>表达式外捕获
+即对⼦表达式的匹配结果进⾏引⽤，可⽤于数据提取和字符串替换。</li>
+</ul>
+<ol>
+<li>数据提取
+使⽤字符串的match()，或者正则的exec()⽅法</li>
+</ol>
+<pre><code class="language-js">1 var reg = /(\d{4})-(\d{2})-(\d{2})/;
+2 var str = '2019-10-29';
+3 str.match(reg);
+4 // =&gt; [&quot;2019-10-29&quot;, &quot;2019&quot;, &quot;10&quot;, &quot;29&quot;, index: 0, input: &quot;2019-10-29&quot;, groups: undefined]
+5 reg.exec(str);
+6 // =&gt; [&quot;2019-10-29&quot;, &quot;2019&quot;, &quot;10&quot;, &quot;29&quot;, index: 0, input: &quot;2019-10-29&quot;, groups: undefined]
+</code></pre>
+<ol start="2">
+<li>字符串替换
+⽤$1,$2,$3…$9表示分组匹配的结果，或⽤全局变量Regexp.$1,Regexp.$2,…Regexp.$9表示。
+如：替换p标签为span</li>
+</ol>
+<pre><code class="language-js">1 var str = '&lt;p class=&quot;p&quot;&gt;xxx&lt;/p&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;p title=&quot;hehhe&quot;&gt;&lt;/p&gt;';
+2 var reg = /&lt;(\/?)p(.*?)&gt;/g;
+3 str.replace(reg, '&lt;$1span$2&gt;');
+4 // =&gt; &quot;&lt;span class=&quot;p&quot;&gt;xxx&lt;/span&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;span title=&quot;hehhe&quot;&gt;&lt;/span&gt;&quot;
+</code></pre>
+<ul>
+<li>
+<p>表达式内捕获(反向引⽤)
+正则表达式中，对括号⾥⾯的⼦表达式进⾏引⽤。\1,\2,\3…\9。
+如：匹配⽇前格式：2019-10-29，2019/10/29，2019.10.29
+不严瑾的写法</p>
+<pre><code class="language-js">1 var reg = /^\d{4}[./-]\d{2}[./-]\d{2}$/
+2 reg.test('2019-10-29');
+3 reg.test('2019/10/29');
+4 reg.test('2019.10.29');
+5 // =&gt; true
+6
+7 reg.test('2019.10/29');
+8 // =&gt; true
+</code></pre>
+<p>严瑾的写法</p>
+<pre><code class="language-js">1 var reg = /^\d{4}([/.-])\d{2}\1\d{2}$/
+2 reg.test('2019-10-29');
+3 reg.test('2019/10/29');
+4 reg.test('2019.10.29');
+5 // =&gt; true
+6
+7 reg.test('2019.10/29');
+8 // =&gt; false
+</code></pre>
+<h3><a class="header" href="#54捕获分组" id="54捕获分组">5.4、⾮捕获分组</a></h3>
+<p>捕获分组的作⽤，⽅便后续引⽤。如果不想引⽤，则使⽤⾮捕获分组(?:p) 。
+⾮捕获分组可以节省内存消耗。
+如：修改前⾯的表达式</p>
+<pre><code class="language-js">1 var str = '&lt;p class=&quot;p&quot;&gt;xxx&lt;/p&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;p title=&quot;hehhe&quot;&gt;&lt;/p&gt;';
+2 var reg = /&lt;(?:\/?)p(?:.*?)&gt;/g;
+3 str.replace(reg, '&lt;$1span$2&gt;');
+4 // &quot;&lt;$1span$2&gt;xxx&lt;$1span$2&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;$1span$2&gt;&lt;$1span$2&gt;&quot;
+</code></pre>
+<h2><a class="header" href="#6零宽断前瞻" id="6零宽断前瞻">6、零宽断⾔（前瞻）</a></h2>
+<p>有时要匹配某个位置之前或之后应该有什么内容，叫零宽断⾔。
+零宽(zero-width)是什么意思？指的就是它匹配⼀个位置，本身没有宽度。
+断⾔(assertion)是什么意思？指的是⼀种判断，断⾔之前或之后应该有什么或应该没有什么。</p>
+<p>表达式			名称									描述
+(?=exp) 		  正向前瞻							匹配后⾯满⾜表达式exp的位置
+(?:exp) 			负向前瞻							匹配后⾯不满⾜表达式exp的位置
+(?&lt;=exp) 		正向后瞻							匹配前⾯满⾜表达式exp的位置（JS不⽀持）
+(?&lt;!exp) 		负向后瞻							匹配前⾯不满⾜表达式exp的位置（JS不⽀持）</p>
+<pre><code class="language-js">1 var reg1 = /bed(?=room)/ // 匹配bed后面为room的字符串。
+2 var reg2 = /bed(?!room)/ // 匹配bed后面不为room的字符串
+3 var str1 = ‘bedroom’;
+4 var str2 = ‘bedding’;
+5 reg1.test(str1);
+6 reg2.test(str2);
+</code></pre>
+<p>如下例⼦，更能体现零宽断⾔，匹配的是⼀个位置。</p>
+<pre><code class="language-js">1 var reg = /a(?=b)c/;
+2 var str = &quot;abc&quot;;
+3 str.match(reg);
+4 // =&gt; null
+</code></pre>
+<p>第1步：匹配表达式a通过
+第2步：匹配表达式(?=b)也通过
+第3步：匹配表达式c，是从“abc”的b位置开始匹配，此时匹配到的是ac，不通过。
+第4步：从字符串“abc”的b继续开始匹配，不通过。
+第5步：从字符串“abc”的c继续开始匹配，不通过。</p>
+<p>改成如下则通过。</p>
+<pre><code class="language-js">1 var reg = /a(?=b)bc/;
+2 var str = &quot;abc&quot;;
+3 str.match(reg);
+4 // =&gt; [&quot;abc&quot;, index: 0, input: &quot;abc&quot;, groups: undefined]
+</code></pre>
+<p>应⽤：去掉除表情外的富⽂本。</p>
+<pre><code class="language-js">1 // 清空不包含class=“w_emoji”的的html标签
+2 var str = `
+3 &lt;div class=&quot;wrap&quot;&gt;
+4 &lt;img class=&quot;w_emoji&quot; src=&quot;xxxxxx&quot; title=&quot;表情&quot;/&gt;
+5 &lt;p&gt;pppp&lt;/p&gt;
+6 &lt;h3&gt;&lt;strong&gt;h3h3h3&lt;/strong&gt;&lt;/h3&gt;
+7 &lt;img calss=&quot;b&quot; src=&quot;dddd&quot; /&gt;
+8 &lt;/div&gt;
+9 `;
+10 var reg = /&lt;(?!img class=&quot;w_emoji&quot;).*?&gt;/gi;
+11 str.replace(reg, '');
+12
+13 // &lt;img class=&quot;w_emoji&quot; src=&quot;xxxxxx&quot; title=&quot;表情&quot;/&gt;
+14 // pppp
+15 // h3h3h3
+</code></pre>
+<h2><a class="header" href="#7正则表达式匹配原理" id="7正则表达式匹配原理">7、正则表达式匹配原理</a></h2>
+<h3><a class="header" href="#71原理" id="71原理">7.1、原理</a></h3>
+<p>正则表达式匹配字符串的这种⽅式，叫回溯法。
+回溯法也称试探法，它的基本思想是：从问题的某⼀种状态（初始状态）出发，搜索从这种状态出发所能
+达到的所有“状态”，当⼀条路⾛到“尽头”的时候（不能再前进），再后退⼀步或若⼲步，从另⼀种可能“状
+态”出发，继续搜索，直到所有的“路径”（状态）都试探过。这种不断“前进”、不断“回溯”寻找解的⽅
+法，就称作“回溯法”。（copy于百度百科）。</p>
+<h3><a class="header" href="#72-没有回溯的匹配" id="72-没有回溯的匹配">7.2 没有回溯的匹配</a></h3>
+<p>假设我们的正则是/ab{1,3}c/ ，其可视化形式是：</p>
+<p>当⽬标字符串是&quot;abbbc&quot;时，就没有所谓的“回溯”。其匹配过程是：
+其中⼦表达式b{1,3} 表示“b”字符连续出现1到3次。</p>
+<h3><a class="header" href="#73有回溯匹配" id="73有回溯匹配">7.3、有回溯匹配</a></h3>
+<p>如果⽬标字符串是&quot;abbc&quot;，中间就有回溯。</p>
+<p>图中第5步有红颜⾊，表示匹配不成功。此时b{1,3} 已经匹配到了2个字符“b”，准备尝试第三个时，结
+果发现接下来的字符是“c”。那么就认为b{1,3} 就已经匹配完毕。然后状态⼜回到之前的状态（即第6
+步，与第4步⼀样），最后再⽤⼦表达式c ，去匹配字符“c”。当然，此时整个表达式匹配成功了。
+量词和分⽀都可能会出现回溯现象。</p>
+<h2><a class="header" href="#8常api" id="8常api">8、常⽤API</a></h2>
+</li>
+<li>
+<p>String#search</p>
+</li>
+<li>
+<p>String#match</p>
+</li>
+<li>
+<p>String#split</p>
+</li>
+<li>
+<p>String#replace</p>
+</li>
+<li>
+<p>RegExp#test</p>
+</li>
+<li>
+<p>RegExp#exec</p>
+</li>
+</ul>
+<h3><a class="header" href="#81-search和match" id="81-search和match">8.1 search和match</a></h3>
+<p>String的4个⽅法，都⽀持正则表达式，search和match会把字符串⾃动转成正则表达式。</p>
+<pre><code class="language-js">1 var string = &quot;2017.06.27&quot;;
+2
+3 console.log( string.search(&quot;.&quot;) );
+4 // =&gt; 0
+5 //需要修改成下列形式之一
+6 console.log( string.search(&quot;\\.&quot;) );
+7 console.log( string.search(/\./) );
+8 // =&gt; 4
+9 // =&gt; 4
+10
+11 console.log( string.match(&quot;.&quot;) );
+12 // =&gt; [&quot;2&quot;, index: 0, input: &quot;2017.06.27&quot;]
+13 //需要修改成下列形式之一
+14 console.log( string.match(&quot;\\.&quot;) );
+15 console.log( string.match(/\./) );
+16 // =&gt; [&quot;.&quot;, index: 4, input: &quot;2017.06.27&quot;]
+17 // =&gt; [&quot;.&quot;, index: 4, input: &quot;2017.06.27&quot;]
+</code></pre>
+<h3><a class="header" href="#82-match返回结果" id="82-match返回结果">8.2 match返回结果</a></h3>
+<p>返回的结果的格式，与正则对象是否有修饰符g有关。</p>
+<ol>
+<li>没有g，返回的是标准匹配格式，即，数组的第⼀个元素是整体匹配的内容，接下来是分组捕获的内
+容，然后是整体匹配的第⼀个下标，最后是输⼊的⽬标字符串。</li>
+<li>有g，返回的是所有匹配的内容。</li>
+<li>当没有匹配时，不管有⽆g，都返回null。</li>
+</ol>
+<pre><code class="language-js">1 var reg1 = /\d([a-z])/;
+2 var reg2 = /\d([a-z])/g;
+3 var str = '12ab34ef';
+4 str.match(reg1);
+5 // =&gt; [&quot;2a&quot;, &quot;a&quot;, index: 1, input: &quot;12ab34ef&quot;, groups: undefined]
+6 str.match(reg2);
+7 // =&gt; [&quot;2a&quot;, &quot;4e&quot;]
+
+</code></pre>
+<h3><a class="header" href="#83-exec" id="83-exec">8.3 exec</a></h3>
+<p>⾮全局模式下，exec和match返回的结果是⼀样的。
+全局模式下(g)，可多次执⾏，匹配下标会不断变化，此值作为下次匹配的开始。下标也可以通过正则实例
+访问，如：reg.lastindex</p>
+<pre><code class="language-js">1 var reg1 = /\d([a-z])/;
+2 var reg2 = /\d([a-z])/g;
+3 var str = '12ab34ef';
+4 reg1.exec(str);
+5 // =&gt; [&quot;2a&quot;, &quot;a&quot;, index: 1, input: &quot;12ab34ef&quot;, groups: undefined]
+6
+7 reg2.exec(str);
+8 // =&gt; [&quot;2a&quot;, &quot;a&quot;, index: 1, input: &quot;12ab34ef&quot;, groups: undefined]
+9 reg2.exec(str);
+10 // =&gt; [&quot;4e&quot;, &quot;e&quot;, index: 5, input: &quot;12ab34ef&quot;, groups: undefined]
+11 reg2.exec(str);
+12 // =&gt; null
+</code></pre>
+<h3><a class="header" href="#84-replace" id="84-replace">8.4 replace</a></h3>
+<p>语法（str.replace(regexp|substr, newSubStr|function)）
+第⼀个参数可为字符或者正则表达式。
+第⼆个参数可以是要替换的字符串，或者⼀个函数，该函数的返回值将替换掉第⼀个参数匹配到的结
+果。
+函数的参数</p>
+<p>变量名							代表的值
+match 							匹配的⼦串。（对应于上述的$&amp;。）
+p1,p2, ... 						假如replace()⽅法的第⼀个参数是⼀个RegExp 对象，则代表第n个括号匹配的字符串。（对应于上述的$1，$2等。）例如，如果是⽤ /(\a+)
+(\b+)/ 这个来匹配， p1 就是匹配的 \a+ ， p2 就是匹配的 \b+ 。
+offset 							匹配到的⼦字符串在原字符串中的偏移量。（⽐如，如果原字符串
+是 'abcd' ，匹配到的⼦字符串是 'bc' ，那么这个参数将会是 1）
+string 							被匹配的原字符串。
+NamedCaptureGroup 命名捕获组匹配的对象</p>
+<h1><a class="header" href="#节流与防抖" id="节流与防抖">节流与防抖</a></h1>
+<p>简化版</p>
+<pre><code class="language-js">const limit = function (fn, wait,  debounce) {
+    let timer = null
+    return function () {
+        const args = arguments
+        const context = this
+        if (debounce) clearTimeout(timer) 
+        if (debounce || !timer) {
+            timer = setTimeout(() =&gt; {
+                fn.apply(context, args)
+                timer = null
+            }, wait)
+        }
+    }
+}
+
+const debounce = (fn, wait, options) =&gt; {
+    return limit(fn, wait, true)
+}
+
+const throttle = (fn, wait, options) =&gt; {
+    return limit(fn, wait, false)
+}
+</code></pre>
+<p>简化版throttle有一些问题， 因为最后触发之后在wait时间内还有触发会被忽略</p>
+<pre><code class="language-js">const throttle = (fn, wait) =&gt; {
+    let timer, last = 0;
+    return () =&gt; {
+        const ctx = this;
+        const args = arguments;
+        const now = new Date().getTime();
+        const remaining = last ? last + wait - now : 0;
+        const later = () =&gt; {
+            timer = null
+            last = new Date().getTime()
+            fn.apply(ctx, args)
+        }
+        if (remaining &gt; 0) {
+            clearTimeout(timer)
+            setTimeout(later, remaining)
+        } else {
+            later()
+        }
+    }
+}
+</code></pre>
+<h2><a class="header" href="#commonjs-和-es6-中模块引入的区别" id="commonjs-和-es6-中模块引入的区别">common.js 和 es6 中模块引入的区别	</a></h2>
+<ul>
+<li>commonjs模块输出的是值的拷贝， ESM输出的是值的引用</li>
+<li>CommonJS是运行时加载的，ESM是编译时输出的接口</li>
+<li>CommonJS是单shi个值导出， ESM可以导出多个</li>
+<li>CommonJS可以写在判断中， ESM只能写在开头</li>
+<li>CommonJS的this是当前模块， ESM的this是undefined</li>
+</ul>
+<h1><a class="header" href="#nodejs相关" id="nodejs相关">Node.js相关</a></h1>
+<h4><a class="header" href="#nodejs架构" id="nodejs架构">Node.js架构</a></h4>
+<p>Node.js架构主要分为三层， 应用App -&gt; V8及node内置架构-&gt; 操作系统， V8是Node运行的环境， 可以理解为Node虚拟机</p>
+<p>Node.js内置架构又可以分为三层：核心模块JavaScript实现 -&gt; C++绑定 -&gt; Libuv + CAes + HTTP</p>
+<img src="js/../assets/屏幕快照 2020-06-12 上午8.08.18.png" alt="屏幕快照 2020-06-12 上午8.08.18" style="zoom:30%;" />
+<h4><a class="header" href="#nodejs核心模块" id="nodejs核心模块">Node.js核心模块</a></h4>
+<p>EventEmitter、Stream、FS、Net 和全局对象</p>
+<p>全局对象有： process、console、Buffer、exports</p>
+<h4><a class="header" href="#错误优先的回调函数" id="错误优先的回调函数">错误优先的回调函数</a></h4>
+<p>错误优先的回调函数第一个参数是错误对象， 用于检查程序是否发生错误， 其余参数用于传递数据</p>
+<h4><a class="header" href="#nodejs异常处理" id="nodejs异常处理">Node.js异常处理</a></h4>
+<p>分为不同的场景， 比如</p>
+<ul>
+<li>throw new Error('msg')</li>
+<li>Try-catch-finally</li>
+<li>express中使用中间件 <code>app.use((err, req, res) =&gt; { ... })</code></li>
+<li>全局异常</li>
+</ul>
+<pre><code class="language-js">process.on('uncaughtException', err =&gt; { ... })
+process.on('unhandledRejection', err =&gt; { ... })
+</code></pre>
+<h4><a class="header" href="#nodejs-try-catch中异步异常无法捕获" id="nodejs-try-catch中异步异常无法捕获">Node.js try-catch中异步异常无法捕获</a></h4>
+<pre><code class="language-js">try {
+  setTimeout(() =&gt; {
+    throw new Error('err')
+  })
+} catch (e) {
+  console.log(e)
+}
+</code></pre>
+<p>上面的catch并不能捕获到异常， 是因为setTimeout的宏任务在执行的时候try-catch的栈已经退出了， 上下文环境已经改变了， 所以不能捕获到异常。 这里把setTimeout换成promise或其它微任务同样无法catch</p>
+<p>处理办法</p>
+<pre><code class="language-js">setTimeout(() =&gt; {
+  try {
+    throw new Error()
+  } catch (e) {
+    console.log(e)
+  }
+})
+// 如果需要获取Error对象
+const promise = new Promise((resolve, reject) =&gt; {
+  setTimeout(() =&gt; {
+    try {
+      throw new Error()
+    } catch (e) {
+      reject(e)
+    }
+  })
+}) 
+promise.then(() =&gt; { ...})
+			.catch(err =&gt; {
+        ...
+      })
+</code></pre>
+<p>promise内部抛出的异常在try-catch中也无法捕获， 因为promise内部的错误不会冒泡出来， 只有通过promise.catch才能捕获</p>
+<h1><a class="header" href="#stream" id="stream">Stream</a></h1>
+<p>流是数据的集合，就像数组或字符串一样， 区别在于流中的数据可能不会立刻全部 可用， 并且不需要一次性把这些数据全部放入内存， 这样操作大量数据或从外部来源逐段发送过来的时候变得非常有用</p>
+<p><img src="js/nodejs/../../assets/image-20200614104930063.png" alt="image-20200614104930063" /></p>
+<h2><a class="header" href="#流的类型" id="流的类型">流的类型</a></h2>
+<p>Node.js中有四种基本类型的流</p>
+<ul>
+<li>可读流</li>
+<li>可写流</li>
+<li>双向流</li>
+<li>变换流</li>
+</ul>
+<p>可读流是对一个可以读取数据的源的抽象， <code>fs.createReadStream</code>就是一个例子</p>
+<p>可写流是对一个可以写入数据的目标的抽象， <code>fs.createWriteStream</code>就是一个例子</p>
+<p>双向流既是可读的， 又是可写的。 TCP Socket就属于这种</p>
+<p>变换流是一种特殊的双向流， 它会基于写入的数据生成可供读取的数据， 例如<code>zlib.createGzip</code>来压缩数据</p>
+<p>所有的流都是<code>EventEmitter</code> 的实例。</p>
+<h2><a class="header" href="#pipe方法" id="pipe方法">pipe方法</a></h2>
+<pre><code class="language-js">readableSrc.pipe(writeableDest)
+</code></pre>
+<p>以管道的方式把一个可读流的输出连接到了一个可写流的输入， 管道的上游必须是一个可读流， 下游必须是一个可写流。 当然它们也可以是双向流或变换流</p>
+<pre><code class="language-js">a.pipe(b).pipe(c).pipe(d)
+
+# 等价于:
+a.pipe(b)
+b.pipe(c)
+c.pipe(d)
+
+# 在 Linux 中，等价于：
+$ a | b | c | d
+</code></pre>
+<h2><a class="header" href="#流事件" id="流事件">流事件</a></h2>
+<p>除了从可读流中读取数据写入可写流外， pipe方法还自动处理了一些其它情况， 比如错误处理、文件结尾、读取写入速度不一致的情况</p>
+<p>流也可以直接通过事件读取</p>
+<pre><code class="language-js"># readable.pipe(writable)
+
+readable.on('data', (chunk) =&gt; {
+  writable.write(chunk);
+});
+
+readable.on('end', () =&gt; {
+  writable.end();
+});
+</code></pre>
+<p><img src="js/nodejs/../../assets/image-20200614112435774.png" alt="image-20200614112435774" /></p>
+<p>可读流上最重要的两个事件</p>
+<ul>
+<li>data事件 任何时候当可读流发送数据给它的消费者时， 会触发此事件</li>
+<li>end事件 当可读流没有更多的数据要发给消费者时触发此事件</li>
+</ul>
+<p>可写流上最重要的两个事件</p>
+<ul>
+<li>drain事件， 这是一个表示可写流可以接受更多数据的信号</li>
+<li>finish事件， 当所有数据都被写入底层系统后会触发此事件</li>
+</ul>
+<h1><a class="header" href="#协议相关" id="协议相关">协议相关</a></h1>
+<h4><a class="header" href="#412-tcp流是分段的-由ip分组传送" id="412-tcp流是分段的-由ip分组传送">4.1.2 tcp流是分段的， 由IP分组传送</a></h4>
+<p>TCP数据是通过名为<strong>IP分组</strong>的小数据块来发送的。</p>
+<p>HTTP要传送一条报文时， 会以流的形式将报文数据的内容通过一条打开的TCP连接按序传输， TCP收到数据流后，会将数据流砍成段的小数据块， 并将段用封装在IP分组中， 通过因特网进行传输。</p>
+<p>每个IP分组中包含</p>
+<ul>
+<li>一个IP分组首部(通常20个字节)</li>
+<li>一个TCP段首部（通常20个字节）</li>
+<li>一个TCP数据块</li>
+</ul>
+<h4><a class="header" href="#413-保持tcp连接持续不断的运行" id="413-保持tcp连接持续不断的运行">4.1.3 保持TCP连接持续不断的运行</a></h4>
+<p>IP协议到机器， TCP协议通过端口到应用</p>
+<p>![屏幕快照 2020-06-11 上午8.42.32](../assets/屏幕快照 2020-06-11 上午8.42.32.png)</p>
+<h4><a class="header" href="#414-用tcp套接字编程" id="414-用tcp套接字编程">4.1.4 用TCP套接字编程</a></h4>
+<p>略</p>
+<h3><a class="header" href="#42-对tcp性能的考虑" id="42-对tcp性能的考虑">4.2 对TCP性能的考虑</a></h3>
+<h4><a class="header" href="#422-性能聚焦区域" id="422-性能聚焦区域">4.2.2 性能聚焦区域</a></h4>
+<ul>
+<li>TCP连接建立握手</li>
+<li>TCP慢启动拥塞控制</li>
+<li>数据聚集的Nagle算法</li>
+<li>用于捎带确认的TCP延迟确认算法</li>
+<li>TIME_WAIT时延和端口耗尽</li>
+</ul>
+<h4><a class="header" href="#423-握手时延" id="423-握手时延">4.2.3 握手时延</a></h4>
+<p>现代的TCP栈都允许在客户端第三次握手的确认分组中发送数据</p>
+<h4><a class="header" href="#424-延迟确认" id="424-延迟确认">4.2.4 延迟确认</a></h4>
+<p>TCP实现了自己的确认机制来确保数据的成功传输， 每个TCP段都有一个序列号和数据完整性校验和，每个段的接收者收到完好的段时， 都会向发送者回送一个小的确认分组， 如果指定时间内没有收到确认信息就重新发送数据。 由于确认报文很小， 所以通常和数据分组合并到一起发送。</p>
+<p>延迟确认算法在一个 特性的时间窗口内将输出确认放在缓冲区内， 以寻找能够捎带它的输出数据分组， 如果没有数据分组， 那么就单独发送。</p>
+<h4><a class="header" href="#425-tcp慢启动" id="425-tcp慢启动">4.2.5 TCP慢启动</a></h4>
+<p>TCP数据传输的性能还取决于TCP连接的<strong>使用期</strong> ， TCP会随时间进行自我调谐，起初限制最大速度， 传输成功后提升速度（比如每次提升一倍的传输分组数）， 这个过程叫<strong>慢启动</strong> ， 用于防止因特网的突然过载和拥塞。</p>
+<h1><a class="header" href="#算法相关" id="算法相关">算法相关</a></h1>
+<p>TopK 问题可以使用大顶堆 或 小顶堆 来实现， </p>
+<p>堆是具有以下性质的完全二叉树</p>
+<p>大顶堆： 每个节点的值都大于或等于其左右孩子节点的值</p>
+<p>小顶堆： 每个节点的值都小于或等于其左右孩子节点的值</p>
+<p>堆可以映射为数组， 此时</p>
+<p>大顶堆： a[i] &gt;= a[2i + 1] &amp;&amp; a[i] &gt;= a[2i + 2]</p>
+<p>小顶堆： a[i] &lt;= a[2i + 1] &amp;&amp; a[i] &lt;= a[2i + 2]</p>
+<p>排序步骤</p>
+<ol>
+<li>把默认数组先当做一个完全二叉树， 那么第一个非叶子节点就是 index =  Math.floor(length / 2) - 1  ， i记为数组长度</li>
+<li>比较index 和 2 * index + 1  以及 2 * index + 2 索引位置的值， 把该处先改为大顶堆</li>
+<li>递减index 到 0， 此时最大的值就在堆顶</li>
+<li>交换堆顶和结尾倒数第i个值， 此时最大值在结尾</li>
+<li>递减i， 重复2-4， 依次得到topK</li>
+</ol>
+<pre><code class="language-js">function topKMaxOfArr(k, arr) {
+    function swap(a, b) {
+        var t = arr[a];
+        arr[a] = arr[b];
+        arr[b] = t;
+    }
+
+    var i, j;
+    //只需循环k次
+    for (i = arr.length; i &gt; arr.length - k; i--) {
+
+        for (j = Math.floor(i / 2) - 1; j &gt;= 0; j--) {
+            if (arr[j] &lt; arr[2 * j + 1]) {
+                swap(j, 2 * j + 1);
+            }
+            if (2 * j + 2 &lt; i &amp;&amp; arr[j] &lt; arr[2 * j + 2]) {
+                swap(j, 2 * j + 2);
+            }
+        }
+        swap(i - 1, 0);
+    }
+
+    return arr.slice(arr.length - k);
+}
+
+//用法示例
+var arr = [4, 2, 5, 6, 77, 33, 21, 44, 55, 22], k = 5;
+console.log(topKMaxOfArr(k, arr));//返回数组[22, 33, 44, 55, 77]
+</code></pre>
+<p>file:///Applications/Typora.app/Contents/Resources/TypeMark/app/main.js</p>
+<p>解法一</p>
+<pre><code class="language-js">var lengthOfLongestSubstring = function(s) {
+    if (!s) return 0
+    var max = 1;
+    let map;
+    for (let i = 1; i &lt; s.length; i++) {
+        let charI = s[i];
+        map = {
+            [charI]: true
+        };
+        let maxI = 1
+        for (let j = i - 1; j &gt;= 0; j--) {
+            let charJ = s[j];
+            if (map[charJ]) {
+                maxI = i - j;
+                break;
+            } else {
+                map[charJ] = true;
+                maxI = maxI + 1;
+            }
+        }
+        max = Math.max(maxI, max)
+    }
+    return max
+};
+</code></pre>
+<p>解法二</p>
+<pre><code class="language-js">var lengthOfLongestSubstring = function(s) {
+    if (!s) return 0;
+    var max = 0;
+    let map = {};
+    for (let i = 0, j = 0; i &lt; s.length; i++) {
+        let char = s[i];
+        if (map[char] !== undefined) {
+            j = Math.max(map[char] + 1, j)
+        }
+        max = Math.max(max, i - j + 1)
+        map[char] = i
+    }
+    return max
+};
+</code></pre>
+<h2><a class="header" href="#方法1" id="方法1">方法1</a></h2>
+<pre><code class="language-js">var getNumChar = function (numStr) {
+    return String.fromCharCode(Number.parseInt(numStr) + 97)
+}
+var translateNum = function(num) {
+    var str = '' + num;
+    var list = []
+    var map = {}
+    var len = str.length
+    for (let i = 0; i &lt; len; i++) {
+        map[i] = map[i] || []
+        map[i].push(str[i])
+        if (i &lt; len - 1 &amp;&amp; +str[i] &gt; 0 &amp;&amp; +str[i] &lt; 3  &amp;&amp;  Number.parseInt(str[i] + str[i + 1]) &lt;= 25) {
+            map[i].push(str[i] + str[i + 1])
+        }
+    }
+    var buildResult = function (result, index) {
+        if (index &gt; len - 1) {
+            list.push(result)
+        }
+        var curr = map[index]
+        for (let i = 0; curr &amp;&amp; i &lt; curr.length; i++) {
+            buildResult(result + getNumChar(curr[i]), index + curr[i].length)
+        }
+    }
+    buildResult('', 0)
+    return list.length
+};
+</code></pre>
+<pre><code class="language-js">function TreeNode (val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
+// 递归解法
+
+var inorderTraversal = function(root) {
+    var result = []
+    var inorderTraversalNode = function (node) {
+        if (!node) return
+        if (node.left) inorderTraversalNode(node.left)
+        result.push(node.val)
+        if (node.right) inorderTraversalNode(node.right)
+    }
+    inorderTraversalNode(root)
+    return result
+};
+
+//  非递归解法， 用栈来模拟递归解法的调用栈
+
+// 栈S;
+// p= root;
+// while(p || S不空){
+//     while(p){
+//         p入S;
+//         p = p的左子树;
+//     }
+//     p = S.top 出栈;
+//     访问p;
+//     p = p的右子树;
+// }
+
+var inorderTraversal = function(root) {
+    var result = []
+    var curr = root
+    var stack = []
+    while (curr || stack.length) {
+        while (curr) {
+            stack.push(curr)
+            curr = curr.left
+        }
+        curr = stack.pop()
+        result.push(curr.val)
+        curr = curr.right
+    }
+    return result
+}
+
+
+var root = new TreeNode(1)
+var node2 = new TreeNode(2)
+var node3 = new TreeNode(3)
+
+root.right = node2
+node2.left = node3
+
+console.log(inorderTraversal(root))
+</code></pre>
+<pre><code class="language-js">function TreeNode (val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
+// 递归解法
+
+// function preorderTraversal (root) {
+//     var result = []
+//     var preorderTraversalNode = function (node) {
+//         if (node) {
+//             result.push(node.val)
+//             preorderTraversalNode(node.left)
+//             preorderTraversalNode(node.right)
+//         }
+//     }
+//     preorderTraversalNode(root)
+//     return result
+// }
+
+//  非递归解法， 用栈来模拟递归解法的调用栈
+
+function preorderTraversal (root) {
+    var result = []
+    var queue = []
+    var curr = root
+    while (curr) {
+        result.push(curr.val)
+        curr.right &amp;&amp; queue.push(curr.right)
+        curr.left &amp;&amp; queue.push(curr.left)
+        curr = queue.pop()
+    }
+    return result
+}
+
+
+var root = new TreeNode(1)
+var node2 = new TreeNode(2)
+var node3 = new TreeNode(3)
+
+root.right = node2
+node2.left = node3
+
+console.log(preorderTraversal(root))
+</code></pre>
+<pre><code class="language-js">/**
+ * initialize your data structure here.
+ */
+var MinStack = function() {
+    this.data = []
+    this.min_stack = [Infinity]
+};
+
+/** 
+ * @param {number} x
+ * @return {void}
+ */
+MinStack.prototype.push = function(x) {
+    this.data.push(x);
+    this.min_stack.unshift(Math.min(x, this.min_stack[0]))
+};
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function() {
+    if (!this.data.length) return;
+    var val = this.data.pop();
+    this.min_stack.shift()
+    return val
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.top = function() {
+    if (!this.data.length) return;
+    return this.data[this.data.length - 1]
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.getMin = function() {
+    if (!this.min_stack.length) return
+    return this.min_stack[0]
+};
+
+var minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+console.log(minStack.getMin());
+console.log(minStack.pop());
+console.log(minStack.top()) 
+console.log(minStack.getMin());
+</code></pre>
+<pre><code class="language-js">var twoSum = function(numbers, target) {
+    let left = 0;
+    let right = numbers.length - 1;
+    while (left &lt; right) {
+        if (numbers[left] + numbers[right] === target) {
+            return [left + 1, right + 1]
+        } else if (numbers[left] + numbers[right] &lt; target) {
+            left++
+        } else {
+            right--
+        }
+    }
+};
+console.log(twoSum([2, 7, 11, 15], 9))
+</code></pre>
+<pre><code class="language-js">function coinExchange (coins, amount) {
+    const dp = []
+    dp[0] = 0
+    for (let i = 1; i &lt;= amount; i++) {
+        dp[i] = Number.MAX_SAFE_INTEGER
+        for (let j = 0; j &lt; coins.length; j++) {
+            const coin = coins[j]
+            if (i - coin &gt;= 0) {
+                dp[i] = Math.min(dp[i - coin] + 1, dp[i])
+            }
+        }
+    }
+
+    return dp[amount] !== Number.MAX_SAFE_INTEGER ? dp[amount] : -1
+}
+
+console.log(coinExchange([1, 2, 5], 11))
+</code></pre>
+<pre><code class="language-js">var canFinish = function (piles, speed, hour) {
+    var time = 0;
+    piles.forEach(function (pile) {
+        time += Math.floor(pile / speed) + (((pile % speed) &gt; 0) ? 1 : 0);
+    });
+
+    return time &lt;= hour;
+}
+var minEatingSpeed = function(piles, H) {
+    var max = Math.max.apply(null, piles);
+    var left = 0;
+    var right = max;
+    while (left &lt; right) {
+        var mid = left + (Math.floor((right - left) / 2));
+        if (canFinish(piles, mid, H)) {
+            right = mid;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return left;
+};
+</code></pre>
+<p>Rust编程之道</p>
+<h2><a class="header" href="#21-rust语言的基本构成" id="21-rust语言的基本构成">2.1 Rust语言的基本构成</a></h2>
+<ul>
+<li>语言规范</li>
+<li>编译器</li>
+<li>核心库</li>
+<li>标准库</li>
+<li>包管理器</li>
+</ul>
+<p>rustc负责将Rust源代码编译为可执行文件或其它库文件</p>
+<p>rustc跨平台、支持交叉编译、使用LLVM作为编译器后端、rustc也使用Rust编写</p>
+<p>Rust语言的语法是由核心库和标准库共同提供， 核心库是标准库的基础</p>
+<p>在顶部使用<code>#! [no_std]</code> 来使用核心库， 可以用来做嵌入式应用开发</p>
+<p>标准库除了与核心库一直的trait、基本数据类型、功能性数据类型和常用宏外， 还提供了并发、IO、运行时、平台抽象、底层操作接口、可选和错误处理类型等。</p>
+<p>包管理器</p>
+<pre><code class="language-shell">cargo new bin_crate
+cargo new --lib lib_crate
+</code></pre>
+<p>通过cargo build和cargo run命令可以对项目进行编译和运行</p>
+<h2><a class="header" href="#22-语句和表达式" id="22-语句和表达式">2.2 语句和表达式</a></h2>
+<p>语句是指要执行的一些操作和产生副作用的表达式</p>
+<p>语句分为声明语句和表达式语句</p>
+<p>名字以叹号结尾， 并且可以想函数一样被调用的语句， 在Rust中叫做宏</p>
+<p>块表达式是由一对花括号和一系列表达式组成， 它总是返回块中最后一个表达式的值，如果最后一个语句是宏语句， 就返回单元值()</p>
+<h2><a class="header" href="#23-变量和绑定" id="23-变量和绑定">2.3 变量和绑定</a></h2>
+<p>通过<code>let</code> 关键字来创建变量</p>
+<p>Rust中的表达式一般可以分为位置表达式和值表达式， 通过位置表达式可以对某个数据单元的内存进行读写， 只要是进行写操作</p>
+<p>值表达式一般只引用了某个存储单元地址中的数据， 它相当于数据值，只能进行读操作</p>
+<p>let 关键字声明的位置表达式默认不可变，为不可变绑定。 可以添加mut 关键字声明可变的位置表达式， 即可变绑定， 可变绑定可以正常修改和赋值</p>
+<p>每个变量绑定实际上都拥有该存储单元的所有权， 引用赋值给其它变量， 这种转移内存地址的行为就是所有权的转移， 有时不需要转移所有权， Rust提供引用操作符 <code>&amp;</code> 可以直接获取表达式的存储单元地址，即内存位置，可以通过内存位置对存储进行读取。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let a = [1, 2, 3];
+  let b = &amp;a; // 这不会引起所有权的转移， 因为右侧变为了位置上下文， 而非默认的值上下文
+  println!(&quot;{:p}&quot;, b); // 0x7ffXXXXXXX 这个{：p} 格式打印指针地址
+  let mut c = vec![1, 2, 3];
+  let d = &amp;mut c; // 获取可变引用
+  d.push(4);
+  println!(&quot;{:?}&quot;, d); // [1, 2, 3, 4];
+  let e = &amp;42;
+  assert_eq!(42, *e);
+}
+</code></pre></pre>
+<h2><a class="header" href="#24-函数和闭包" id="24-函数和闭包">2.4 函数和闭包</a></h2>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn fizz_buzz(num: i32) -&gt; String{
+  //...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>rust编译器会严格按照上面的类型声明， 如果不是的话就会编译报错</p>
+<p>Rust语言的作用域是静态作用域， 即词法作用域， 由一对花括号来开辟作用域， 其作用域在词法分析阶段就已经确定了， 不会动态改变</p>
+<p>let声明变量之后还可以再次声明变量绑定， 这种连续用let定义同名变量的做法叫做变量遮蔽Variable Shadow， 最终变量的值是由最后一个变量定义所决定的。</p>
+<p>Rust中函数是一等公民， 这意味着函数自身就可以作为函数的参数和返回值使用。</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn math(op: fn(i32, i32) -&gt; i32, a: i32, b: i32) -&gt; i32 {
+  // ...
+}
+fn true_maker() -&gt; fn() -&gt; bool {
+  fn is_true() -&gt; bool { true }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>CTFE编译时函数执行， Compile-Time Function Execution</p>
+<p>闭包也叫匿名函数， 有一下几个特点</p>
+<ul>
+<li>可以想函数一样被调用</li>
+<li>可以驳火上下文环境中的自由变量</li>
+<li>可以自动推断输入和返回的类型</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let out = 42;
+  // fn add(i: i32, j: i32) -&gt; i32 { i + j + out } 报错
+  let closure_annotatedd = |i: i32, j: i32| -&gt; i32 { i + j + out };
+  let closure_inferred = |i, j| i + j + out;
+  assert_eq!(45, closure_inferred(1, 2));
+}
+</code></pre></pre>
+<p>闭包和函数一个重要的区别是闭包可以捕获外部变量， 而函数不可以</p>
+<p>闭包也可以作为函数参数和返回值， 但使用起来略有区别</p>
+<pre><pre class="playground"><code class="language-rust">fn math&lt;F: Fn() -&gt; i32&gt;(op: F) -&gt; i32 {
+  op()
+}
+
+fn main () {
+  let a = 2;
+  let b = 3;
+  assert_eq!(math(|| a + b), 5);
+}
+</code></pre></pre>
+<p>math参数是一个泛型F， 并且该泛型受Fn() -&gt; i32 trait的限定， 代表该函数只允许实现Fn() -&gt; i32 trait 的类型作为参数</p>
+<p>Rust中闭包实际上就是由一个匿名函数体和trait来组合实现的</p>
+<p>闭包同样也可以作为返回值</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn two_times_impl () -&gt; impl Fn(i32) -&gt; i32 {
+  let i = 2;
+  move |j| i * j
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>返回闭包时使用了move关键字， 这是因为一般情况下， 闭包默认会按引用捕获变量， 如果将闭包返回， 引用也会跟着返回， 但是在整个函数调用完毕后， 函数内的本地变量i就会被销毁， 那么随闭包返回的变量i的引用就会成为悬垂指针， 使用move关键字将捕获变量i的所有权转移到闭包中， 就不会按引用进行捕获变量</p>
+<h2><a class="header" href="#25-流程控制" id="25-流程控制">2.5 流程控制</a></h2>
+<p>rust中不叫流程控制语句， 而叫流程控制表达式</p>
+<p>条件表达式</p>
+<p>if表达式的分支必须返回同一个类型的值才可以， 这也是rust没有三元运算符的原因。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let n = 13;
+  let big_n = if (n &lt; 10 &amp;&amp; n &gt; -10) {
+    10 * n
+  } else {
+    n / 2
+  };
+  assert_eq!(big_n, 6)
+}
+</code></pre></pre>
+<p>for...in表达式</p>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+  for n in 1..101 {
+    println!(&quot;{}&quot;, n);
+  }
+}
+</code></pre></pre>
+<p>while表达式</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn while_true(x: i32) -&gt; i32 {
+  while true {
+    return x + 1;
+  }
+  // x
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>上面的代码会报错， 因为while true循环返回的时单元值， 而函数返回值是i32， 所以不匹配</p>
+<p>这是因为Rust编译器在对while循环做流分析 Flow Sensitive的时候不会检查循环条件， 编译器会认为while循环条件可真可假， 所以循环体内的表达式就会被忽略， 因此只知道while_true 返回的是单元值</p>
+<p>, 可以在最后一行加x变量</p>
+<p>match表达式</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let number = 42;
+  match number {
+    0 =&gt; println!(&quot;origin&quot;),
+    1...3 =&gt; println!(&quot;all&quot;),
+    | 5 | 7 | 13 =&gt; println!(&quot;bad luck&quot;),
+    n @ 42 =&gt; println!(&quot;{}&quot;, n),
+    _ =&gt; println!(&quot;common&quot;),
+  }
+}
+</code></pre></pre>
+<p>上面的例子演示了 单个值、范围、多个值、匹配并绑定给变量（绑定模式）、通配符的情况</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let mut v = vec![1,2,3,4,5];
+  loop {
+    match v.pop() {
+      Some(x) =&gt; println!(&quot;{}&quot;, x),
+      None =&gt; break,
+    }
+  }
+}
+</code></pre></pre>
+<p>if let 表达式</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let boolean = true;
+let mut binary = 0;
+if let true = boolean {
+  binary = 1;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>While let表达式</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let mut v = vec![1,2,3,4,5];
+  while let Some(x) = v.pop() {
+    println!(&quot;{}&quot;, x);
+  }
+}
+</code></pre></pre>
+<h2><a class="header" href="#26-基本数据类型" id="26-基本数据类型">2.6 基本数据类型</a></h2>
+<p><strong>布尔类型</strong></p>
+<p>布尔类型只有两个值<code>true</code> 和 <code>false</code> </p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let x = true;
+let y: bool = false;
+<span class="boring">}
+</span></code></pre></pre>
+<p>任意比较操作都会产生bool类型</p>
+<p>也可以使用as 操作符将bool类型转换为数组0 和 1， 但是rust并不支持将数字转换为bool类型</p>
+<p><strong>基本数字类型</strong></p>
+<p>Rust提供的基本数字类型大致上可以分为三类： 固定大小的类型、动态大小的类型和浮点数</p>
+<ul>
+<li>固定大小的类型</li>
+</ul>
+<p>包括无符号整数和 符号整数</p>
+<p>u8、u16、u32、u64、u128</p>
+<p>i8、i16、i32、i64、i128（-2^127 ~ 2^127 -1）</p>
+<ul>
+<li>动态大小的类型</li>
+</ul>
+<p>usize 根据机器的字长 32或64</p>
+<p>isize 根据机器字长</p>
+<ul>
+<li>浮点数类型</li>
+</ul>
+<p>f32和 f64</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let num = 42u32;
+  let num: u32 = 42;
+  let num = 0x2A;
+  let num = 0o106; // 八进制
+  let num = 0b1001_1100; // 二进制
+  assert_eq!(b'*', 42u8);
+  assert_eq!(b'\'', 39u8);
+}
+</code></pre></pre>
+<ul>
+<li>
+<p>字符类型</p>
+<p>Rust使用单引号来定义字符类型，代表一个unicode标量值， 每个字符占4个字节</p>
+</li>
+<li>
+<p>数组类型</p>
+<p>是Rust内建的原始集合类型，数组大小固定， 元素均为同类型，默认不可变。</p>
+<p>数组的类型签名为[T;N], T是一个泛型标记，N是数组长度， 必须编译时确定其值</p>
+</li>
+</ul>
+<h1><a class="header" href="#go语言" id="go语言">Go语言</a></h1>
+<h1><a class="header" href="#go语言圣经读书笔记" id="go语言圣经读书笔记">Go语言圣经读书笔记</a></h1>
+<h1><a class="header" href="#程序结构" id="程序结构">程序结构</a></h1>
+<h2><a class="header" href="#21-命名" id="21-命名">2.1 命名</a></h2>
+<p>Go语言的命名规则：</p>
+<blockquote>
+<p>一个名字必须以字母或下划线开头， 后面可以跟任意数量的字母、数字、下划线， 大小写敏感。</p>
+</blockquote>
+<p>Go语言的关键字有</p>
+<pre><code>break      default       func     interface   select
+case       defer         go       map         struct
+chan       else          goto     package     switch
+const      fallthrough   if       range       type
+continue   for           import   return      var
+</code></pre>
+<p>此外还有30个预定义的名字， 主要对应内建的常量、类型、函数</p>
+<pre><code>内建常量: true false iota nil
+
+内建类型: int int8 int16 int32 int64
+         uint uint8 uint16 uint32 uint64 uintptr
+         float32 float64 complex128 complex64
+         bool byte rune string error
+
+内建函数: make len cap new append copy close delete
+          complex real imag
+          panic recover
+</code></pre>
+<p>这些预定义的名字并不是关键字， 可以在定义中重新使用它们</p>
+<p>名字定义在函数内部， 只有函数内生效。 </p>
+<p>如果定义在函数外部， 那么当前包所有的文件都可以访问</p>
+<p>名字开头字母的大小写决定了名字在包外的可见性</p>
+<p>包名一般总是小写字母</p>
+<p>名字长度没有限制， 但尽量使用短小的名字， 推荐驼峰式命名</p>
+<h2><a class="header" href="#22-声明" id="22-声明">2.2 声明</a></h2>
+<p>Go语言中主要有四种类型的声明语句： <code>var</code> 、<code>const</code> 、<code>type</code> 、<code>func</code> 分别对应变量、常量、类型和函数实体对象的声明。</p>
+<p>每个go源文件以包声明语句开始， 其后跟import语句导入依赖的其它包， 然后是包一级的类型、变量、常量、函数声明语句。 </p>
+<p>包级别声明的语句在整个包的每个源文件中都可以访问， 而不仅仅在其声明语句所在的源文件中</p>
+<p>一个函数的声明由函数名字、参数列表、一个可选的返回值列表 和包含函数定义的函数体组成</p>
+<pre><code class="language-go">func fToC(f float64) float64 {
+    return (f - 32) * 5 / 9
+}
+</code></pre>
+<h2><a class="header" href="#23-变量" id="23-变量">2.3 变量</a></h2>
+<pre><code class="language-Go">var 变量名字 类型 = 表达式
+</code></pre>
+<p>类型和表达式可以省略其中的一个， 如果不声明表达式， 那么将使用零值初始化该变量。 数值类型为0， 布尔false，字符串为空字符串， 接口或引用类型为nil</p>
+<p>零值初始化机制可以确保每个声明的变量总是有一个良好定义的值， 因此Go中不存在未初始化的变量</p>
+<p>也可以在声明语句中同时声明一组变量或用一组初始化表达式声明并初始化一组变量， 如果省略每个变量的类型，将可以同时声明多个类型不同的变量</p>
+<pre><code class="language-go">var i, j, k int                 // int, int, int
+var b, f, s = true, 2.3, &quot;four&quot; // bool, float64, string
+</code></pre>
+<p>初始化表达式可以是字面量或任意表达式， 在包级别声明的变量会在main函数执行前完成初始化， 局部变量将在声明语句被执行到的时候进行初始化</p>
+<p>一组变量也可以通过调用一个函数， 由函数返回的多个返回值初始化</p>
+<pre><code class="language-go">var f, err = os.Open(name)
+</code></pre>
+<p>在函数内部有一种称为简短变量声明语句的形式可以用于声明和初始化局部变量。</p>
+<pre><code class="language-go">anim := gif.GIF{LoopCount: nframes}
+freq := rand.Float64() * 3.0
+i, j := 0, 1
+f, err := os.Open(name)
+</code></pre>
+<p>简短变量声明被广泛用于大部分的局部变量的声明和初始化，var形式的声明通常用于需要显示指定变量类型的地方或者变量稍后才会被赋值的地方</p>
+<p>简短变量声明语句中必须至少要声明一个新的变量， 否则代码不能编译通过</p>
+<pre><code class="language-go">f, err := os.Open(infile)
+// ...
+f, err := os.Create(outfile)
+</code></pre>
+<p>解决办法是第二个简短变量声明语句改成普通的多重赋值语句</p>
+<h3><a class="header" href="#指针" id="指针">指针</a></h3>
+<p>并不是每个值都会有一个内存地址， 但是对于每一个变量必然有对应的内存地址， 通过指针， 我们可以读取或更新对应变量的值， 而不需要知道变量的名字。</p>
+<p>果用“var x int”声明语句声明一个x变量，那么&amp;x表达式（取x变量的内存地址）将产生一个指向该整数变量的指针，指针对应的数据类型是<code>*int</code>，指针被称之为“指向int类型的指针”。如果指针名字为p，那么可以说“p指针指向变量x”，或者说“p指针保存了x变量的内存地址”。同时<code>*p</code>表达式对应p指针指向的变量的值。一般<code>*p</code>表达式读取指针指向的变量的值，这里为int类型的值，同时因为<code>*p</code>对应一个变量，所以该表达式也可以出现在赋值语句的左边，表示更新指针所指向的变量的值</p>
+<pre><code class="language-Go">x := 1
+p := &amp;x         // p, of type *int, points to x
+fmt.Println(*p) // &quot;1&quot;
+*p = 2          // equivalent to x = 2
+fmt.Println(x)  // &quot;2&quot;
+</code></pre>
+<p>变量有时候被称为可寻址的值</p>
+<p>任何类型的指针的零值都是nil， 如果是有效变量那么 p  != nil</p>
+<pre><code class="language-go">var x, y int
+fmt.Println(&amp;x == &amp;x, &amp;x == &amp;y, &amp;x == nil) // &quot;true false false&quot;
+</code></pre>
+<pre><code class="language-go">func f() *int {
+    v := 1
+    return &amp;v
+}
+fmt.Println(f() == f()) // &quot;false&quot;
+</code></pre>
+<pre><code class="language-go">func incr(p *int) int {
+    *p++ // 非常重要：只是增加p指向的变量的值，并不改变p指针！！！
+    return *p
+}
+</code></pre>
+<p>每次对一个变量取地址或者复制指针， 就为原变量创建了一个新的别名，所以我们可以不用名字而访问到一个变量</p>
+<h3><a class="header" href="#new函数" id="new函数">new函数</a></h3>
+<p>另一个创建变量的方法是调用内建的new函数， <code>new(T)</code>  将创建一个T类型的匿名变量， 初始化为T类型的零值， 返回变量地址，即指针类型 *T</p>
+<pre><code class="language-go">p := new(int)   // p, *int 类型, 指向匿名的 int 变量
+fmt.Println(*p) // &quot;0&quot;
+*p = 2          // 设置 int 匿名变量的值为 2
+fmt.Println(*p) // &quot;2&quot;
+</code></pre>
+<h3><a class="header" href="#变量的声明周期" id="变量的声明周期">变量的声明周期</a></h3>
+<p>包一级声明的变量生命周期和整个程序的运行周期一致</p>
+<p>局部变量的生命周期是动态的，不再引用时被垃圾回收机制回收</p>
+<p>局部变量可能在函数返回之后依然存在， 只要是有效引用</p>
+<pre><code class="language-Go">var global *int
+
+func f() {
+    var x int
+    x = 1
+    global = &amp;x
+}
+</code></pre>
+<p>x会从函数f中逃逸了</p>
+<h2><a class="header" href="#24-赋值" id="24-赋值">2.4 赋值</a></h2>
+<pre><code class="language-Go">x = 1                       // 命名变量的赋值
+*p = true                   // 通过指针间接赋值
+person.name = &quot;bob&quot;         // 结构体字段赋值
+count[x] = count[x] * scale // 数组、slice或map的元素赋值
+</code></pre>
+<h3><a class="header" href="#元组赋值" id="元组赋值">元组赋值</a></h3>
+<pre><code class="language-Go">x, y = y, x
+a[i], a[j] = a[j], a[i]
+f, err = os.Open(&quot;foo.txt&quot;)
+_, err = io.Copy(dst, src) // 丢弃字节数
+</code></pre>
+<h3><a class="header" href="#可赋值性" id="可赋值性">可赋值性</a></h3>
+<p>除了显示赋值形式， 还有很多隐式赋值， 比如函数调用对参数变量赋值， 返回语句将结果赋值给结果变量，复合类型的字面量赋值行为</p>
+<pre><code class="language-Go">medals := []string{&quot;gold&quot;, &quot;silver&quot;, &quot;bronze&quot;}
+</code></pre>
+<p>这些 必须满足赋值语句左边的变量和右边最终求值必须有相同的类型，赋值才是被允许的， nil可以赋值给任何指针或引用类型的变量</p>
+<p>两个值是否可以用 == 和 !=  进行相等比较的能力也和可赋值能力有关系， 第二个值必须是对第一个值对应的变量是可赋值性的。</p>
+<h2><a class="header" href="#25-类型" id="25-类型">2.5 类型</a></h2>
+<p>一个类型声明语句创建了一个新的类型名称， 可以用来分割不同概念的类型， 这样即使他们的底层类型相同也是不兼容的</p>
+<pre><code class="language-go">type 类型名字 底层类型
+</code></pre>
+<p>类型声明一般出现在包一级， 如果类型名字首字母大写， 在外部也可以使用</p>
+<pre><code class="language-go">type Celsius float64
+type Fahrenheit float64 // 华氏温度
+
+const (
+    AbsoluteZeroC Celsius = -273.15 // 绝对零度
+    FreezingC     Celsius = 0       // 结冰点温度
+    BoilingC      Celsius = 100     // 沸水温度
+)
+func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
+</code></pre>
+<h2><a class="header" href="#26-包和文件" id="26-包和文件">2.6 包和文件</a></h2>
+<p>按照惯例，一个包的名字和包的导入路径的最后一个字段相同</p>
+<p>包的初始化首先是解决包级变量的依赖顺序， 然后按照包级变量声明出现的顺序依次初始化</p>
+<pre><code class="language-Go">var a = b + c // a 第三个初始化, 为 3
+var b = f()   // b 第二个初始化, 为 2, 通过调用 f (依赖c)
+var c = 1     // c 第一个初始化, 为 1
+
+func f() int { return c + 1 }
+</code></pre>
+<p>如果包中有多个go源文件， 他们将按照发给编译器的顺序进行初始化，go构建工具首先对文件名进行排序， 然后依次调用编译器编译</p>
+<p>每个文件中可以包含多个init初始化函数， 该函数除了不能被调用和引用外， 其它行为和普通函数类似，它们按照声明的顺序被自动调用</p>
+<p>包在解决依赖的前提下， 以导入声明的顺序初始化， 每个包初始化一次</p>
+<p>有时也可以用匿名函数进行初始化处理</p>
+<pre><code class="language-Go">var pc [256]byte = func() (pc [256]byte) {
+    for i := range pc {
+        pc[i] = pc[i/2] + byte(i&amp;1)
+    }
+    return
+}()
+</code></pre>
+<h2><a class="header" href="#27-作用域" id="27-作用域">2.7 作用域</a></h2>
+<pre><code class="language-Go">func main() {
+    x := &quot;hello&quot;
+    for _, x := range x {
+        x := x + 'A' - 'a'
+        fmt.Printf(&quot;%c&quot;, x) // &quot;HELLO&quot; (one letter per iteration)
+    }
+}
+</code></pre>
+<p>x每个声明在不同的词法域，一个在函数体词法域，一个在for隐式的初始化词法域，一个在for循环体词法域；只有两个块是显式创建的：</p>
+<h1><a class="header" href="#基础数据类型" id="基础数据类型">基础数据类型</a></h1>
+<p>Go数据类型分为四类：</p>
+<ul>
+<li>基础数据类型</li>
+<li>复合类型</li>
+<li>引用类型</li>
+<li>接口类型</li>
+</ul>
+<h2><a class="header" href="#31-整型" id="31-整型">3.1 整型</a></h2>
+<p>数值类型分类整型、浮点数、复数</p>
+<p>int8 int16 int32 int64</p>
+<p>uint8 uint16 uint32 uint64</p>
+<p>还有两种对应特定CPU平台机器字大小的有符号和无符号整数int 和 uint,   32bit 或 64bit， 不同的编译器即使在相同硬件平台上可能产生不同的大小</p>
+<p>Unicode字符rune类型和int32等价的类型， 通常表示一个Unicode码点， 可以互换使用</p>
+<p>byte是uint8的等价类型</p>
+<p>还有一种无符号整数 uintptr 没指定大小， 但足够容纳指针， 底层编程才需要</p>
+<pre><code>&amp;      位运算 AND
+|      位运算 OR
+^      位运算 XOR
+&amp;^     位清空 (AND NOT)
+</code></pre>
+<p>对于每种类型T，如果转换允许的话，类型转换操作T(x)将x转换为T类型。许多整数之间的相互转换并不会改变数值；它们只是告诉编译器如何解释这个值。但是对于将一个大尺寸的整数类型转为一个小尺寸的整数类型，或者是将一个浮点数转为整数，可能会改变数值或丢失精度</p>
+<pre><code class="language-Go">f := 3.141 // a float64
+i := int(f)
+f = 1.99
+fmt.Println(int(f)) // &quot;1&quot;
+</code></pre>
+<p>八进制 0 开头， 十六进制0X开头</p>
+<p>fmt包打印一个数值时，我们可以用%d、%o或%x参数控制输出的进制格式</p>
+<h2><a class="header" href="#32-浮点数" id="32-浮点数">3.2 浮点数</a></h2>
+<p>float32  和 float64</p>
+<p>正无穷大和负无穷大，分别用于表示太大溢出的数字和除零的结果</p>
+<p>NaN非数，一般用于表示无效的除法操作结果0/0或Sqrt(-1)</p>
+<p>math.IsNaN用于测试一个数是否是非数NaN,  math.NaN则返回非数对应的值</p>
+<pre><code class="language-Go">nan := math.NaN()
+fmt.Println(nan == nan, nan &lt; nan, nan &gt; nan) // &quot;false false false&quot;
+</code></pre>
+<h2><a class="header" href="#33-复数" id="33-复数">3.3 复数</a></h2>
+<p>complex64  和 complex128, 分别对应float32 和 float64两种浮点数精度， 内置的complex函数用于构造复数， real和imag函数用来返回实部和虚部</p>
+<pre><code class="language-Go">var x complex128 = complex(1, 2) // 1+2i
+var y complex128 = complex(3, 4) // 3+4i
+fmt.Println(x*y)                 // &quot;(-5+10i)&quot;
+fmt.Println(real(x*y))           // &quot;-5&quot;
+fmt.Println(imag(x*y))           // &quot;10&quot;
+</code></pre>
+<p>浮点数面值或一个十进制整数面值后面跟着一个i，例如3.14i或2i，它将构成一个复数的虚部，复数的实部是0</p>
+<h2><a class="header" href="#34-布尔类型" id="34-布尔类型">3.4 布尔类型</a></h2>
+<p>true 和 false</p>
+<p><code>&amp;&amp;</code>的优先级比<code>||</code>高（助记：<code>&amp;&amp;</code>对应逻辑乘法，<code>||</code>对应逻辑加法，乘法比加法优先级要高</p>
+<p>布尔值并不会隐式转换为数字值0或1，反之亦然。必须使用一个显式的if语句辅助转换</p>
+<p>数字到布尔类型的转换</p>
+<pre><code class="language-Go">func itob(i int) bool { return i != 0 }
+</code></pre>
+<h2><a class="header" href="#35-字符串" id="35-字符串">3.5 字符串</a></h2>
+<p>len函数可以返回一个字符串中的字节数目</p>
+<p>索引操作s[i]返回第i个字节的字节值，i必须满足0 ≤ i&lt; len(s)条件约束</p>
+<p>如果试图访问超出字符串索引范围的字节将会导致panic异常</p>
+<p>子字符串操作s[i:j]基于原始的s字符串的第i个字节开始到第j个字节，生成一个新字符串。 i还是j都可能被忽略</p>
+<pre><code class="language-Go">fmt.Println(s[0:5]) // &quot;hello&quot;
+</code></pre>
+<p>字符串可以用==和&lt;进行比较；比较通过逐个字节比较完成的</p>
+<p>一个原生的字符串面值形式是`...`，使用反引号代替双引号。在原生的字符串面值中，没有转义操作；全部的内容都是字面的意思，包含退格和换行，因此一个程序中的原生字符串面值可能跨越多行</p>
+<h3><a class="header" href="#unicode" id="unicode">Unicode</a></h3>
+<p>ASCII 只有7bit表示128个字符， Unicode对应Go语言中的rune整数类型， 是int32等价类型， Unicode超过120000个字符， 可以将一个符文序列表示为int32序列， 这种编码叫做UTF-32 和 UCS-4  ， 这种很简单， 但是会浪费大量存储空间， 大部分都是ASCII码</p>
+<h3><a class="header" href="#utf-8" id="utf-8">UTF-8</a></h3>
+<p>UTF8是一个将Unicode码点编码为字节序列的变长编码. UTF8编码使用1到4个字节来表示每个Unicode码点，ASCII部分字符只使用1个字节，常用字符部分使用2或3个字节表示</p>
+<p>如果第一个字节的高端bit为0，则表示对应7bit的ASCII字符</p>
+<p>如果第一个字节的高端bit是110，则说明需要2个字节；后续的每个高端bit都以10开头。</p>
+<pre><code>0xxxxxxx                             runes 0-127    (ASCII)
+110xxxxx 10xxxxxx                    128-2047       (values &lt;128 unused)
+1110xxxx 10xxxxxx 10xxxxxx           2048-65535     (values &lt;2048 unused)
+11110xxx 10xxxxxx 10xxxxxx 10xxxxxx  65536-0x10ffff (other valuesunused)
+</code></pre>
+<p>变长的编码无法直接通过索引来访问第n个字符， 但是有很多额外的优点</p>
+<ol>
+<li>比较紧凑， 完全兼容ASCII</li>
+</ol>
+<p>unicode/utf8包则提供了用于rune字符序列的UTF8编码和解码的功能</p>
+<p>unicode包提供了诸多处理rune字符相关功能的函数</p>
+<h3><a class="header" href="#字符串和byte切片" id="字符串和byte切片">字符串和Byte切片</a></h3>
+<p>标准库有四个包对字符串处理尤为重要： <code>bytes</code>、<code>strings</code>·、 <code>strconv</code>、<code>unicode</code> </p>
+<p>strings 提供了字符串查询、替换、比较、截断、拆分和合并等功能</p>
+<p>strconv 提供了布尔、整型、浮点数、对应字符串的相互转换， 还提供了双引号转义相关的转换</p>
+<p>unicode包提供了IsDigit、IsLetter、IsUpper和IsLower等类似功能，它们用于给字符分类</p>
+<p>一个字符串是包含的只读字节数组，一旦创建，是不可变的。相比之下，一个字节slice的元素则可以自由地修改。</p>
+<pre><code class="language-Go">s := &quot;abc&quot;
+b := []byte(s)
+s2 := string(b)
+</code></pre>
+<p>整数与字符串转换</p>
+<pre><code class="language-Go">fmt.Println(y, strconv.Itoa(x)) // &quot;123 123&quot;
+fmt.Println(strconv.FormatInt(int64(x), 2)) // &quot;1111011&quot;
+x, err := strconv.Atoi(&quot;123&quot;)             // x is an int
+y, err := strconv.ParseInt(&quot;123&quot;, 10, 64) // base 10, up to 64 bits
+</code></pre>
+<h2><a class="header" href="#36-常量" id="36-常量">3.6 常量</a></h2>
+<p>常量表达式的值在编译期计算，而不是在运行期。每种常量的潜在类型都是基础类型：boolean、string或数字</p>
+<p>常量间的所有算术运算、逻辑运算和比较运算的结果也是常量，对常量的类型转换操作或以下函数调用都是返回常量结果：len、cap、real、imag、complex和unsafe.Sizeof</p>
+<p>常量可以是构成类型的一部分</p>
+<pre><code class="language-Go">const IPv4Len = 4
+var p [IPv4Len]byte
+</code></pre>
+<p>一个常量的声明也可以包含一个类型和一个值，但是如果没有显式指明类型，那么将从右边的表达式推断类型</p>
+<h3><a class="header" href="#iota常量生成器" id="iota常量生成器">iota常量生成器</a></h3>
+<p>用于生成一组以相似规则初始化的常量</p>
+<pre><code class="language-Go">type Weekday int
+
+const (
+    Sunday Weekday = iota
+    Monday
+    Tuesday
+    Wednesday
+    Thursday
+    Friday
+    Saturday
+)
+// 每个常量对应表达式1 &lt;&lt; iota，是连续的2的幂
+type Flags uint
+
+const (
+    FlagUp Flags = 1 &lt;&lt; iota // is up
+    FlagBroadcast            // supports broadcast access capability
+    FlagLoopback             // is a loopback interface
+    FlagPointToPoint         // belongs to a point-to-point link
+    FlagMulticast            // supports multicast access capability
+)
+const (
+    _ = 1 &lt;&lt; (10 * iota)
+    KiB // 1024
+    MiB // 1048576
+    GiB // 1073741824
+    TiB // 1099511627776             (exceeds 1 &lt;&lt; 32)
+    PiB // 1125899906842624
+    EiB // 1152921504606846976
+    ZiB // 1180591620717411303424    (exceeds 1 &lt;&lt; 64)
+    YiB // 1208925819614629174706176
+)
+</code></pre>
+<h3><a class="header" href="#无类型常量" id="无类型常量">无类型常量</a></h3>
+<p>许多常量并没有一个明确的基础类型。编译器为这些没有明确的基础类型的数字常量提供比基础类型更高精度的算术运算；你可以认为至少有256bit的运算精度。</p>
+<p>math.Pi无类型的浮点数常量，可以直接用于任意需要浮点数或复数的地方：</p>
+<p>只有常量可以是无类型的。当一个无类型的常量被赋值给一个变量的时候， 无类型的常量将会被隐式转换为对应的类型，如果转换合法的话</p>
+<h1><a class="header" href="#复合数据类型" id="复合数据类型">复合数据类型</a></h1>
+<p>数组和结构体是聚合类型， 数组由完全相同类型的元素组成， 结构体则是由异构的元素组成的，它们都是固定内存大小的数据结构。 而slice和map是动态数据结构， 动态增加大小</p>
+<h2><a class="header" href="#41-数组" id="41-数组">4.1 数组</a></h2>
+<p>Go语言中很少直接使用数组， 更多使用的是slice</p>
+<pre><code class="language-Go">var a [3]int 
+fmt.Println(a[len(a)-1])
+for i, v := range a {
+    fmt.Printf(&quot;%d %d\n&quot;, i, v)
+}
+var q [3]int = [3]int{1, 2, 3}
+var r [3]int = [3]int{1, 2}
+fmt.Println(r[2]) // &quot;0&quot;
+
+q := [...]int{1, 2, 3} // 根据初始值计算长度
+r := [...]int{99: -1}  // 长度100， 前99个是初始值0， 最后一个是-1
+</code></pre>
+<pre><code class="language-Go">a := [2]int{1, 2}
+b := [...]int{1, 2}
+c := [2]int{1, 3}
+fmt.Println(a == b, a == c, b == c) // &quot;true false false&quot;
+d := [3]int{1, 2}
+fmt.Println(a == d) // compile error: cannot compare [2]int == [3]int
+</code></pre>
+<p>当调用一个函数时， 函数的每个调用参数将会被赋值给函数内部的参数变量， 函数接收到的时复制的副本， 并不是原始的变量， 因此传递大的数组类型是低效的， 并且任何修改只发生在复制出来的数组上， 并不能直接修改调用时的原始数组变量， 这跟其它语言作为引用或指针对象传入调用函数的方式是不一样的。</p>
+<p>所以也可以传入一个数组指针的方式</p>
+<pre><code class="language-Go">func zero(ptr *[32]byte) {
+    for i := range ptr {
+        ptr[i] = 0
+    }
+}
+</code></pre>
+<h2><a class="header" href="#42-slice" id="42-slice">4.2 Slice</a></h2>
+<p>Slice代表变长的序列， 序列的每个元素都有相同的类型， 语法跟数组很像。 一个slice包含指针、长度、容量</p>
+<pre><code class="language-go">Q2 := months[4:7]
+for idx, q := range Q2 {
+    .....
+}
+</code></pre>
+<p>如果切片操作cap(s) 超出了上限，将会导致一个panic异常。</p>
+<p>slice的切片操作s[i:j]，其中0 ≤ i≤ j≤ cap(s)，用于创建一个新的slice，引用s的从第i个元素开始到第j-1个元素的子序列</p>
+<p>字符串也有x[m:n] 返回原始字节系列的子序列</p>
+<pre><code class="language-go">func reverse(s []int) {
+    for i, j := 0, len(s)-1; i &lt; j; i, j = i+1, j-1 {
+        s[i], s[j] = s[j], s[i]
+    }
+}
+</code></pre>
+<pre><code class="language-Go">a := [...]int{0, 1, 2, 3, 4, 5}
+reverse(a[:])
+fmt.Println(a) // &quot;[5 4 3 2 1 0]&quot;
+</code></pre>
+<p>向函数传递slice将允许在函数内部修改底层数组的元素</p>
+<p>一种将slice元素循环向左旋转n个元素的方法是三次调用reverse反转函数，第一次是反转开头的n个元素，然后是反转剩下的元素，最后是反转整个slice的元素</p>
+<pre><code class="language-Go">s := []int{0, 1, 2, 3, 4, 5}
+// Rotate s left by two positions.
+reverse(s[:2])
+reverse(s[2:])
+reverse(s)
+fmt.Println(s) // &quot;[2 3 4 5 0 1]&quot;
+</code></pre>
+<p>slice跟数组声明比较像， 不过没有指定长度</p>
+<p>和数组不同的是slice不能比较， 不能通过 ==操作符来判断两个slice是否含有全部相同的元素。 slice唯一合法的比较操作是和nil 比较</p>
+<p>slice长度为0 不等于就是nil</p>
+<pre><code class="language-Go">var s []int    // len(s) == 0, s == nil
+s = nil        // len(s) == 0, s == nil
+s = []int(nil) // len(s) == 0, s == nil
+s = []int{}    // len(s) == 0, s != nil
+</code></pre>
+<h3><a class="header" href="#append函数" id="append函数">append函数</a></h3>
+<p>append(slice, T) 可用于向slice追加元素 </p>
+<p>可以使用make来扩容</p>
+<pre><code class="language-Go">make([]T, len)
+make([]T, len, cap) // same as make([]T, cap)[:len]
+</code></pre>
+<pre><code class="language-Go">copy(z, x)
+</code></pre>
+<p>copy会将slice内容从x拷贝到目标slice z</p>
+<p>内置的append函数可以追加多个元素</p>
+<pre><code class="language-Go">var x []int
+x = append(x, 4, 5, 6)
+x = append(x, x...) // append the slice x
+</code></pre>
+<pre><code class="language-Go">func appendInt(x []int, y ...int) []int {
+    var z []int
+    zlen := len(x) + len(y)
+    // ...expand z to at least zlen...
+    copy(z[len(x):], y)
+    return z
+}
+</code></pre>
+<h2><a class="header" href="#43-map" id="43-map">4.3 Map</a></h2>
+<p>map中所有的key都有相同的类型， 所有的value也有相同的类型， key必须是支持==比较运算符的数据类型</p>
+<pre><code class="language-Go">ages := make(map[string]int) // mapping from strings to ints
+ages[&quot;alice&quot;] = 31
+ages[&quot;charlie&quot;] = 34
+// 等价于
+ages := map[string]int{
+    &quot;alice&quot;:   31,
+    &quot;charlie&quot;: 34,
+}
+fmt.Println(ages[&quot;alice&quot;]) // &quot;32&quot;
+delete(ages, &quot;alice&quot;) // remove element ages[&quot;alice&quot;]
+ages[&quot;bob&quot;] = ages[&quot;bob&quot;] + 1 // 即使bob不存在也不会报错， 等价于ages[&quot;bob&quot;]++
+for name, age := range ages {
+    fmt.Printf(&quot;%s\t%d\n&quot;, name, age)
+}
+</code></pre>
+<p>不能对map元素进行取址<code>&amp;ages[&quot;bob&quot;]</code> ， map可能随着元素数量的增长而重新分配更大的内存空间， 导致之前的地址无效</p>
+<p>map遍历顺序并不固定， 因此可以遍历出keys， 然后使用 对其进行排序， 在遍历</p>
+<pre><code class="language-Go">if age, ok := ages[&quot;bob&quot;]; !ok { /* ... */ }
+</code></pre>
+<p>和slice一样，map之间也不能进行相等比较；唯一的例外是和nil进行比较。要判断两个map是否包含相同的key和value，我们必须通过一个循环实现</p>
+<pre><code class="language-Go">func equal(x, y map[string]int) bool {
+    if len(x) != len(y) {
+        return false
+    }
+    for k, xv := range x {
+        if yv, ok := y[k]; !ok || yv != xv {
+            return false
+        }
+    }
+    return true
+}
+</code></pre>
+<h2><a class="header" href="#44-结构体" id="44-结构体">4.4 结构体</a></h2>
+<p>结构体是由零个或多个任意类型的值聚合成的实体</p>
+<pre><code class="language-Go">type Employee struct {
+    ID        int
+    Name, Address string
+   	Age   	  int
+    DoB       time.Time
+}
+var dilbert Employee
+dilbert.Age = 18
+name = &amp;dilbert.Name
+*name = &quot;Mr &quot; + *name
+</code></pre>
+<p>如果结构体成员名字是以大写字母开头的， 那么成员就是导出的</p>
+<p>命名为S的结构体不能再包含S类型的成员， 但是可以包含*s类型的指针， 可以创建递归的数据结构</p>
+<pre><code class="language-Go">type tree struct {
+    value       int
+    left, right *tree
+}
+</code></pre>
+<h3><a class="header" href="#结构体字面量" id="结构体字面量">结构体字面量</a></h3>
+<pre><code class="language-Go">type Point struct{ X, Y int }
+p := Point{1, 2}
+anim := gif.GIF{LoopCount: nframes}
+</code></pre>
+<h2><a class="header" href="#101-包简介" id="101-包简介">10.1 包简介</a></h2>
+<ol>
+<li>简化大型程序设计和维护工作</li>
+<li>便于独立开发和维护</li>
+<li>便于项目共享和重用</li>
+<li>作为标识， 避免命名冲突</li>
+<li>实现可见性 和 封装特性</li>
+</ol>
+<p>Go语言编译速度得益于三个语言特性</p>
+<ol>
+<li>所有包必须在开头显示声明， 不用分析整个文件</li>
+<li>禁止包的环状以来</li>
+<li>编译后包的目标文件不仅包含包本身的导出信息， 还记录了包的依赖关系， 编译器只需要读取每个直接导入包的目标文件， 而不需要遍历所有依赖的文件（间接依赖）</li>
+</ol>
+<h2><a class="header" href="#102-导入路径" id="102-导入路径">10.2 导入路径</a></h2>
+<pre><code class="language-go">import (
+    &quot;fmt&quot;
+    &quot;math/rand&quot;
+    &quot;encoding/json&quot;
+
+    &quot;golang.org/x/net/html&quot;
+
+    &quot;github.com/go-sql-driver/mysql&quot;
+)
+</code></pre>
+<h2><a class="header" href="#103-包声明" id="103-包声明">10.3 包声明</a></h2>
+<p>在每个go源文件的开头必须包含包声明语句， 主要目的是确定当前包被其他包导入时默认的标识符</p>
+<p>math/rand包的每个源文件的开头都包含<code>package rand</code>包声明语句，所以当你导入这个包，你就可以用rand.Int、rand.Float64类似的方式访问包的成员</p>
+<p>默认的包名就是包导入路径名的最后一段， 因此<code>math/rand</code> 和 <code>crypto/rand</code> 是有相同的包名， 有三个例外情况</p>
+<ol>
+<li>main包本身的导入路径无关紧要</li>
+<li>包所在的目录中可能有一些文件名为<code>_test.go</code> 为后缀的go源文件</li>
+<li>一些依赖版本号的管理工具会在导入路径后追加版本号信息 <code>gopkg.in/yaml.v2</code></li>
+</ol>
+<h2><a class="header" href="#104-导入声明" id="104-导入声明">10.4 导入声明</a></h2>
+<pre><code class="language-go">import &quot;fmt&quot;
+import &quot;os&quot;
+import (
+    &quot;html/template&quot;
+    &quot;crypto/rand&quot;
+    mrand &quot;math/rand&quot; // alternative name mrand avoids conflict
+
+    &quot;golang.org/x/net/html&quot;
+    &quot;golang.org/x/net/ipv4&quot;
+)
+</code></pre>
+<h2><a class="header" href="#105-包的匿名导入" id="105-包的匿名导入">10.5 包的匿名导入</a></h2>
+<p>有时我们只想利用导入包产生的副作用： 它会计算包级变量的初始化表达式和执行导入包的<code>init</code>初始化函数， 这时使用<code>_</code> 来重命名导入的包</p>
+<pre><code class="language-Go">import _ &quot;image/png&quot; // register PNG decoder
+</code></pre>
+<pre><code class="language-Go">package png // image/png
+
+func Decode(r io.Reader) (image.Image, error)
+func DecodeConfig(r io.Reader) (image.Config, error)
+
+func init() {
+    const pngHeader = &quot;\x89PNG\r\n\x1a\n&quot;
+    image.RegisterFormat(&quot;png&quot;, pngHeader, Decode, DecodeConfig)
+}
+</code></pre>
+<h2><a class="header" href="#106-包和命名" id="106-包和命名">10.6 包和命名</a></h2>
+<p>当创建一个包时，一般要用短小的包名， 但也不能太短导致难以理解</p>
+<p>包名一般采用单数形式</p>
+<h2><a class="header" href="#107-工具" id="107-工具">10.7 工具</a></h2>
+<p>工作区结构, <code>GOPATH</code> 对应的工作区目录有三个子目录， 其中</p>
+<ul>
+<li>src用于存储源代码</li>
+<li>pkg用于保存编译后的包目标文件</li>
+<li>bin用于保存编译后的可执行文件</li>
+</ul>
+<p><code>GOROOT</code> 用于执行Go的安装目录</p>
+<p>go get 获取包</p>
+<p>go build 构建包</p>
+<p>Go语言的构建工具对包含internal名字的路径段的包导入路径做了特殊处理。这种包叫internal包，一个internal包只能被和internal目录有同一个父目录的包所导入。例如，net/http/internal/chunked内部包只能被net/http/httputil或net/http包导入，但是不能被net/url包导入。不过net/url包却可以导入net/http/httputil包。</p>
+<h1><a class="header" href="#工程化相关笔记" id="工程化相关笔记">工程化相关笔记</a></h1>
+<h1><a class="header" href="#webpack相关" id="webpack相关">Webpack相关</a></h1>
+<h1><a class="header" href="#requirecontext" id="requirecontext">require.context</a></h1>
+<p>用于动态批量导入文件</p>
+<pre><code class="language-js">require.context(directory, useSubdirectories = false, regExp = /^.//);
+</code></pre>
+<p>使用 require.context() 方法来创建自己的（模块）上下文，这个方法有 3 个参数：</p>
+<ul>
+<li>要搜索的文件夹目录</li>
+<li>是否还应该搜索它的子目录，</li>
+<li>以及一个匹配文件的正则表达式。</li>
+</ul>
+<pre><code class="language-js">require.context(&quot;../&quot;, true, /\.stories\.js$/);
+</code></pre>
+<p>该函数执行后返回的是一个函数， 并且这个函数有三个属性</p>
+<ol>
+<li>
+<p>resolve {Function} -接受一个参数request,request为test文件夹下面匹配文件的相对路径,返回这个匹配文件相对于整个工程的相对路径</p>
+</li>
+<li>
+<p>keys {Function} -返回匹配成功模块的名字组成的数组</p>
+</li>
+<li>
+<p>id {String} -执行环境的id,返回的是一个字符串,主要用在module.hot.accept,应该是热加载?</p>
+</li>
+</ol>
+<pre><code class="language-js">const context = require.context(&quot;./svg&quot;, true, /\.svg$/)
+// 看看你是何方神圣
+console.log(context)
+
+context.keys().map(context)
+</code></pre>
+<p><img src="engineer/webpack/../../assets/1460000019723842.png" alt="一张图说明" /></p>
+<h1><a class="header" href="#禁用export-default-object" id="禁用export-default-object">禁用export default object</a></h1>
+<pre><code class="language-js"># lib.js
+export default { 
+ a: 1,
+ b: 2
+}
+# main.js
+import { a,b } from './lib';
+console.log('a:',a);
+console.log('b:',b);
+</code></pre>
+<p>上面的写法虽然Babel5错误的进行了支持， 但实际上是有问题的， 包括esm和babel6都不支持</p>
+<p>造成错误的原因在于 对象解构 的语法 和命名导出 的语法虽然长的一模一样的，但由于两者使用的上下文不一样会， 在import 中解构是对应的 命名导出 named export， 不和import 和 export一起使用时才是对象解构</p>
+<p>正确的用法</p>
+<pre><code class="language-js">#lib.js
+export default {
+a:1,
+b:2
+}
+# main.js
+import lib from './lib';
+console.log('a:',lib.a);
+console.log('b:',lib.b);
+const { a, b}  = lib;
+console.log('a:',a);
+console.log('b:',b);
+</code></pre>
+<pre><code class="language-js"># lib.js
+// 导出方式1
+const a =1;
+const b = 2;
+export {
+ a, b
+}
+// 导出方式2
+export const a = 1;
+export const b = 2;
+</code></pre>
+<pre><code class="language-js">#main.js
+// 导入方式1
+import * as lib from './lib';
+console.log(lib.a);
+console.log(lib.b);
+// 导入方式2
+import { a,b} from './lib';
+console.log(a);
+console.log(b);
+</code></pre>
+<h1><a class="header" href="#架构相关" id="架构相关">架构相关</a></h1>
+<h1><a class="header" href="#serverless分享-课件" id="serverless分享-课件">Serverless分享 课件</a></h1>
+<h2><a class="header" href="#简介" id="简介">简介</a></h2>
+<blockquote>
+<p>无服务器运算（英语：Serverless computing），又被称为功能即服务（Function-as-a-Service，缩写为 FaaS），是云计算的一种模型。以平台即服务（PaaS）为基础，无服务器运算提供一个微型的架构，终端客户不需要部署、配置或管理服务器服务，代码运行所需要的服务器服务皆由云端平台来提供。亚马逊公司在2014年推出AWS Lambda，是最早提供这个服务的供应商</p>
+</blockquote>
+<p>形象的比喻
+<img src="architecture/serverless/../../assets/car.png" alt="car" /></p>
+<ol>
+<li>最古老的方式，买服务器， 找机房托管服务器， 以及进行运维</li>
+<li>租用VPS、云服务器、虚拟机等方式， 省去了对服务器的物理管理，上线祝需要专注于软件环境搭建就可以了</li>
+<li>Serverless连软件环境都已经准备好了， 一键部署，并且可以自动伸缩， 具有高可用性</li>
+</ol>
+<p><img src="architecture/serverless/../../assets/compare.jpg" alt="compare" /></p>
+<h3><a class="header" href="#serverless特点" id="serverless特点">Serverless特点</a></h3>
+<ol>
+<li>只需要关心核心业务逻辑， 提升开发和运维的效率</li>
+<li>基于事件触发， 灵活扩展</li>
+<li>可以弹性收缩和扩容</li>
+<li>按需付费，执行了才收费</li>
+<li>细粒度的计算资源分配</li>
+<li>无状态</li>
+</ol>
+<h3><a class="header" href="#应用场景" id="应用场景">应用场景</a></h3>
+<ol>
+<li>WebHook</li>
+<li>聊天机器人</li>
+<li>发送通知</li>
+<li>定时执行任务</li>
+<li>网站和应用， 不需要长时间运行的， 冷启动时间较长的不适用</li>
+<li>类型转换, 比如生成PDF, JSON格式转换, 图片压缩处理, 图像识别等</li>
+<li>统计与监控</li>
+</ol>
+<h2><a class="header" href="#结构" id="结构">结构</a></h2>
+<p>AWS Lambda相对来说操作复杂一些, 这次技术分享使用Netlify提供的Lambda, 相对来说简单一些, 并且最终也是运行在AWS Lambda</p>
+<p>一个最基本的Serverless Function结构类似如下</p>
+<pre><code class="language-js">exports.handler = (event, context, callback) =&gt; {
+    // 函数的具体实现
+}
+</code></pre>
+<p>这个无论AWS lambda还是Netlify lambda 还是国内阿里云或者平安云 都是一样的
+其中 </p>
+<ul>
+<li><code>event</code> 包含了request相关的所有data</li>
+<li><code>context</code> 包含了用户的认证信息</li>
+<li><code>callback</code> 用户创建response</li>
+</ul>
+<p>callback的回传的参数有两个, 类似Node.js , 第一个是error, 如果没有error的话写 null 就可以了</p>
+<h2><a class="header" href="#hello-world" id="hello-world">Hello World</a></h2>
+<pre><code class="language-bash">mkdir netlify-demo
+cd netlify-demo
+npm init -y
+npm i -S netlify-lambda
+
+</code></pre>
+<p>编辑package.json</p>
+<pre><code class="language-json">&quot;scripts&quot;: {
+    &quot;start:lambda&quot;: &quot;netlify-lambda serve src/lambda&quot;,
+    &quot;build:lambda&quot;: &quot;netlify-lambda build src/lambda&quot;
+}
+</code></pre>
+<p><code>src/lambda/helloworld.js</code> 中代码如下</p>
+<pre><code class="language-js">exports.handler = (event, context, callback) =&gt; {
+  callback(null, {
+        statusCode: 200,
+        body: 'Hello, world!',
+    });
+}; 
+</code></pre>
+<p><code>netlify.toml</code> </p>
+<pre><code class="language-toml">[build]
+    Functions = &quot;lambda&quot;
+    Command = &quot;npm run build:lambda&quot;
+
+</code></pre>
+<p>本地运行</p>
+<pre><code class="language-bash">npm run start:lambda
+</code></pre>
+<p>然后在 http://localhost:9000/helloworld 访问</p>
+<p>Github或者Gitlab提交之后在Netlify中 </p>
+<p><img src="architecture/serverless/../../assets/newsite.png" alt="newsite" /></p>
+<p><img src="architecture/serverless/../../assets/newsite2.png" alt="newsite2" /></p>
+<p>之后就不用管了, 每次Git push之后就自动更新了</p>
+<p>https://thirsty-austin-f10d08.netlify.com/.netlify/functions/helloworld</p>
+<p><img src="architecture/serverless/../../assets/functions-log.png" alt="functions-log" /></p>
+<p><img src="architecture/serverless/../../assets/functions-setting-7218898.png" alt="functions-setting" /></p>
+<h2><a class="header" href="#zapier定时任务监控股票价格" id="zapier定时任务监控股票价格">Zapier定时任务监控股票价格</a></h2>
+<pre><code class="language-js">const axios = require('axios')
+const nodemailer = require('nodemailer')
+
+const URL = 'http://hq.sinajs.cn/list=sh601318'
+const getCurrentPrice = async function () {
+    const res = await axios.get(URL)
+    const arr =  res.data.split(',')
+    return arr[3]
+}
+
+exports.handler = async function (event, context, callback) {
+    const price = await getCurrentPrice()
+    let transporter = nodemailer.createTransport({
+        service: '163',
+        secureConnection: true,
+        auth: {
+            user: 'serverless_demo@163.com',
+            pass: 'serverless123'
+        }
+    })
+
+    transporter.sendMail({
+        from: 'serverless_demo@163.com',
+        to: 'serverless_demo@163.com',
+        subject: 'Price updated',
+        html: price
+    }, (error, info) =&gt; {
+        if (error) {
+            return callback(error)
+        }
+        callback(null, {
+            statusCode: 200,
+            body: price
+        })
+    })
+    
+}
+</code></pre>
+<p>Zapier设置</p>
+<p><img src="architecture/serverless/../../assets/zapier-event.png" alt="zapier" /></p>
+<p><img src="architecture/serverless/../../assets/zapier-webhook.png" alt="zapier" /></p>
+<p><img src="architecture/serverless/../../assets/zapier-request.png" alt="zapier" /></p>
+<h2><a class="header" href="#实战案例" id="实战案例">实战案例</a></h2>
+<p><a href="https://github.com/liangshuai/serverless-blog">基于netlify-lambda  + faunadb + react hooks的博客简单示例</a></p>
+<p>一些工具类的笔记</p>
+<h1><a class="header" href="#tumx" id="tumx">Tumx</a></h1>
+<h2><a class="header" href="#安装" id="安装">安装</a></h2>
+<pre><code class="language-bash">brew install tmux
+</code></pre>
+<h2><a class="header" href="#使用" id="使用">使用</a></h2>
+<pre><code class="language-bash">tmux # 启动一个Sesion
+tmux new -s SessionName # 启动一个命名Session
+exit # 退出Tmux
+Ctrl + d # 退出Tmux
+tmux attach -t try
+tmux a -t &lt;目标会话名&gt;
+tmux ls # 列举会话列表
+[前缀] d  # 分离一个Session
+tmux new -n &lt;窗口名&gt;
+
+</code></pre>
+<h2><a class="header" href="#window操作" id="window操作">Window操作</a></h2>
+<ul>
+<li>Ctrl+B c //创建一个新窗口</li>
+<li>Ctrl+B &amp; //关闭当前窗口</li>
+<li>Ctrl+B p //切换到上一个窗口</li>
+<li>Ctrl+B n //切换到下一个窗口</li>
+<li>Ctrl+B 窗口号 //使用窗口号切换窗口(例如窗口号为1的, 则C-b 1)</li>
+<li>Ctrl+B , //重命名当前窗口，便于识别各个窗口</li>
+<li>Ctrl+B w //显示窗口列表， 上下键选择， 回车确认</li>
+</ul>
+<h2><a class="header" href="#panel操作" id="panel操作">Panel操作</a></h2>
+<ul>
+<li>Ctrl+B % //横向分Terminal(左右)</li>
+<li>Ctrl+B &quot; //纵向分Terminal</li>
+<li>Ctrl+B 方向键 //则会在自由选择各面板</li>
+<li>Ctrl+B x //关闭当前pane</li>
+<li>Ctrl+B q //显示面板编号</li>
+</ul>
+<p>Session操作</p>
+<ul>
+<li>Ctrl+B s //列出所有会话</li>
+<li>Ctrl+B d //detach当前session(可以认为后台运行)</li>
+</ul>
+<h1><a class="header" href="#ag搜索工具" id="ag搜索工具">Ag搜索工具	</a></h1>
+<p>使用方式</p>
+<pre><code class="language-bash">ag [FILE-TYPE] [OPTIONS] PATTERN [PATH]
+</code></pre>
+<p>FILE-TYPE 忽略的话会搜索所有类型</p>
+<pre><code class="language-bash">ag --list-file-types
+</code></pre>
+<pre><code class="language-bash">ag --lua search_pattern
+ag -G .lua search_pattern
+</code></pre>
+<p>ag搜索时会默认忽略.gitignore 等版本控制系统所指定的忽略文件， 如果需要搜索其中的内容， 使用-U 选项</p>
+<pre><code class="language-bash">ag -U search_pattern
+</code></pre>
+<p>Ag如果搜索的pattern是全部小写的话， 自动使用大小写不敏感。 如果包含大写，就改成大小写敏感的匹配方式， 如果想直接大小写不敏感使用 ag -i 选项</p>
+<p><code>ag -w</code> 全词匹配， 字符前后都要有合适的分隔符</p>
+<p><code>ag -v</code> 对搜索结果取反</p>
+<h1><a class="header" href="#pkg把nodejs打包成可执行文件" id="pkg把nodejs打包成可执行文件">pkg把node.js打包成可执行文件</a></h1>
+<p>安装</p>
+<pre><code class="language-bash">npm install -g pkg
+</code></pre>
+<p>安装好之后执行</p>
+<pre><code class="language-bash">pkg /path/app.js
+pkg .  # 当前目录的package.json中定义的bin
+</code></pre>
+<p>离线安装</p>
+<p>到https://github.com/zeit/pkg-fetch/releases下载离线报错提示中相应的文件， 放到<code>~\.pkg-cache\v2.5</code> 下， 2.5也要替换成指定的版本， 下载好之后 要把对应的文件重命名为<code>fetched-&lt;version&gt;-&lt;os&gt;-&lt;architecture&gt;</code> 形式的文件， 比如<code>fetched-v10.4.1-linux-x64</code> 即可</p>
+<p>一些关于Unix相关知识和工具的笔记</p>
+<h1><a class="header" href="#awk" id="awk">awk</a></h1>
+<p>awk '{print}' coins.txt</p>
+<p>awk '{print $1}'  coins.txt
+awk '{print $1, $2}' coins.txt
+对齐
+awk '{print $1 &quot;\t&quot;  $2}' coins.txt
+显示行号
+awk '{print NR &quot;\t&quot; $1 &quot;\t&quot;  $2}' coins.txt
+$0表示一整行
+awk '{print NR &quot;\t&quot; $0}' coins.txt
+按照空格分割，
+awk '{print NF &quot;\t&quot; $0}' coins.txt
+打印指定行
+awk 'NF==7{print NF &quot;\t&quot; $0}' coins.txt
+awk 'NR==7{print NF &quot;\t&quot; $0}' coins.txt
+awk '$2==1986{print NF &quot;\t&quot; $0}' coins.txt
+awk '$1==&quot;Golden&quot;{print NF &quot;\t&quot; $0}' coins.txt
+打印文件名
+awk '{print FILENAME, $0 }' coins.txt</p>
+<p>指定输入和输出分隔符
+awk 'BEGIN{FS=&quot;,&quot;} {print $1, $2}' coins.txt
+awk 'BEGIN{OFS=&quot;,&quot;} {print $1, $2}' coins.txt
+awk 'BEGIN{OFS=&quot;,&quot;;FS=&quot;,&quot;} {print $1, $2}' coins.txt</p>
+<p>多个文件
+awk '{print FILENAME, $0 }' coins.txt data.txt</p>
+<p>隐藏指定列
+awk '{$3=&quot;*****&quot;;print FILENAME, $0 }' coins.txt</p>
+<p>打印最后一列
+awk '{print FILENAME, $NF }' coins.txt data.txt</p>
+<p>打印倒数第二列
+awk '{print FILENAME, $(NF - 1) }' coins.txt data.txt</p>
+<p>定义变量
+awk '{a=1; b=3; print a + b}'</p>
+<p>计算</p>
+<p>awk '{a=1; b=3; print a - b}'
+awk '{a=1; b=3; print a * b}'
+awk '{a=1; b=3; print a / b}'</p>
+<p>awk '{a=1; b=3; c=2; print a b+c}'  # 15
+awk '{a=1; b=3; c=2; print (a b)+c}'  # 15   先把a和b拼接起来在加c</p>
+<p>awk '{a=1; b=&quot;apple&quot;; c=2; print b+c}' # 2</p>
+<p>awk '{a=1; b=&quot;56apple&quot;; c=2; print b+c}' # 58</p>
+<h1><a class="header" href="#shell-scripting-tutorial-for-beginners" id="shell-scripting-tutorial-for-beginners">Shell Scripting Tutorial for Beginners</a></h1>
+<blockquote>
+<p>https://www.youtube.com/watch?v=vQv4W-JfrmQ</p>
+</blockquote>
+<pre><code class="language-sh">cat /etc/shells 查看系统有哪些shell
+touch hello.sh
+chmod +x ./hello.sh
+# 或者直接执行
+/bin/bash ./hello.sh
+shell脚本
+#! /bin/bash
+
+echo &quot;Hello World&quot;
+echo $BASH
+echo $BASH_VERSION
+echo $HOME
+echo $PWD
+name = mark
+echo the name is $name
+# 通常系统内置变量是大写的， 用户定义的变量是小写的
+# 变量不能以数字开头, 字母数字下划线
+10val=10
+echo value is $10val 只会输出0val
+# 使用变量的时候也可以加花括号， 帮助解释器识别变量边界
+echo ${name}
+# 对已经有的变量可以重新定义
+name = &quot;ssss&quot;
+# 只读变量的值不能被改变
+readonly myUrl=&quot;http://wwww.paic.com.cn/&quot;
+# 删除变量
+unset myUrl
+</code></pre>
+<p>第三节 读取用户输入</p>
+<pre><code class="language-sh">#! /bin/bash
+read name
+echo $name   # 输入名字后enter
+read name1 name2 name3
+echo &quot;$name1 $name2 $name3&quot;  # 输入三个name后再enter
+# 同一行中提示输入
+read -p 'username: ' user_var
+read -sp 'password: ' pass_var # 隐藏
+echo &quot;username: &quot; $user_var
+echo &quot;password:&quot; $pass_var
+# 读取数组
+read -a names
+echo &quot;Names: ${names[0]}&quot;
+# 不需要变量名, 使用$REPLY
+read
+echo &quot;Name: $REPLY&quot;
+</code></pre>
+<p>第四节 给脚本传递参数</p>
+<pre><code class="language-bash">echo $1 $2 $3 ' &gt; echo $1 $2 $3 '
+# 运行，输入 ./hello.sh Mark Tom John
+# 输出 Mark Tom John &gt; echo $1 $2 $3 
+# $0 是脚本名
+args=(&quot;$@&quot;)
+echo ${args[0]} ${args[1]} ${args[2]} ${args[3]}
+# args[0] 是从Mark开始的
+echo $@ # 直接输出三个参数
+echo $# # 输出参数的个数 3
+</code></pre>
+<p>第五节 if then ， if then else， if elif else</p>
+<pre><code class="language-bash">#! /bin/bash
+count = 10
+if [ $count -eq 10 ]
+then
+	statement
+fi
+</code></pre>
+<p>比较</p>
+<pre><code>String Comparisons:  
+---------------------------------
+=  compare if two strings are equal
+!=  compare if two strings are not equal
+-n  evaluate if string length is greater than zero
+-z  evaluate if string length is equal to zero 
+
+Examples: 
+[ s1 = s2 ]  (true if s1 same as s2, else false)
+[ s1 != s2 ]  (true if s1 not same as s2, else false)
+[ s1 ]   (true if s1 is not empty, else false)
+[ -n s1 ]   (true if s1 has a length greater then 0, else false)
+[ -z s2 ]   (true if s2 has a length of 0, otherwise false)
+
+Number Comparisons: 
+------------------------------------
+-eq compare if two numbers are equal
+-ge compare if one number is greater than or equal to a number
+-le  compare if one number is less than or equal to a number
+-ne  compare if two numbers are not equal
+-gt  compare if one number is greater than another number
+-lt  compare if one number is less than another number 
+
+Examples: 
+[ n1 -eq n2 ]  (true if n1 same as n2, else false)
+[ n1 -ge n2 ]  (true if n1greater then or equal to n2, else false)
+[ n1 -le n2 ]  (true if n1 less then or equal to n2, else false)
+[ n1 -ne n2 ]  (true if n1 is not same as n2, else false)
+[ n1 -gt n2 ]  (true if n1 greater then n2, else false)
+[ n1 -lt n2 ]  (true if n1 less then n2, else false)
+</code></pre>
+<p>第六讲  使用if检查文件是否存在</p>
+<pre><code class="language-bash">#! /bin/bash
+echo -e &quot;Enter the filename: \c&quot;
+read file_name
+if [ -e $file_name ]
+then
+	echo &quot;$file_name found&quot;
+else
+	echo &quot;$file_name not found&quot;
+fi
+
+</code></pre>
+<p>echo(选项)(参数)选项</p>
+<p>-e：激活转义字符。使用-e选项时，若字符串中出现以下字符，则特别加以处理，而不会将它当成一般文字输出：</p>
+<p>• \a 发出警告声；
+• \b 删除前一个字符；
+• \c 最后不加上换行符号；
+• \f 换行但光标仍旧停留在原来的位置；
+• \n 换行且光标移至行首；
+• \r 光标移至行首，但不换行；
+• \t 插入tab；
+• \v 与\f相同；
+• \ 插入\字符；
+• \nnn 插入nnn（八进制）所代表的ASCII字符</p>
+<p>文件比较运算符 </p>
+<ol>
+<li>-e filename 如果 filename存在，则为真 如： [ -e /var/log/syslog ] </li>
+<li>-d filename 如果 filename为目录，则为真 如： [ -d /tmp/mydir ] </li>
+<li>-f filename 如果 filename为常规文件，则为真 如： [ -f /usr/bin/grep ] </li>
+<li>-L filename 如果 filename为符号链接，则为真 如： [ -L /usr/bin/grep ] </li>
+<li>-r filename 如果 filename可读，则为真 如： [ -r /var/log/syslog ] </li>
+<li>-w filename 如果 filename可写，则为真 如： [ -w /var/mytmp.txt ] </li>
+<li>-x filename 如果 filename可执行，则为真 如： [ -L /usr/bin/grep ] </li>
+<li>-s 存在且为空   if [ -s file ] 如果文件存在且非空</li>
+<li>filename1-nt filename2 如果 filename1比 filename2新，则为真 如： [ 
+/tmp/install/etc/services -nt /etc/services ] </li>
+<li>filename1-ot filename2 如果 filename1比 filename2旧，则为真 如： [ 
+/boot/bzImage -ot arch/i386/boot/bzImage ]</li>
+</ol>
+<p>第七讲 往文件结尾追加文本</p>
+<pre><code class="language-bash">#! /bin/bash
+echo -e &quot;Enter the filename: \c&quot;
+read file_name
+if [ -f $file_name ]
+then
+	if [ -w $file_name ]
+	then
+		echo &quot;Type some text here, to  quite press Ctrl + d&quot;
+		cat &gt;&gt; $file_name
+	else
+		echo &quot;Don't have permission&quot;
+	fi
+else
+	echo &quot;$file_name not found&quot;
+fi
+</code></pre>
+<pre><code class="language-sh">chmod -w test # 去掉写权限
+</code></pre>
+<p>https://www.bilibili.com/video/av40317436/?p=5</p>
+<h2><a class="header" href="#在bash中调用python" id="在bash中调用python">在Bash中调用Python</a></h2>
+<pre><code class="language-ba">#! /bin/bash
+echo &quot;Hello World&quot;
+/usr/bin/python &lt;&lt;-EOF
+print &quot;Hello from python&quot;
+EOF
+echo &quot;hello bash&quot;
+
+
+EOF可以是任意的， 只是一个标记开始和结束的符号， 比如可以换成@@
+</code></pre>
+<p>把a文件的内容追加到b文件</p>
+<pre><code class="language-sh">cat with-python.sh &gt;&gt; test.sh
+</code></pre>
+<h2><a class="header" href="#子shell" id="子shell">子shell</a></h2>
+<pre><code class="language-bash">bash script.sh
+./script.sh
+# 上面的两种是在sub shell中执行的
+. script.sh
+source script.sh
+# 在当前shell中执行， 定义的变量都有效
+</code></pre>
+<p>Nologin shell</p>
+<pre><code class="language-bash">su alice
+# Nologin切换到alice 用户
+su - alice
+# Login 切换到alice用户
+
+用户主目录中有
+~/.bash_profile
+~/.bashrc
+~/.bash_logout
+~/.bash_history
+
+# 登录用户时执行
+/etc/profile
+/etc/bashrc
+~/.bash_profile
+~/.bashrc
+# no login shell
+/etc/bashrc
+~/.bashrc
+
+</code></pre>
+<p>自动补齐</p>
+<pre><code class="language-bash">rpm -qa | grep bash_com
+</code></pre>
+<p>执行历史中的某一条</p>
+<pre><code class="language-bash">!1020 # 执行bask_history中的第1020条命令，同时显示该命令
+!string # 搜索相关命令
+!! # 执行上一条命令
+!$ # 上一条命令的参数
+</code></pre>
+<p>alias设置命令别名， unalias 取消别名 , \命令  不使用别名</p>
+<h3><a class="header" href="#命令的排序" id="命令的排序">命令的排序</a></h3>
+<p>分号 ;   分割多个命令， 各个命令单独执行， 状态互不影响， 前一个失败也不会影响到下一个</p>
+<p>&amp;&amp;  前面一个命令成功才会执行后面的命令</p>
+<p>||   前面一个失败了会执行后面的命令, 成功了不会</p>
+<p>mkdir -p 递归创建目录</p>
+<pre><code class="language-bas">ping -c1 10.25.100.11 &amp;&gt;/dev/null &amp;&amp; echo &quot;Running&quot; || echo &quot;down&quot;
+echo $? # 输出上一条命令的执行结果状态
+true || false
+command &amp; # 后台执行
+command &amp;&gt;/dev/null   # 混合重定向（标准输出，错误输出） 
+command1 &amp;&amp; command   # 命令排序逻辑判断
+</code></pre>
+<h3><a class="header" href="#shell元字符" id="shell元字符">shell元字符</a></h3>
+<blockquote>
+<p>*匹配一个或多个任意字符</p>
+<p>?匹配任意一个字符</p>
+<p>[] 匹配括号中任意一个字符 [abc]  [a-z] [^a-z] 取反</p>
+<p>() 在子shell中执行 (cd /boot;ls)</p>
+<p>{} 集合  touch file{1..9}</p>
+<p>mkdir -pv /home/{333/{aaa, bbb}, 444}</p>
+<p>cp -rv /home/liangshuai/aaa.txt /home/liangshuai/bbb.txt</p>
+<p>cp -rv /Users/liangshuai/{aaa,bbb}.txt</p>
+</blockquote>
+<h3><a class="header" href="#输出颜色" id="输出颜色">输出颜色</a></h3>
+<pre><code class="language-bash">echo -e &quot;\e[1;31mThis is text.\e[0m&quot;
+</code></pre>
+<p>颜色30m - 37m表示前景色 ,40m-47m表示背景色，  0m表示恢复</p>
+<p>Mac下</p>
+<pre><code class="language-bash">echo -e &quot;\033[31mText\033[0m&quot;
+</code></pre>
+<table><thead><tr><th align="left">颜色值x</th><th align="left">0</th><th align="left">1</th><th align="left">2</th><th align="left">3</th><th align="left">4</th><th align="left">5</th><th align="left">6</th><th align="left">7</th></tr></thead><tbody>
+<tr><td align="left">颜色</td><td align="left">黑</td><td align="left">红</td><td align="left">绿</td><td align="left">黄</td><td align="left">蓝</td><td align="left">紫</td><td align="left">青</td><td align="left">白</td></tr>
+</tbody></table>
+<pre><code>### shell变量
+</code></pre>
+<p>定义变量： 变量不能以数字开头, 字母数字下划线</p>
+<p>引用变量： $变量名</p>
+<p>type -a if   判断if的类型</p>
+<pre><code class="language-bash">#! /usr/bin/bash
+ip=10.18.42.127  # read -p &quot;please input a in addr: &quot; ip
+ping -c1 $ip &amp;&gt;/dev/null
+if [ $? -eq 0 ]; then
+	echo &quot; $ip is up &quot;
+else
+	echo &quot; $ip is down &quot;
+fi
+</code></pre>
+<p>https://blog.csdn.net/scaleqiao/article/details/45153379</p>
+<p>i 进入编辑模式</p>
+<p>a append 追加,当前单词后面</p>
+<p>o open a new line below</p>
+<p>A Append after line</p>
+<p>I Insert before line</p>
+<p>O append line above</p>
+<h3><a class="header" href="#命令模式" id="命令模式">命令模式</a></h3>
+<p>:q 退出</p>
+<p>:wq 保存并退出</p>
+<p>ZZ 保存并退出h</p>
+<p>:vs(vertical split)垂直左右分屏 :sp(split) 水平上下分屏</p>
+<p>:set nu 设置行号</p>
+<p>:set hls  高亮搜索</p>
+<p>:syntax on 语法高亮</p>
+<p>:% s/java/python/g  全部替换java-&gt;python</p>
+<p>:Vex -- 垂直分割一个窗口，浏览文件系统</p>
+<p>:Sex -- 水平分割一个窗口，浏览文件系统</p>
+<p>:r !date 在光标处插入当前日期与时间。同理，:r !command可以将其它shell命令的输出插入当前文档</p>
+<p>:r filename在当前位置插入另一个文件的内容。</p>
+<p>:[n]r filename在第n行插入另一个文件的内容。</p>
+<h3><a class="header" href="#visual模式" id="visual模式">Visual模式</a></h3>
+<p>v选择字符</p>
+<p>V选择行</p>
+<p>ctrl+v块状选择</p>
+<p>选中之后可以可以只用Y  （yank）复制，P （paste）， D 删除</p>
+<h3><a class="header" href="#插入模式" id="插入模式">插入模式</a></h3>
+<p>下面这几个在Linux终端都比较通用</p>
+<p>ctrl+h 删除字符</p>
+<p>ctrl+w 删除单词</p>
+<p>ctrl+u 删除一行</p>
+<p>ctrl+b 前移一个字符</p>
+<p>ctrl+f 后移一个字符</p>
+<p>ctrl+c/[ 功能同Esc 切换insert和normal模式</p>
+<p>gi 快速进入编辑模式, 回到上次编辑的位置</p>
+<h3><a class="header" href="#改写插入" id="改写插入">改写插入</a></h3>
+<ul>
+<li>c[n]w: 改写光标后1(n)个词。</li>
+<li>c[n]l: 改写光标后n个字母。</li>
+<li>c[n]h: 改写光标前n个字母。</li>
+<li>[n]cc: 修改当前[n]行。</li>
+<li>[n]s: 以输入的文本替代光标之后1(n)个字符，相当于c[n]l。</li>
+<li>[n]S: 删除指定数目的行，并以所输入文本代替之。</li>
+</ul>
+<h3><a class="header" href="#快速移动" id="快速移动">快速移动</a></h3>
+<p>normal 模式下 h左、j下、k上、l右</p>
+<p>w/W 移动下一个word/WORD开头。e/E 下一个word/WORD尾</p>
+<p>b/B 回上一个word/WORD开头</p>
+<p>word 以非空白符分割的单词，WORD 以空白符分割的单词</p>
+<p>同一行内快速跳转到指定字符 f{char}，</p>
+<p>F{char} 向前搜索， t{char} 移动到该字符的前一个字符</p>
+<p>按 ；可以跳到下一个匹配结果， ，到上一个</p>
+<p>Ctrl + o /I  最近打开的文件跳转</p>
+<p>% 跳转到匹配的括号</p>
+<p>0 移动到行首第一个字符</p>
+<p>^ 移动到行首第一个非空白字符</p>
+<p>$ 移动到行尾</p>
+<p>g_ 移动到行尾非空白字符</p>
+<p>（）在句子间移动</p>
+<p>{} 在段落间移动</p>
+<p>-  把光标移至上一行第一个非空白字符。</p>
+<p>+或Enter: 把光标移至下一行第一个非空白字符</p>
+<p>:help (   帮助</p>
+<p>:$<cr> 移动到最后一行</p>
+<p>:n<cr> 移动到第n行</p>
+<p>g$: 移动光标所在屏幕行行尾</p>
+<p>g0: 移到光标所在屏幕行行首。</p>
+<p>gg 移动到文件开头</p>
+<p>G移动到文件结尾</p>
+<p>Ctrl + o 返回上一次编辑位置</p>
+<p>H/M/L 移动到屏幕开头、中间、结尾</p>
+<p>ctrl + f 上下翻页</p>
+<p>ctrl+b: 上翻一屏</p>
+<p>ctrl+d: 下翻半屏</p>
+<p>ctrl+u: 上翻半屏</p>
+<p>ctrl+e: 向下滚动一行</p>
+<p>zz: 将当前行移动到屏幕中央</p>
+<p>zt: 将当前行移动到屏幕顶端</p>
+<p>zb: 将当前行移动到屏幕底端</p>
+<p>输入3h， 则光标向左移动3个字符</p>
+<p>n<HJKL> 移动</p>
+<p>m{char} 打标签， char是大写的就是全局的， 小写的是针对当前Buffer</p>
+<p>:marks查看标签列表</p>
+<p>`{char} 跳转到指定mark</p>
+<h3><a class="header" href="#快速增删改查" id="快速增删改查">快速增删改查</a></h3>
+<p>x 删除一个字符</p>
+<p>数字 + x  删除N个字符</p>
+<p>u 恢复</p>
+<p>dt + 直到哪个字符  delete to</p>
+<p>s{char} 替换当前字符为指定字符, 进入到了插入模式</p>
+<p>dd 删除一行</p>
+<p>dw 删除一个单词</p>
+<p>d$   删除到行尾</p>
+<p>d0  删除到行首</p>
+<p>daw 删除单词和周围空格（delete around word）</p>
+<p>diw 删除单词（dw）</p>
+<p>2dd 删除两行</p>
+<p>在Visual模式下， d和x也能使用</p>
+<p>以下命令可以对标点内的内容进行操作。
+ci'、ci&quot;、ci(、ci[、ci{、ci&lt; - 分别更改这些配对标点符号中的文本内容
+di'、di&quot;、di(或dib、di[、di{或diB、di&lt; - 分别删除这些配对标点符号中的文本内容
+yi'、yi&quot;、yi(、yi[、yi{、yi&lt; - 分别复制这些配对标点符号中的文本内容
+vi'、vi&quot;、vi(、vi[、vi{、vi&lt; - 分别选中这些配对标点符号中的文本内容</p>
+<p>快速修改</p>
+<p>常用的三个 r（replace）  c （change）</p>
+<p>r replace 替换一个字符 </p>
+<p>​    eg: 光标下g ra g-&gt;a </p>
+<p>c change </p>
+<p>​    cw 删除单词进入插入模式 change word</p>
+<p>​    ct{char} 删除到字符，进入插入模式</p>
+<p>s substitute 删除并进入插入模式 eg: 4s 删除4个字符进入插入模式</p>
+<p>R 不断替换多个字符</p>
+<p>S 删除整行进行插入 </p>
+<p>C 删除整行进行插入</p>
+<p>/ 前向搜索</p>
+<p>? 反向搜索</p>
+<p>n/N 下一个或者上一个</p>
+<p>*/# 当前单词的前向和后向匹配</p>
+<p>搜索结果高亮 :set hls (high light search)</p>
+<p>:set incsearch</p>
+<h3><a class="header" href="#复制和剪切" id="复制和剪切">复制和剪切</a></h3>
+<ul>
+<li>[n]x: 剪切光标右边n个字符，相当于d[n]l。</li>
+</ul>
+<ul>
+<li>[n]X: 剪切光标左边n个字符，相当于d[n]h。</li>
+<li>y: 复制在可视模式下选中的文本。</li>
+<li>yy or Y: 复制整行文本。</li>
+<li>y[n]w: 复制一(n)个词。</li>
+<li>y[n]l: 复制光标右边1(n)个字符。</li>
+<li>y[n]h: 复制光标左边1(n)个字符。</li>
+<li>y$: 从光标当前位置复制到行尾。</li>
+<li>y0: 从光标当前位置复制到行首。</li>
+<li>:m,ny<cr> 复制m行到n行的内容。</li>
+<li>y1G或ygg: 复制光标以上的所有行。</li>
+<li>yG: 复制光标以下的所有行。</li>
+<li>yaw和yas：复制一个词和复制一个句子，即使光标不在词首和句首也没关系。</li>
+<li>d: 删除（剪切）在可视模式下选中的文本。</li>
+<li>d$ or D: 删除（剪切）当前位置到行尾的内容。</li>
+<li>d[n]w: 删除（剪切）1(n)个单词</li>
+<li>d[n]l: 删除（剪切）光标右边1(n)个字符。</li>
+<li>d[n]h: 删除（剪切）光标左边1(n)个字符。</li>
+<li>d0: 删除（剪切）当前位置到行首的内容</li>
+<li>[n] dd: 删除（剪切）1(n)行。</li>
+<li>:m,nd<cr> 剪切m行到n行的内容。</li>
+<li>d1G或dgg: 剪切光标以上的所有行。</li>
+<li>dG: 剪切光标以下的所有行。</li>
+<li>daw和das：剪切一个词和剪切一个句子，即使光标不在词首和句首也没关系。</li>
+<li>d/f<cr>：这是一个比较高级的组合命令，它将删除当前位置 到下一个f之间的内容。</li>
+<li>p: 在光标之后粘贴。</li>
+<li>P: 在光标之前粘贴</li>
+</ul>
+<h3><a class="header" href="#搜索替换" id="搜索替换">搜索替换</a></h3>
+<p>substitute 支持正则</p>
+<p>:[range]s[ubstitute]/{pattern}/{string}/flags</p>
+<p>range 范围 </p>
+<p>​    eg: </p>
+<p>​        10,20 表示10-20行</p>
+<p>​        % 表示全部</p>
+<p>pattern 替换模式</p>
+<p>string  替换后文本</p>
+<p>flags 替换标志位</p>
+<p>​    g global 全局替换</p>
+<p>​    c confirm 确认</p>
+<p>​    n number 查询匹配次数而不替换</p>
+<p>eg:</p>
+<p>:% s/self/this/g  # 替换 self-&gt;this</p>
+<p>:1,6 s/self//n    # 查询  计算有1-6行有多少个self</p>
+<p>:% s/&lt;name&gt;/Name/g # 精确匹配单词</p>
+<p>Control + Z切换到命令行</p>
+<p>fg 从命令行返回到Vim</p>
+<h3><a class="header" href="#vim多文件操作" id="vim多文件操作">Vim多文件操作</a></h3>
+<p># 多文件操作</p>
+<p>Buffer  打开一个文件的缓冲区</p>
+<p>Window  可视化分割区域</p>
+<p>Tab     组织窗口为一个工作区</p>
+<p>1、Buffer</p>
+<p>:ls  列举缓冲区</p>
+<p>:b n 跳转到第n个缓冲区</p>
+<p>:bpre :bnext :bfirst :blast</p>
+<p>:b buffer_name  tab补全</p>
+<p>:e filename 打开文件</p>
+<p>2、Window</p>
+<p>一个缓冲区可以分割为多个窗口</p>
+<p>每个窗口也可打开不同缓冲区</p>
+<p>窗口可以无限分割</p>
+<p>（1）窗口分割</p>
+<p>&lt;ctrl + w&gt; + s 水平分割  :sp [filename]</p>
+<p>&lt;ctrl + w&gt; + v 垂直分割  :vs [filename]</p>
+<p>（2）窗口切换</p>
+<p>&lt;ctrl + w&gt; + w 循环切换</p>
+<p>&lt;ctrl + w&gt; + h 切换到左边</p>
+<p>&lt;ctrl + w&gt; + j 切换到下边</p>
+<p>&lt;ctrl + w&gt; + k 切换到上边</p>
+<p>&lt;ctrl + w&gt; + l 切换到右边</p>
+<p>（3）窗口移动</p>
+<p>&lt;ctrl + w&gt; + H 移动到左边</p>
+<p>&lt;ctrl + w&gt; + J 移动到下边</p>
+<p>&lt;ctrl + w&gt; + K 移动到上边</p>
+<p>&lt;ctrl + w&gt; + L 移动到右边</p>
+<p>(4)重排窗口</p>
+<p>:h window-size</p>
+<p>&lt;ctrl + w&gt; + = 所有窗口等宽等高</p>
+<p>&lt;ctrl + w&gt; + _  最大化活动窗口高度</p>
+<p>&lt;ctrl + w&gt; + |  最大化活动窗口宽度</p>
+<p>n + &lt;ctrl + w&gt; + _ 把活动窗口的高度设为n 行</p>
+<p>n + &lt;ctrl + w&gt; + | 把活动窗口的宽度设为n 行</p>
+<p>3、Tab标签页</p>
+<p>一系列窗口的容器:h tabpage</p>
+<p>:tabnew {filename}     新标签中打开</p>
+<p>:tabe[dit] {filename}  新标签中打开</p>
+<p>&lt;ctrl + w&gt; + T 当前窗口移动到一个新标签页</p>
+<p>:tabc[lose]  关闭当前标签页及其中的所有窗口 </p>
+<p>:tabo[nly]   只保留当前标签页，关闭其他标签页</p>
+<p>:tabn[ext] {N} {N}gt  切换到编号N 的标签页</p>
+<p>:tabn[ext]       gt    切换到下一个标签页</p>
+<p>:tabp[revious]   gT    切换到上一个标签页</p>
+<p>插件：ctrlp nerdtree</p>
+<h3><a class="header" href="#文本对象text-object" id="文本对象text-object">文本对象text object</a></h3>
+<p>命令格式：</p>
+<p>[number]<command>[text object]</p>
+<p>number 次数</p>
+<p>command 命令 d(delete), c(change), y(yank), v(visual)</p>
+<p>text object 文本对象 w(单词word)， s(句子sentence)，p(段落paragraph)</p>
+<p>3dw  删除三个单词</p>
+<p>eg:</p>
+<p>iw  插入单词</p>
+<p>viw 选择模式插入单词</p>
+<p>vaw  around word 选中当前单词和单词之后的空格</p>
+<p>vis/vas/vip/vap</p>
+<p>vi(/)/&lt;/&gt;/{/}/&quot;/&quot;/'/'</p>
+<p>va(/)/&lt;/&gt;/{/}/&quot;/&quot;/'/'</p>
+<p>vi&quot;   删除双引号内的内容</p>
+<p>3daw</p>
+<p>ciw  删除单词并插入</p>
+<p>ci{  删除{内容</p>
+<p>插件 vim-go</p>
+<h3><a class="header" href="#vim-复制粘贴与寄存器的使用" id="vim-复制粘贴与寄存器的使用">Vim 复制粘贴与寄存器的使用</a></h3>
+<p>normal模式下复制粘贴分别使用y(ank) 和p(ut) 剪切粘贴d和p</p>
+<p>也可以在Visual模式下选中所要复制的地方， 可以直接G或者gg到文件结尾或开头，然后p粘贴</p>
+<p>配合文本对象 yiw 复制一个单词， yy复制一行</p>
+<p>:set autoindent 自动缩进</p>
+<p>:set paste</p>
+<p>:set nopaste</p>
+<h4><a class="header" href="#寄存器" id="寄存器">寄存器</a></h4>
+<p>y复制和d删除的内容都放到了无名寄存器</p>
+<p>x删除一个字符，放到无名寄存器， xp 两个字符对调 </p>
+<p>&quot;{register}   前缀可以指定寄存器， 不指定就是用无名寄存器</p>
+<p>&quot;ayiw  复制一个单词到a寄存器中</p>
+<p>&quot;byy复制一行到b寄存器</p>
+<p>:reg a 查看a寄存器的内容</p>
+<p>&quot;ap  粘贴a寄存器的内容</p>
+<p>&quot;&quot; 表示无名寄存器</p>
+<p>a-z 都可以当作寄存器</p>
+<p>复制专用寄存器 , &quot;0 </p>
+<p>系统剪切板 &quot;+ 复制到系统剪切板</p>
+<p>&quot;% 当前文件名</p>
+<p>&quot;. 上次插入的文本</p>
+<p>:echo has('clipboard')  1 支持 复制到系统剪切板</p>
+<p>:set clipboard=unnamed 可以直接复制的系统剪切板</p>
+<p>insert 模式下 ctr+r+'+'</p>
+<p>:e! 重新加载文件 ,且不保持</p>
+<h3><a class="header" href="#宏录制" id="宏录制">宏录制</a></h3>
+<p>每行添加双引号</p>
+<p>qa a寄存器录制</p>
+<p>I + &quot; + Esc + A + &quot;</p>
+<p>q 结束录制</p>
+<p>shift/^ + V 行xuan </p>
+<p>G 到文件结尾 </p>
+<p>: normal @a</p>
+<p>@a</p>
+<p>另一种做法不使用宏</p>
+<p>V + G全选， :normal I&quot;</p>
+<p>然后 ： Ctrl + p 重复上一条命令， 把I“ 换成 A” 回车即可</p>
+<h3><a class="header" href="#自动补全" id="自动补全">自动补全</a></h3>
+<p>Ctrl + n 和 Ctrl + p补全单词</p>
+<p>ctrl + x ctrl + f   补全文件名</p>
+<p>ctrl + x ctrl + o 补全代码， 需要开启文件类型检查， 安装插件</p>
+<p>: r! echo %:p   当前文件路径</p>
+<p>: r! echo %   当前文件名</p>
+<h3><a class="header" href="#更换主题" id="更换主题">更换主题</a></h3>
+<p>:colorscheme回车，显示当前主题</p>
+<p>:colorscheme  Ctrl +d 显示所有主题</p>
+<p>：colorscheme  主题名  修改当前主题</p>
+<p>vim file1 file2 -O 分窗口打开文件名所涉及的文件</p>
+<p>网络搜索color scheme</p>
+<h3><a class="header" href="#编写vim配置" id="编写vim配置">编写Vim配置</a></h3>
+<p>linux和Mac新建 vim ~/.vimrc</p>
+<p>Windows系统 vim $MYVIMRC，通过环境变量编辑配置文件</p>
+<p>colorscheme hybrid</p>
+<p>noremap <Leader>w :w<cr> 保存文件</p>
+<p>自定义的Vimscript函数 vim高手  和插件的配置</p>
+<pre><code>let mapleader=&quot;,&quot;
+// inoremap表示插入模式下的， cr表示回车， 下面这一条映射表示按下 ,w 之后保存当前文件
+inoremap &lt;leader&gt;w &lt;Esc&gt;:w&lt;cr&gt; 
+inoremap jj &lt;Esc&gt;
+noremap &lt;c-h&gt; &lt;C-w&gt;h
+noremap &lt;C-j&gt; &lt;C-w&gt;j
+noremap &lt;C-k&gt; &lt;C-w&gt;k
+noremap &lt;C-l&gt; &lt;C-w&gt;l
+命令行下输入source .vimrc 立即生效vimrc
+
+com! FormatJSON %!python3 -m json.tool
+</code></pre>
+<h3><a class="header" href="#映射" id="映射">映射</a></h3>
+<p>基本映射指的是normal模式下的映射</p>
+<p>使用map就可以实现映射， 比如 :map - x 然后按 - 就会删除字符</p>
+<p>:map <Space> vim 告诉vim按下空格的时候选中整个单词</p>
+<p>:map <c-d> dd 可以使用Ctrl+ d执行dd删除一行</p>
+<p>:unmap -  删除 - 的map</p>
+<p>nmap、vmap、imap 定义在normal、visual、insert</p>
+<p>Vim中 Visual模式下选中的文本按U转成大写的， 按u转成小写的</p>
+<p>:vmap \ U</p>
+<p>:imap <c-d> <ESC>ddi</p>
+<p>map映射存在递归问题， 为解决该问题，构建了非递归映射</p>
+<p>nnoremap ---normal下的非递归映射， n --normal, non-recursive 非递归, map---映射；vnoremap --视图模式非递归映射， inoremap ---插入模式非递归</p>
+<p>任何时候都要使用非递归映射</p>
+<pre><code>&quot; 使用jj进入normal模式， 并进入到之前编辑的位置
+inoremap jj &lt;Esc&gt;`^
+</code></pre>
+<p>笨方法学vimscript https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49321</p>
+<h2><a class="header" href="#vim插件" id="vim插件">Vim插件</a></h2>
+<p>Vim-Plug</p>
+<p>source ~/.vimrc 然后 :PlugInstall</p>
+<p>Github/Google搜索</p>
+<p>vimawesome寻找</p>
+<p>看别人的vimrc配置</p>
+<p>vim-startify</p>
+<p>vim-airline</p>
+<h3><a class="header" href="#nerdtree快捷方式" id="nerdtree快捷方式">NerdTree快捷方式</a></h3>
+<p>切换工作台和目录</p>
+<pre><code>ctrl + w + h    光标 focus 左侧树形目录
+ctrl + w + l    光标 focus 右侧文件显示窗口
+ctrl + w + w    光标自动在左右侧窗口切换
+ctrl + w + r    移动当前窗口的布局位置
+o       在已有窗口中打开文件、目录或书签，并跳到该窗口
+go      在已有窗口 中打开文件、目录或书签，但不跳到该窗口
+t       在新 Tab 中打开选中文件/书签，并跳到新 Tab
+T       在新 Tab 中打开选中文件/书签，但不跳到新 Tab
+i       split 一个新窗口打开选中文件，并跳到该窗口
+gi      split 一个新窗口打开选中文件，但不跳到该窗口
+s       vsplit 一个新窗口打开选中文件，并跳到该窗口
+gs      vsplit 一个新 窗口打开选中文件，但不跳到该窗口
+!       执行当前文件
+O       递归打开选中 结点下的所有目录
+x       合拢选中结点的父目录
+X       递归 合拢选中结点下的所有目录
+e       Edit the current dif
+双击    相当于 NERDTree-o
+中键    对文件相当于 NERDTree-i，对目录相当于 NERDTree-e
+D       删除当前书签
+P       跳到根结点
+p       跳到父结点
+K       跳到当前目录下同级的第一个结点
+J       跳到当前目录下同级的最后一个结点
+k       跳到当前目录下同级的前一个结点
+j       跳到当前目录下同级的后一个结点
+C       将选中目录或选中文件的父目录设为根结点
+u       将当前根结点的父目录设为根目录，并变成合拢原根结点
+U       将当前根结点的父目录设为根目录，但保持展开原根结点
+r       递归刷新选中目录
+R       递归刷新根结点
+m       显示文件系统菜单
+cd      将 CWD 设为选中目录
+I       切换是否显示隐藏文件
+f       切换是否使用文件过滤器
+F       切换是否显示文件
+B       切换是否显示书签
+q       关闭 NerdTree 窗口
+?       切换是否显示 Quick Help
+</code></pre>
+<p>在目录下创建文件， 先按 <code>m</code> 然后NerdTree会显示操作菜单， 按<code>a</code> 添加文件 b, 创建目录的话后面追加一个<code>\</code> </p>
+<p>切换标签页</p>
+<pre><code>:tabnew [++opt选项] ［＋cmd］ 文件      建立对指定文件新的tab
+:tabc   关闭当前的 tab
+:tabo   关闭所有其他的 tab
+:tabs   查看所有打开的 tab
+:tabp   前一个 tab
+:tabn   后一个 tab
+
+
+</code></pre>
+<p>,n  自定义的组合键， 快速找到当前打开的文件在NerdTree上的位置</p>
+<p>Emmet</p>
+<p>https://blog.zfanw.com/zencoding-vim-tutorial-chinese/</p>
+<p>EasyMotion</p>
+<p><Leader><leader>w/b</p>
+<p><Leader><Leader>s</p>
+<pre><code>map &lt;Leader&gt;&lt;leader&gt;h &lt;Plug&gt;(easymotion-linebackward)
+map &lt;Leader&gt;&lt;Leader&gt;j &lt;Plug&gt;(easymotion-j)
+map &lt;Leader&gt;&lt;Leader&gt;k &lt;Plug&gt;(easymotion-k)
+map &lt;Leader&gt;&lt;leader&gt;l &lt;Plug&gt;(easymotion-lineforward)
+&quot; 重复上一次操作, 类似repeat插件, 很强大
+map &lt;Leader&gt;&lt;leader&gt;. &lt;Plug&gt;(easymotion-repeat)
+</code></pre>
+<p>Vim-surround</p>
+<pre><code class="language-markdown">普通模式
+--------
+|    | 命令                   | 说明 + 示例                                                                          |
+|---:|----------------------|:---------------------------------------------------------------------------------|
+|    | ds                   | 删除括号                                                                             |
+|  例 | `ds` `&quot;`             | `&quot;Hello world!&quot;` =&gt;&lt;br&gt; `Hello world!`                                           |
+|    | cs                   | 替换括号                                                                             |
+|  例 | `cs` `&quot;(`            | `&quot;Hello world!&quot;` =&gt;&lt;br&gt; `(Hello world!)`                                         |
+|    | cS                   | 替换括号，括号内文本做新一行                                                                   |
+|  例 | `cS` `&quot;{`            | `&quot;Hello world!&quot;` =&gt;&lt;br&gt; `{` &lt;br&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;`Hello world!` &lt;br&gt; `}` |
+|    | ys                   | 添加括号(配合vim光标移动)                                                                  |
+|  例 | `ys` `w` `[`         | `Hello world!` =&gt;&lt;br&gt; `[Hello] world!`                                           |
+|  例 | `ys` `w` `&lt;em` Enter | `Hello world!` =&gt;&lt;br&gt; `&lt;em&gt;Hello&lt;em&gt; world!`                                     |
+|    | yS                   | 添加括号，括号内文本做新一行                                                                   |
+|  例 | `yS` `w` `[`         | `Hello world!` =&gt;&lt;br&gt; `[` &lt;br&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; `Hello` &lt;br&gt; `] world!`  |
+|    | yss                  | 整行括起来                                                                            |
+|  例 | `yss` `(`            | `Hello world!` =&gt;&lt;br&gt; `( Hello world! )`                                         |
+|    | ySS                  | 整行括起来，括号内文本做新一行                                                                  |
+|  例 | `ySS` `{`            | `Hello world!` =&gt;&lt;br&gt; `{` &lt;br&gt; &amp;nbsp;&amp;nbsp; `Hello world! ` &lt;br&gt; `}`             |
+|  例 | `ySS` `&lt;div` Enter   | `Hello world!` =&gt;&lt;br&gt; `&lt;div&gt;` &lt;br&gt; &amp;nbsp;&amp;nbsp; `Hello world! ` &lt;br&gt; `&lt;div&gt;`     |
+|    | ySs                  | 与ySs功能相同                                                                         |
+
+
+可视模式
+--------
+|    | 命令             | 说明 + 示例                                                           |
+|---:|:---------------|:----------------------------------------------------------------------|
+|    | S              | 选中的括起来                                                              |
+|  例 | 选中world: `S(`  | `Hello world!` =&gt;&lt;br&gt; `Hello (world)!`                                |
+|    | gS             | 选中的括起来，括号内文本做新一行                                             |
+|  例 | 选中world: `gS{` | `Hello world!` =&gt;&lt;br&gt; `Hello {` &lt;br&gt; &amp;nbsp;&amp;nbsp; ` world` &lt;br&gt; `}! ` |
+</code></pre>
+<hr />
+<p>Ctrlp插件</p>
+<p>F5 刷新</p>
+<p>Ctrl + j/k 上下选择</p>
+<p>Verb + Noun</p>
+<p>d for delete</p>
+<p>w for word</p>
+<p>dw delete word</p>
+<p>Commands are repeatable and </p>
+<p>d =&gt; delete</p>
+<p>c =&gt; change</p>
+<p>&gt; =&gt; indent</p>
+<p>v =&gt; Visually select</p>
+<p>y =&gt; Yank(Copy) </p>
+<h1><a class="header" href="#代码片段" id="代码片段">代码片段</a></h1>
+<p>JavaScript相关的代码片段</p>
+<h2><a class="header" href="#javascript-bind模拟实现" id="javascript-bind模拟实现">JavaScript bind模拟实现</a></h2>
+<p>第一版</p>
+<pre><code class="language-js">const toString = Object.prototype.toString;
+const slice = Array.prototype.slice;
+Function.prototype.bind2 = function (ctx) {
+    const self = this;
+    if (typeof self !== 'function' || toString.call(self) !== '[object Function]') {
+        throw new Error('bind must be called on a Function');
+    }
+    const args = slice.call(arguments, 1);
+    const binder = function () {
+        const otherArgs = slice.call(arguments, 0);
+        return self.apply(ctx, args.concat(otherArgs));
+    }
+    return binder
+}
+</code></pre>
+<p>第二版</p>
+<blockquote>
+<p>当使用new 操作符调用绑定函数时， 该参数会失效</p>
+<p>一个绑定函数也可以使用new操作符来创建对象，这种行为就像把原函数当成构造器， 提供的this值被忽略， 同时调用时的参数被提供给模拟函数</p>
+</blockquote>
+<pre><code class="language-js">function User () {
+    console.log(this.value);
+}
+const user = {
+    value: 'wizard'
+}
+const bindUser = User.bind2(user);
+const binduser = new bindUser(); // 应该输出undefined
+bindUser(); // 应该输出wizard
+</code></pre>
+<p>所以在apply的时候使用instanceof来判断是否是通过new操作符创建对象调用的,  并修改binder的prototype指向原函数的protottype</p>
+<pre><code class="language-js">Function.prototype.bind2 = function (ctx) {
+    const self = this;
+    if (typeof self !== 'function' || toString.call(self) !== '[object Function]') {
+        throw new Error('bind must be called on a Function');
+    }
+    const args = slice.call(arguments, 1);
+    const binder = function () {
+        const otherArgs =slice.call(arguments, 0);
+        return self.apply(this instanceof binder ? this : ctx, args.concat(otherArgs));
+    }
+    binder.prototype = self.prototype;
+    return binder;
+}
+</code></pre>
+<p>第三版</p>
+<p>第二版中如果修改了bindUser 的prototype， 会导致原函数的prototype 也被修改， 所以可以通过一个空函数中转</p>
+<pre><code class="language-js">Function.prototype.bind2 = function (ctx) {
+    const self = this;
+    if (typeof self !== 'function' || toString.call(self) !== '[object Function]') {
+        throw new Error('bind must be called on a Function');
+    }
+    const args = slice.call(arguments, 1);
+    const NOOP = function () {};
+    const binder = function () {
+        const otherArgs =slice.call(arguments, 0);
+        return self.apply(this instanceof NOOP ? this : ctx, args.concat(otherArgs));
+    }
+    NOOP.prototype = self.prototype;
+    binder.prototype = new NOOP();
+    return binder;
+}
+</code></pre>
+<h2><a class="header" href="#javascript模拟call的实现" id="javascript模拟call的实现">JavaScript模拟call的实现</a></h2>
+<pre><code class="language-js">Function.prototype.call2 = function (ctx) {
+  const self = ctx;
+  const args = [];
+  for (let i = 0; i &lt; arguments.length; i++) {
+    args.push(`arguments[${i}]`);
+  }
+  ctx.fn = self;
+  const result = eval('eval(ctx.fn('+ args +'))');
+  delete ctx.fn;
+  return result;
+}
+</code></pre>
+<pre><code class="language-js">class LazyMan {
+    constructor (name) {
+        this.name = name
+        this.queue = [this.sayName.bind(this)]
+        setTimeout(async () =&gt; {
+            for (let task of this.queue) {
+                await task()
+            }
+        }, 0)
+    }
+
+    eat (food) {
+        this.queue.push(() =&gt; {
+            console.log(food)
+        })
+        return this
+    }
+
+    holdOn (time) {
+        return () =&gt; {
+            return new Promise(resolve =&gt; {
+                setTimeout(() =&gt; {
+                    console.log(`wake up ${time}s`)
+                    resolve()
+                }, time * 1000)
+            })
+        }
+    }
+
+    sleep (time) {
+        this.queue.push(this.holdOn(time))
+        return this
+    }
+
+    sleepFirst (time) {
+        this.queue.unshift(this.holdOn(time))
+        return this
+    }
+
+    sayName () {
+        return new Promise(resolve =&gt; {
+            console.log(`Hello, ${this.name}`)
+            resolve()
+        })
+    }
+}
+
+new LazyMan('shuai').sleepFirst(1).eat('banana').sleep(3)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>HTTP权威指南 - my personal notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">1.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/event-loop.html"><strong aria-hidden="true">1.1.</strong> 事件循环</a></li><li class="chapter-item expanded "><a href="../js/composition.html"><strong aria-hidden="true">1.2.</strong> Composition</a></li><li class="chapter-item expanded "><a href="../js/selection.html"><strong aria-hidden="true">1.3.</strong> Selection</a></li><li class="chapter-item expanded "><a href="../js/regexp.html"><strong aria-hidden="true">1.4.</strong> 正则表达式</a></li><li class="chapter-item expanded "><a href="../js/throttle-debounce.html"><strong aria-hidden="true">1.5.</strong> 节流防抖</a></li><li class="chapter-item expanded "><a href="../js/commonjs-esm.html"><strong aria-hidden="true">1.6.</strong> ESM与CommonJS</a></li><li class="chapter-item expanded "><a href="../js/nodejs/index.html"><strong aria-hidden="true">1.7.</strong> node.js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/nodejs.html"><strong aria-hidden="true">1.7.1.</strong> node.js架构</a></li><li class="chapter-item expanded "><a href="../js/nodejs/stream.html"><strong aria-hidden="true">1.7.2.</strong> stream</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../protocol/index.html"><strong aria-hidden="true">2.</strong> 协议</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../protocol/HTTP权威指南笔记.html" class="active"><strong aria-hidden="true">2.1.</strong> HTTP权威指南</a></li></ol></li><li class="chapter-item expanded "><a href="../algorithm/index.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algorithm/topK.html"><strong aria-hidden="true">3.1.</strong> topK问题</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-3.html"><strong aria-hidden="true">3.2.</strong> leetcode-3-最长无重复子串</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-46.html"><strong aria-hidden="true">3.3.</strong> leetcode-46-数字翻译字符串</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-94.html"><strong aria-hidden="true">3.4.</strong> leetcode-94-中序遍历</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-144.html"><strong aria-hidden="true">3.5.</strong> leetcode-144-先序遍历</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-155.html"><strong aria-hidden="true">3.6.</strong> leetcode-155</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-167.html"><strong aria-hidden="true">3.7.</strong> leetcode-167-twoSum有序</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-322.html"><strong aria-hidden="true">3.8.</strong> leetcode-322-硬币兑换</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-875.html"><strong aria-hidden="true">3.9.</strong> leetcode-875-KoKo吃香蕉</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust_way.html"><strong aria-hidden="true">4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../go/index.html"><strong aria-hidden="true">5.</strong> Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../go/gopl/index.html"><strong aria-hidden="true">5.1.</strong> Go语言圣经读书笔记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../go/gopl/chapter02.html"><strong aria-hidden="true">5.1.1.</strong> 程序结构</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter03.html"><strong aria-hidden="true">5.1.2.</strong> 基础数据类型</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter04.html"><strong aria-hidden="true">5.1.3.</strong> 复合数据类型</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter10.html"><strong aria-hidden="true">5.1.4.</strong> 包和工具</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../engineer/index.html"><strong aria-hidden="true">6.</strong> 工程化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../engineer/webpack/index.html"><strong aria-hidden="true">6.1.</strong> Webpack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../engineer/webpack/require-context.html"><strong aria-hidden="true">6.1.1.</strong> require.context</a></li><li class="chapter-item expanded "><a href="../engineer/webpack/disable-export-default-object.html"><strong aria-hidden="true">6.1.2.</strong> disable export default object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../architecture/index.html"><strong aria-hidden="true">7.</strong> 架构</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../architecture/serverless/share.html"><strong aria-hidden="true">7.1.</strong> serverless</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/index.html"><strong aria-hidden="true">8.</strong> 工具</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/Tmux.html"><strong aria-hidden="true">8.1.</strong> Tmux</a></li><li class="chapter-item expanded "><a href="../tools/ag.html"><strong aria-hidden="true">8.2.</strong> ag文本搜索</a></li><li class="chapter-item expanded "><a href="../tools/pkg.html"><strong aria-hidden="true">8.3.</strong> pkg</a></li></ol></li><li class="chapter-item expanded "><a href="../unix/index.html"><strong aria-hidden="true">9.</strong> unix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../unix/awk.html"><strong aria-hidden="true">9.1.</strong> awk</a></li><li class="chapter-item expanded "><a href="../unix/Bash.html"><strong aria-hidden="true">9.2.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../unix/shell.html"><strong aria-hidden="true">9.3.</strong> Linux shell脚本自动化编程实战 笔记</a></li></ol></li><li class="chapter-item expanded "><a href="../Vim/Vim.html"><strong aria-hidden="true">10.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../snippet/index.html"><strong aria-hidden="true">11.</strong> 代码片段</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../snippet/javascript/index.html"><strong aria-hidden="true">11.1.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../snippet/javascript/bind.html"><strong aria-hidden="true">11.1.1.</strong> bind的模拟实现</a></li><li class="chapter-item expanded "><a href="../snippet/javascript/call.html"><strong aria-hidden="true">11.1.2.</strong> call的模拟实现</a></li><li class="chapter-item expanded "><a href="../snippet/javascript/lazyman.html"><strong aria-hidden="true">11.1.3.</strong> LazyMan的实现</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">my personal notes</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h4><a class="header" href="#412-tcp流是分段的-由ip分组传送" id="412-tcp流是分段的-由ip分组传送">4.1.2 tcp流是分段的， 由IP分组传送</a></h4>
+<p>TCP数据是通过名为<strong>IP分组</strong>的小数据块来发送的。</p>
+<p>HTTP要传送一条报文时， 会以流的形式将报文数据的内容通过一条打开的TCP连接按序传输， TCP收到数据流后，会将数据流砍成段的小数据块， 并将段用封装在IP分组中， 通过因特网进行传输。</p>
+<p>每个IP分组中包含</p>
+<ul>
+<li>一个IP分组首部(通常20个字节)</li>
+<li>一个TCP段首部（通常20个字节）</li>
+<li>一个TCP数据块</li>
+</ul>
+<h4><a class="header" href="#413-保持tcp连接持续不断的运行" id="413-保持tcp连接持续不断的运行">4.1.3 保持TCP连接持续不断的运行</a></h4>
+<p>IP协议到机器， TCP协议通过端口到应用</p>
+<p>![屏幕快照 2020-06-11 上午8.42.32](../assets/屏幕快照 2020-06-11 上午8.42.32.png)</p>
+<h4><a class="header" href="#414-用tcp套接字编程" id="414-用tcp套接字编程">4.1.4 用TCP套接字编程</a></h4>
+<p>略</p>
+<h3><a class="header" href="#42-对tcp性能的考虑" id="42-对tcp性能的考虑">4.2 对TCP性能的考虑</a></h3>
+<h4><a class="header" href="#422-性能聚焦区域" id="422-性能聚焦区域">4.2.2 性能聚焦区域</a></h4>
+<ul>
+<li>TCP连接建立握手</li>
+<li>TCP慢启动拥塞控制</li>
+<li>数据聚集的Nagle算法</li>
+<li>用于捎带确认的TCP延迟确认算法</li>
+<li>TIME_WAIT时延和端口耗尽</li>
+</ul>
+<h4><a class="header" href="#423-握手时延" id="423-握手时延">4.2.3 握手时延</a></h4>
+<p>现代的TCP栈都允许在客户端第三次握手的确认分组中发送数据</p>
+<h4><a class="header" href="#424-延迟确认" id="424-延迟确认">4.2.4 延迟确认</a></h4>
+<p>TCP实现了自己的确认机制来确保数据的成功传输， 每个TCP段都有一个序列号和数据完整性校验和，每个段的接收者收到完好的段时， 都会向发送者回送一个小的确认分组， 如果指定时间内没有收到确认信息就重新发送数据。 由于确认报文很小， 所以通常和数据分组合并到一起发送。</p>
+<p>延迟确认算法在一个 特性的时间窗口内将输出确认放在缓冲区内， 以寻找能够捎带它的输出数据分组， 如果没有数据分组， 那么就单独发送。</p>
+<h4><a class="header" href="#425-tcp慢启动" id="425-tcp慢启动">4.2.5 TCP慢启动</a></h4>
+<p>TCP数据传输的性能还取决于TCP连接的<strong>使用期</strong> ， TCP会随时间进行自我调谐，起初限制最大速度， 传输成功后提升速度（比如每次提升一倍的传输分组数）， 这个过程叫<strong>慢启动</strong> ， 用于防止因特网的突然过载和拥塞。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../protocol/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../algorithm/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../protocol/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../algorithm/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

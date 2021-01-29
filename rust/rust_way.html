@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rust - my personal notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">1.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/event-loop.html"><strong aria-hidden="true">1.1.</strong> 事件循环</a></li><li class="chapter-item expanded "><a href="../js/composition.html"><strong aria-hidden="true">1.2.</strong> Composition</a></li><li class="chapter-item expanded "><a href="../js/selection.html"><strong aria-hidden="true">1.3.</strong> Selection</a></li><li class="chapter-item expanded "><a href="../js/regexp.html"><strong aria-hidden="true">1.4.</strong> 正则表达式</a></li><li class="chapter-item expanded "><a href="../js/throttle-debounce.html"><strong aria-hidden="true">1.5.</strong> 节流防抖</a></li><li class="chapter-item expanded "><a href="../js/commonjs-esm.html"><strong aria-hidden="true">1.6.</strong> ESM与CommonJS</a></li><li class="chapter-item expanded "><a href="../js/nodejs/index.html"><strong aria-hidden="true">1.7.</strong> node.js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/nodejs.html"><strong aria-hidden="true">1.7.1.</strong> node.js架构</a></li><li class="chapter-item expanded "><a href="../js/nodejs/stream.html"><strong aria-hidden="true">1.7.2.</strong> stream</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../protocol/index.html"><strong aria-hidden="true">2.</strong> 协议</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../protocol/HTTP权威指南笔记.html"><strong aria-hidden="true">2.1.</strong> HTTP权威指南</a></li></ol></li><li class="chapter-item expanded "><a href="../algorithm/index.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algorithm/topK.html"><strong aria-hidden="true">3.1.</strong> topK问题</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-3.html"><strong aria-hidden="true">3.2.</strong> leetcode-3-最长无重复子串</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-46.html"><strong aria-hidden="true">3.3.</strong> leetcode-46-数字翻译字符串</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-94.html"><strong aria-hidden="true">3.4.</strong> leetcode-94-中序遍历</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-144.html"><strong aria-hidden="true">3.5.</strong> leetcode-144-先序遍历</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-155.html"><strong aria-hidden="true">3.6.</strong> leetcode-155</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-167.html"><strong aria-hidden="true">3.7.</strong> leetcode-167-twoSum有序</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-322.html"><strong aria-hidden="true">3.8.</strong> leetcode-322-硬币兑换</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-875.html"><strong aria-hidden="true">3.9.</strong> leetcode-875-KoKo吃香蕉</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust_way.html" class="active"><strong aria-hidden="true">4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../go/index.html"><strong aria-hidden="true">5.</strong> Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../go/gopl/index.html"><strong aria-hidden="true">5.1.</strong> Go语言圣经读书笔记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../go/gopl/chapter02.html"><strong aria-hidden="true">5.1.1.</strong> 程序结构</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter03.html"><strong aria-hidden="true">5.1.2.</strong> 基础数据类型</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter04.html"><strong aria-hidden="true">5.1.3.</strong> 复合数据类型</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter10.html"><strong aria-hidden="true">5.1.4.</strong> 包和工具</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../engineer/index.html"><strong aria-hidden="true">6.</strong> 工程化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../engineer/webpack/index.html"><strong aria-hidden="true">6.1.</strong> Webpack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../engineer/webpack/require-context.html"><strong aria-hidden="true">6.1.1.</strong> require.context</a></li><li class="chapter-item expanded "><a href="../engineer/webpack/disable-export-default-object.html"><strong aria-hidden="true">6.1.2.</strong> disable export default object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../architecture/index.html"><strong aria-hidden="true">7.</strong> 架构</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../architecture/serverless/share.html"><strong aria-hidden="true">7.1.</strong> serverless</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/index.html"><strong aria-hidden="true">8.</strong> 工具</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/Tmux.html"><strong aria-hidden="true">8.1.</strong> Tmux</a></li><li class="chapter-item expanded "><a href="../tools/ag.html"><strong aria-hidden="true">8.2.</strong> ag文本搜索</a></li><li class="chapter-item expanded "><a href="../tools/pkg.html"><strong aria-hidden="true">8.3.</strong> pkg</a></li></ol></li><li class="chapter-item expanded "><a href="../unix/index.html"><strong aria-hidden="true">9.</strong> unix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../unix/awk.html"><strong aria-hidden="true">9.1.</strong> awk</a></li><li class="chapter-item expanded "><a href="../unix/Bash.html"><strong aria-hidden="true">9.2.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../unix/shell.html"><strong aria-hidden="true">9.3.</strong> Linux shell脚本自动化编程实战 笔记</a></li></ol></li><li class="chapter-item expanded "><a href="../Vim/Vim.html"><strong aria-hidden="true">10.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../snippet/index.html"><strong aria-hidden="true">11.</strong> 代码片段</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../snippet/javascript/index.html"><strong aria-hidden="true">11.1.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../snippet/javascript/bind.html"><strong aria-hidden="true">11.1.1.</strong> bind的模拟实现</a></li><li class="chapter-item expanded "><a href="../snippet/javascript/call.html"><strong aria-hidden="true">11.1.2.</strong> call的模拟实现</a></li><li class="chapter-item expanded "><a href="../snippet/javascript/lazyman.html"><strong aria-hidden="true">11.1.3.</strong> LazyMan的实现</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">my personal notes</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Rust编程之道</p>
+<h2><a class="header" href="#21-rust语言的基本构成" id="21-rust语言的基本构成">2.1 Rust语言的基本构成</a></h2>
+<ul>
+<li>语言规范</li>
+<li>编译器</li>
+<li>核心库</li>
+<li>标准库</li>
+<li>包管理器</li>
+</ul>
+<p>rustc负责将Rust源代码编译为可执行文件或其它库文件</p>
+<p>rustc跨平台、支持交叉编译、使用LLVM作为编译器后端、rustc也使用Rust编写</p>
+<p>Rust语言的语法是由核心库和标准库共同提供， 核心库是标准库的基础</p>
+<p>在顶部使用<code>#! [no_std]</code> 来使用核心库， 可以用来做嵌入式应用开发</p>
+<p>标准库除了与核心库一直的trait、基本数据类型、功能性数据类型和常用宏外， 还提供了并发、IO、运行时、平台抽象、底层操作接口、可选和错误处理类型等。</p>
+<p>包管理器</p>
+<pre><code class="language-shell">cargo new bin_crate
+cargo new --lib lib_crate
+</code></pre>
+<p>通过cargo build和cargo run命令可以对项目进行编译和运行</p>
+<h2><a class="header" href="#22-语句和表达式" id="22-语句和表达式">2.2 语句和表达式</a></h2>
+<p>语句是指要执行的一些操作和产生副作用的表达式</p>
+<p>语句分为声明语句和表达式语句</p>
+<p>名字以叹号结尾， 并且可以想函数一样被调用的语句， 在Rust中叫做宏</p>
+<p>块表达式是由一对花括号和一系列表达式组成， 它总是返回块中最后一个表达式的值，如果最后一个语句是宏语句， 就返回单元值()</p>
+<h2><a class="header" href="#23-变量和绑定" id="23-变量和绑定">2.3 变量和绑定</a></h2>
+<p>通过<code>let</code> 关键字来创建变量</p>
+<p>Rust中的表达式一般可以分为位置表达式和值表达式， 通过位置表达式可以对某个数据单元的内存进行读写， 只要是进行写操作</p>
+<p>值表达式一般只引用了某个存储单元地址中的数据， 它相当于数据值，只能进行读操作</p>
+<p>let 关键字声明的位置表达式默认不可变，为不可变绑定。 可以添加mut 关键字声明可变的位置表达式， 即可变绑定， 可变绑定可以正常修改和赋值</p>
+<p>每个变量绑定实际上都拥有该存储单元的所有权， 引用赋值给其它变量， 这种转移内存地址的行为就是所有权的转移， 有时不需要转移所有权， Rust提供引用操作符 <code>&amp;</code> 可以直接获取表达式的存储单元地址，即内存位置，可以通过内存位置对存储进行读取。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let a = [1, 2, 3];
+  let b = &amp;a; // 这不会引起所有权的转移， 因为右侧变为了位置上下文， 而非默认的值上下文
+  println!(&quot;{:p}&quot;, b); // 0x7ffXXXXXXX 这个{：p} 格式打印指针地址
+  let mut c = vec![1, 2, 3];
+  let d = &amp;mut c; // 获取可变引用
+  d.push(4);
+  println!(&quot;{:?}&quot;, d); // [1, 2, 3, 4];
+  let e = &amp;42;
+  assert_eq!(42, *e);
+}
+</code></pre></pre>
+<h2><a class="header" href="#24-函数和闭包" id="24-函数和闭包">2.4 函数和闭包</a></h2>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn fizz_buzz(num: i32) -&gt; String{
+  //...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>rust编译器会严格按照上面的类型声明， 如果不是的话就会编译报错</p>
+<p>Rust语言的作用域是静态作用域， 即词法作用域， 由一对花括号来开辟作用域， 其作用域在词法分析阶段就已经确定了， 不会动态改变</p>
+<p>let声明变量之后还可以再次声明变量绑定， 这种连续用let定义同名变量的做法叫做变量遮蔽Variable Shadow， 最终变量的值是由最后一个变量定义所决定的。</p>
+<p>Rust中函数是一等公民， 这意味着函数自身就可以作为函数的参数和返回值使用。</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn math(op: fn(i32, i32) -&gt; i32, a: i32, b: i32) -&gt; i32 {
+  // ...
+}
+fn true_maker() -&gt; fn() -&gt; bool {
+  fn is_true() -&gt; bool { true }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>CTFE编译时函数执行， Compile-Time Function Execution</p>
+<p>闭包也叫匿名函数， 有一下几个特点</p>
+<ul>
+<li>可以想函数一样被调用</li>
+<li>可以驳火上下文环境中的自由变量</li>
+<li>可以自动推断输入和返回的类型</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let out = 42;
+  // fn add(i: i32, j: i32) -&gt; i32 { i + j + out } 报错
+  let closure_annotatedd = |i: i32, j: i32| -&gt; i32 { i + j + out };
+  let closure_inferred = |i, j| i + j + out;
+  assert_eq!(45, closure_inferred(1, 2));
+}
+</code></pre></pre>
+<p>闭包和函数一个重要的区别是闭包可以捕获外部变量， 而函数不可以</p>
+<p>闭包也可以作为函数参数和返回值， 但使用起来略有区别</p>
+<pre><pre class="playground"><code class="language-rust">fn math&lt;F: Fn() -&gt; i32&gt;(op: F) -&gt; i32 {
+  op()
+}
+
+fn main () {
+  let a = 2;
+  let b = 3;
+  assert_eq!(math(|| a + b), 5);
+}
+</code></pre></pre>
+<p>math参数是一个泛型F， 并且该泛型受Fn() -&gt; i32 trait的限定， 代表该函数只允许实现Fn() -&gt; i32 trait 的类型作为参数</p>
+<p>Rust中闭包实际上就是由一个匿名函数体和trait来组合实现的</p>
+<p>闭包同样也可以作为返回值</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn two_times_impl () -&gt; impl Fn(i32) -&gt; i32 {
+  let i = 2;
+  move |j| i * j
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>返回闭包时使用了move关键字， 这是因为一般情况下， 闭包默认会按引用捕获变量， 如果将闭包返回， 引用也会跟着返回， 但是在整个函数调用完毕后， 函数内的本地变量i就会被销毁， 那么随闭包返回的变量i的引用就会成为悬垂指针， 使用move关键字将捕获变量i的所有权转移到闭包中， 就不会按引用进行捕获变量</p>
+<h2><a class="header" href="#25-流程控制" id="25-流程控制">2.5 流程控制</a></h2>
+<p>rust中不叫流程控制语句， 而叫流程控制表达式</p>
+<p>条件表达式</p>
+<p>if表达式的分支必须返回同一个类型的值才可以， 这也是rust没有三元运算符的原因。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let n = 13;
+  let big_n = if (n &lt; 10 &amp;&amp; n &gt; -10) {
+    10 * n
+  } else {
+    n / 2
+  };
+  assert_eq!(big_n, 6)
+}
+</code></pre></pre>
+<p>for...in表达式</p>
+<pre><pre class="playground"><code class="language-rust">fn main () {
+  for n in 1..101 {
+    println!(&quot;{}&quot;, n);
+  }
+}
+</code></pre></pre>
+<p>while表达式</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn while_true(x: i32) -&gt; i32 {
+  while true {
+    return x + 1;
+  }
+  // x
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>上面的代码会报错， 因为while true循环返回的时单元值， 而函数返回值是i32， 所以不匹配</p>
+<p>这是因为Rust编译器在对while循环做流分析 Flow Sensitive的时候不会检查循环条件， 编译器会认为while循环条件可真可假， 所以循环体内的表达式就会被忽略， 因此只知道while_true 返回的是单元值</p>
+<p>, 可以在最后一行加x变量</p>
+<p>match表达式</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let number = 42;
+  match number {
+    0 =&gt; println!(&quot;origin&quot;),
+    1...3 =&gt; println!(&quot;all&quot;),
+    | 5 | 7 | 13 =&gt; println!(&quot;bad luck&quot;),
+    n @ 42 =&gt; println!(&quot;{}&quot;, n),
+    _ =&gt; println!(&quot;common&quot;),
+  }
+}
+</code></pre></pre>
+<p>上面的例子演示了 单个值、范围、多个值、匹配并绑定给变量（绑定模式）、通配符的情况</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let mut v = vec![1,2,3,4,5];
+  loop {
+    match v.pop() {
+      Some(x) =&gt; println!(&quot;{}&quot;, x),
+      None =&gt; break,
+    }
+  }
+}
+</code></pre></pre>
+<p>if let 表达式</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let boolean = true;
+let mut binary = 0;
+if let true = boolean {
+  binary = 1;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>While let表达式</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let mut v = vec![1,2,3,4,5];
+  while let Some(x) = v.pop() {
+    println!(&quot;{}&quot;, x);
+  }
+}
+</code></pre></pre>
+<h2><a class="header" href="#26-基本数据类型" id="26-基本数据类型">2.6 基本数据类型</a></h2>
+<p><strong>布尔类型</strong></p>
+<p>布尔类型只有两个值<code>true</code> 和 <code>false</code> </p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let x = true;
+let y: bool = false;
+<span class="boring">}
+</span></code></pre></pre>
+<p>任意比较操作都会产生bool类型</p>
+<p>也可以使用as 操作符将bool类型转换为数组0 和 1， 但是rust并不支持将数字转换为bool类型</p>
+<p><strong>基本数字类型</strong></p>
+<p>Rust提供的基本数字类型大致上可以分为三类： 固定大小的类型、动态大小的类型和浮点数</p>
+<ul>
+<li>固定大小的类型</li>
+</ul>
+<p>包括无符号整数和 符号整数</p>
+<p>u8、u16、u32、u64、u128</p>
+<p>i8、i16、i32、i64、i128（-2^127 ~ 2^127 -1）</p>
+<ul>
+<li>动态大小的类型</li>
+</ul>
+<p>usize 根据机器的字长 32或64</p>
+<p>isize 根据机器字长</p>
+<ul>
+<li>浮点数类型</li>
+</ul>
+<p>f32和 f64</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  let num = 42u32;
+  let num: u32 = 42;
+  let num = 0x2A;
+  let num = 0o106; // 八进制
+  let num = 0b1001_1100; // 二进制
+  assert_eq!(b'*', 42u8);
+  assert_eq!(b'\'', 39u8);
+}
+</code></pre></pre>
+<ul>
+<li>
+<p>字符类型</p>
+<p>Rust使用单引号来定义字符类型，代表一个unicode标量值， 每个字符占4个字节</p>
+</li>
+<li>
+<p>数组类型</p>
+<p>是Rust内建的原始集合类型，数组大小固定， 元素均为同类型，默认不可变。</p>
+<p>数组的类型签名为[T;N], T是一个泛型标记，N是数组长度， 必须编译时确定其值</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../algorithm/leetcode-875.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../go/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../algorithm/leetcode-875.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../go/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

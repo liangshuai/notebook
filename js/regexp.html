@@ -1,0 +1,590 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>正则表达式 - my personal notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">1.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/event-loop.html"><strong aria-hidden="true">1.1.</strong> 事件循环</a></li><li class="chapter-item expanded "><a href="../js/composition.html"><strong aria-hidden="true">1.2.</strong> Composition</a></li><li class="chapter-item expanded "><a href="../js/selection.html"><strong aria-hidden="true">1.3.</strong> Selection</a></li><li class="chapter-item expanded "><a href="../js/regexp.html" class="active"><strong aria-hidden="true">1.4.</strong> 正则表达式</a></li><li class="chapter-item expanded "><a href="../js/throttle-debounce.html"><strong aria-hidden="true">1.5.</strong> 节流防抖</a></li><li class="chapter-item expanded "><a href="../js/commonjs-esm.html"><strong aria-hidden="true">1.6.</strong> ESM与CommonJS</a></li><li class="chapter-item expanded "><a href="../js/nodejs/index.html"><strong aria-hidden="true">1.7.</strong> node.js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/nodejs.html"><strong aria-hidden="true">1.7.1.</strong> node.js架构</a></li><li class="chapter-item expanded "><a href="../js/nodejs/stream.html"><strong aria-hidden="true">1.7.2.</strong> stream</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../protocol/index.html"><strong aria-hidden="true">2.</strong> 协议</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../protocol/HTTP权威指南笔记.html"><strong aria-hidden="true">2.1.</strong> HTTP权威指南</a></li></ol></li><li class="chapter-item expanded "><a href="../algorithm/index.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algorithm/topK.html"><strong aria-hidden="true">3.1.</strong> topK问题</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-3.html"><strong aria-hidden="true">3.2.</strong> leetcode-3-最长无重复子串</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-46.html"><strong aria-hidden="true">3.3.</strong> leetcode-46-数字翻译字符串</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-94.html"><strong aria-hidden="true">3.4.</strong> leetcode-94-中序遍历</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-144.html"><strong aria-hidden="true">3.5.</strong> leetcode-144-先序遍历</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-155.html"><strong aria-hidden="true">3.6.</strong> leetcode-155</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-167.html"><strong aria-hidden="true">3.7.</strong> leetcode-167-twoSum有序</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-322.html"><strong aria-hidden="true">3.8.</strong> leetcode-322-硬币兑换</a></li><li class="chapter-item expanded "><a href="../algorithm/leetcode-875.html"><strong aria-hidden="true">3.9.</strong> leetcode-875-KoKo吃香蕉</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust_way.html"><strong aria-hidden="true">4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../go/index.html"><strong aria-hidden="true">5.</strong> Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../go/gopl/index.html"><strong aria-hidden="true">5.1.</strong> Go语言圣经读书笔记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../go/gopl/chapter02.html"><strong aria-hidden="true">5.1.1.</strong> 程序结构</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter03.html"><strong aria-hidden="true">5.1.2.</strong> 基础数据类型</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter04.html"><strong aria-hidden="true">5.1.3.</strong> 复合数据类型</a></li><li class="chapter-item expanded "><a href="../go/gopl/chapter10.html"><strong aria-hidden="true">5.1.4.</strong> 包和工具</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../engineer/index.html"><strong aria-hidden="true">6.</strong> 工程化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../engineer/webpack/index.html"><strong aria-hidden="true">6.1.</strong> Webpack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../engineer/webpack/require-context.html"><strong aria-hidden="true">6.1.1.</strong> require.context</a></li><li class="chapter-item expanded "><a href="../engineer/webpack/disable-export-default-object.html"><strong aria-hidden="true">6.1.2.</strong> disable export default object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../architecture/index.html"><strong aria-hidden="true">7.</strong> 架构</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../architecture/serverless/share.html"><strong aria-hidden="true">7.1.</strong> serverless</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/index.html"><strong aria-hidden="true">8.</strong> 工具</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/Tmux.html"><strong aria-hidden="true">8.1.</strong> Tmux</a></li><li class="chapter-item expanded "><a href="../tools/ag.html"><strong aria-hidden="true">8.2.</strong> ag文本搜索</a></li><li class="chapter-item expanded "><a href="../tools/pkg.html"><strong aria-hidden="true">8.3.</strong> pkg</a></li></ol></li><li class="chapter-item expanded "><a href="../unix/index.html"><strong aria-hidden="true">9.</strong> unix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../unix/awk.html"><strong aria-hidden="true">9.1.</strong> awk</a></li><li class="chapter-item expanded "><a href="../unix/Bash.html"><strong aria-hidden="true">9.2.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../unix/shell.html"><strong aria-hidden="true">9.3.</strong> Linux shell脚本自动化编程实战 笔记</a></li></ol></li><li class="chapter-item expanded "><a href="../Vim/Vim.html"><strong aria-hidden="true">10.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../snippet/index.html"><strong aria-hidden="true">11.</strong> 代码片段</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../snippet/javascript/index.html"><strong aria-hidden="true">11.1.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../snippet/javascript/bind.html"><strong aria-hidden="true">11.1.1.</strong> bind的模拟实现</a></li><li class="chapter-item expanded "><a href="../snippet/javascript/call.html"><strong aria-hidden="true">11.1.2.</strong> call的模拟实现</a></li><li class="chapter-item expanded "><a href="../snippet/javascript/lazyman.html"><strong aria-hidden="true">11.1.3.</strong> LazyMan的实现</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">my personal notes</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#js正则表达式" id="js正则表达式">JS正则表达式</a></h1>
+<p>1、字符匹配</p>
+<p>​	1.1、常⽤的元字符
+​	1.2、量词
+​	1.3、字符组
+​	1.4、分⽀
+​	1.5、字符匹配⽅式</p>
+<p>2、位置匹配
+2.1、什么是位置匹配
+2.2、^和$
+2.3、\b和\B
+2.4、(?=p)和(?!p)
+3、修饰符
+3.1、g
+3.2、i
+3.3、m
+4、贪婪和惰性
+4.1、贪婪（尽可能多匹配）
+4.2、惰性（尽可能少匹配）
+5、括号的作⽤
+5.1、分组(⼦表达式)
+5.2、分⽀
+5.3、捕获分组
+5.4、⾮捕获分组
+6、零宽断⾔（前瞻）
+7、正则表达式匹配原理
+7.1、原理
+7.2、没有回溯的匹配
+7.3、有回溯匹配
+8、常⽤API
+8.1 search和match
+8.2 match返回结果
+8.3 exec
+8.4 replace</p>
+<h2><a class="header" href="#1字符匹配" id="1字符匹配">1、字符匹配</a></h2>
+<h3><a class="header" href="#11常的元字符" id="11常的元字符">1.1、常⽤的元字符</a></h3>
+<p>元字符				 含义
+\b 						匹配⼀个单词边界(boundary)
+\B 						匹配⼀个⾮单词边界
+\d 						匹配⼀个数字字符(digit)
+\D 						匹配⼀个⾮数字字符
+\s 						匹配⼀个空⽩字符(space)
+\S 						匹配⼀个⾮空⽩字符
+\w 						匹配⼀个字⺟或者⼀个数字或者⼀个下划线(word)
+\W 						匹配⼀个字⺟、数字和下划线之外的字符
+\n 						匹配换⾏
+. 							匹配除换⾏符以外的任意字符
+^ 							匹配字符串开始位置
+$ 							匹配字符串结束位置
+\ 							字符串转义</p>
+<h3><a class="header" href="#12量词" id="12量词">1.2、量词</a></h3>
+<p>量词也属于元字符。表示字符重复的次数。表示⽅式{m, n}。如：/\d{2,5}/，表示匹配数字，
+重复2-5次。</p>
+<p>量词			等价于							描述</p>
+<p>{m,} 		  										表示出现m次或以上</p>
+<p>{m} 			等价于{m,m} 				表示出现m次
+? 				等价于{0,1} 					表示出现0次或1次</p>
+<p>+                 等价于{1,} 					 表示出现⾄少⼀次</p>
+<p>* 				等价于{0,} 					 表示出现0次或多次</p>
+<h3><a class="header" href="#13-字符组" id="13-字符组">1.3 字符组</a></h3>
+<p>⽤[]表示，或的逻辑，即匹配字符组⾥任意⼀个字符，例如[abc]，它可以是“a”、“b”、“c”之⼀。</p>
+<p>字符组范围
+连字符“-”表示范围。如：[a-zA-Z0-9]，表示匹配⼤⼩写字⺟和数字0-9。
+要匹配字符“-”⾃身，则要转义或者放到字符组前⾯或后⾯。如果：[a-b]或[ab-]
+字符组取反</p>
+<p>字符组开头⽤^, 表示取反。如：'aregex'.match(/<sup class="footnote-reference"><a href="#ae">1</a></sup>/g)，表示匹配除ae外的字符</p>
+<p>特殊字符
+字符组⾥⾯特殊字符可以不转义，[.^$／-]。</p>
+<h3><a class="header" href="#14-分支" id="14-分支">1.4 分支</a></h3>
+<p>分⽀⽤|分隔，表示匹配⼦模式中任意⼀个。表示⽅式：(p1|p2|p3)，其中p1、p2和p3是⼦模式。
+如果每个分⽀值匹配⼀个字符，等价于[]。</p>
+<p>分⽀⼦模式可以是多个字符</p>
+<h3><a class="header" href="#15-字符匹配式" id="15-字符匹配式">1.5 字符匹配⽅式</a></h3>
+<p>横向匹配
+匹配字符串，某个或者某⼏个字符出现的次数是不固定的，即⽤量词表示{m, n};
+如：/ab{2}/ 匹配b出现2次
+/(ab){2, 5}/ 匹配ab出现2-5次。
+纵向匹配
+单个字符的纵向匹配，⽤字符组。如：[abc]，表示a、b、c任意⼀个。
+多个字符的纵向匹配，则要使⽤分⽀。如：/(ab|ac)a/ 表示aba、aca</p>
+<h2><a class="header" href="#2-位置匹配" id="2-位置匹配">2 位置匹配</a></h2>
+<p>位置是相邻字符之间的位置。</p>
+<h3><a class="header" href="#22和" id="22和">2.2、^和$</a></h3>
+<p>^匹配开头，在多⾏匹配中匹配⾏开头。
+$匹配结尾，在多⾏匹配中匹配⾏结尾。</p>
+<h3><a class="header" href="#23b和b" id="23b和b">2.3、\b和\B</a></h3>
+<p>\b是单词边界，即\w和\W之间的位置，也包括\w和^之间的位置，也包括\w和$之间的位置。
+\B就是\b的反⾯的意思，⾮单词边界。例如在字符串中所有位置中，扣掉\b，剩下的都是\B的。</p>
+<h3><a class="header" href="#24p-和p" id="24p-和p">2.4、(?=p) 和(?!p)</a></h3>
+<p>零宽断⾔</p>
+<h2><a class="header" href="#3-修饰符" id="3-修饰符">3、 修饰符</a></h2>
+<h3><a class="header" href="#31g" id="31g">3.1、g</a></h3>
+<p>默认从坐到右匹配，匹配到⼀个结果就停⽌。g开启全局匹配，会找到所有的匹配，单词是global</p>
+<h3><a class="header" href="#32-i" id="32-i">3.2、 i</a></h3>
+<p>忽略字⺟⼤⼩写，单词ingoreCase</p>
+<h3><a class="header" href="#33m" id="33m">3.3、m</a></h3>
+<p>多⾏匹配，遇到\n则分⾏，每⼀⾏都能匹配开始结束位置。单词是multiline</p>
+<h3><a class="header" href="#4贪婪和惰性" id="4贪婪和惰性">4、贪婪和惰性</a></h3>
+<p>量词（*, ?, +, {n}, {n,}, {n,m}）匹配是分贪婪和惰性的，默是贪婪匹配。量词后⾯加？则表示惰性。</p>
+<h3><a class="header" href="#41贪婪尽可能多匹配" id="41贪婪尽可能多匹配">4.1、贪婪（尽可能多匹配）</a></h3>
+<p>匹配到⼀个结果后，继续往后匹配，直到不满⾜条件为⽌。</p>
+<pre><code class="language-js">'123456xx'.match(/\d+/g);
+// =&gt; [&quot;123456&quot;]
+'123456xx'.match(/\d{2,5}/g);
+// =&gt; [&quot;12345&quot;]
+var str = '&lt;img src=&quot;1.jpg&quot; /&gt;aaa&lt;img src=&quot;2.jpg&quot; /&gt;';
+var reg = /&lt;img.*&gt;/g;
+str.match(reg);
+// =&gt; [&quot;&lt;img src=&quot;1.jpg&quot; /&gt;aaa&lt;img src=&quot;2.jpg&quot; /&gt;&quot;]
+</code></pre>
+<h3><a class="header" href="#42惰性尽可能少匹配" id="42惰性尽可能少匹配">4.2、惰性（尽可能少匹配）</a></h3>
+<p>匹配到⼀个结果后则停⽌。</p>
+<pre><code class="language-js">// 匹配数字
+'123456xx'.match(/\d+?/g);
+// =&gt; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;]
+'123456xx'.match(/\d{2,5}?/g);
+// =&gt; [&quot;12&quot;, &quot;34&quot;, &quot;56&quot;]
+// 匹配img标签
+var str = '&lt;img src=&quot;1.jpg&quot; /&gt;aaa&lt;img src=&quot;2.jpg&quot; /&gt;';
+var reg = /&lt;img.*?&gt;/g;
+str.match(reg);
+// [&quot;&lt;img src=&quot;1.jpg&quot; /&gt;&quot;, &quot;&lt;img src=&quot;2.jpg&quot; /&gt;&quot;]
+// 也可以这样写
+// var reg = /&lt;img[^&gt;]*&gt;/g;
+</code></pre>
+<h2><a class="header" href="#5括号的作" id="5括号的作">5、括号的作⽤</a></h2>
+<h3><a class="header" href="#51分组表达式" id="51分组表达式">5.1、分组(⼦表达式)</a></h3>
+<p>如果需要匹配多个字符，则需使⽤分组，括号⾥⾯的表达式则叫⼦表达式。</p>
+<pre><code class="language-js">1 var reg = /(ab)+/g;
+2 var str = &quot;ababa abbb ababab&quot;;
+3 str.match(reg)
+4 // =&gt; [&quot;abab&quot;, &quot;ab&quot;, &quot;ababab&quot;]
+</code></pre>
+<h3><a class="header" href="#52分" id="52分">5.2、分⽀</a></h3>
+<p>可以作为⼀个分⽀使⽤。
+如：匹配北京座机(010-xxxxxxx)和⼴州座机(020-xxxxxxxx)</p>
+<pre><code class="language-js">1 var reg = /^((010)|(020))-\d{8}$/g;
+2 // var reg = /^(0[12]0)-\d{8}$/g
+3 reg.test('020-23456784');
+</code></pre>
+<h3><a class="header" href="#53捕获分组" id="53捕获分组">5.3、捕获分组</a></h3>
+<ul>
+<li>表达式外捕获
+即对⼦表达式的匹配结果进⾏引⽤，可⽤于数据提取和字符串替换。</li>
+</ul>
+<ol>
+<li>数据提取
+使⽤字符串的match()，或者正则的exec()⽅法</li>
+</ol>
+<pre><code class="language-js">1 var reg = /(\d{4})-(\d{2})-(\d{2})/;
+2 var str = '2019-10-29';
+3 str.match(reg);
+4 // =&gt; [&quot;2019-10-29&quot;, &quot;2019&quot;, &quot;10&quot;, &quot;29&quot;, index: 0, input: &quot;2019-10-29&quot;, groups: undefined]
+5 reg.exec(str);
+6 // =&gt; [&quot;2019-10-29&quot;, &quot;2019&quot;, &quot;10&quot;, &quot;29&quot;, index: 0, input: &quot;2019-10-29&quot;, groups: undefined]
+</code></pre>
+<ol start="2">
+<li>字符串替换
+⽤$1,$2,$3…$9表示分组匹配的结果，或⽤全局变量Regexp.$1,Regexp.$2,…Regexp.$9表示。
+如：替换p标签为span</li>
+</ol>
+<pre><code class="language-js">1 var str = '&lt;p class=&quot;p&quot;&gt;xxx&lt;/p&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;p title=&quot;hehhe&quot;&gt;&lt;/p&gt;';
+2 var reg = /&lt;(\/?)p(.*?)&gt;/g;
+3 str.replace(reg, '&lt;$1span$2&gt;');
+4 // =&gt; &quot;&lt;span class=&quot;p&quot;&gt;xxx&lt;/span&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;span title=&quot;hehhe&quot;&gt;&lt;/span&gt;&quot;
+</code></pre>
+<ul>
+<li>
+<p>表达式内捕获(反向引⽤)
+正则表达式中，对括号⾥⾯的⼦表达式进⾏引⽤。\1,\2,\3…\9。
+如：匹配⽇前格式：2019-10-29，2019/10/29，2019.10.29
+不严瑾的写法</p>
+<pre><code class="language-js">1 var reg = /^\d{4}[./-]\d{2}[./-]\d{2}$/
+2 reg.test('2019-10-29');
+3 reg.test('2019/10/29');
+4 reg.test('2019.10.29');
+5 // =&gt; true
+6
+7 reg.test('2019.10/29');
+8 // =&gt; true
+</code></pre>
+<p>严瑾的写法</p>
+<pre><code class="language-js">1 var reg = /^\d{4}([/.-])\d{2}\1\d{2}$/
+2 reg.test('2019-10-29');
+3 reg.test('2019/10/29');
+4 reg.test('2019.10.29');
+5 // =&gt; true
+6
+7 reg.test('2019.10/29');
+8 // =&gt; false
+</code></pre>
+<h3><a class="header" href="#54捕获分组" id="54捕获分组">5.4、⾮捕获分组</a></h3>
+<p>捕获分组的作⽤，⽅便后续引⽤。如果不想引⽤，则使⽤⾮捕获分组(?:p) 。
+⾮捕获分组可以节省内存消耗。
+如：修改前⾯的表达式</p>
+<pre><code class="language-js">1 var str = '&lt;p class=&quot;p&quot;&gt;xxx&lt;/p&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;p title=&quot;hehhe&quot;&gt;&lt;/p&gt;';
+2 var reg = /&lt;(?:\/?)p(?:.*?)&gt;/g;
+3 str.replace(reg, '&lt;$1span$2&gt;');
+4 // &quot;&lt;$1span$2&gt;xxx&lt;$1span$2&gt;&lt;div&gt;ddd&lt;/div&gt;&lt;$1span$2&gt;&lt;$1span$2&gt;&quot;
+</code></pre>
+<h2><a class="header" href="#6零宽断前瞻" id="6零宽断前瞻">6、零宽断⾔（前瞻）</a></h2>
+<p>有时要匹配某个位置之前或之后应该有什么内容，叫零宽断⾔。
+零宽(zero-width)是什么意思？指的就是它匹配⼀个位置，本身没有宽度。
+断⾔(assertion)是什么意思？指的是⼀种判断，断⾔之前或之后应该有什么或应该没有什么。</p>
+<p>表达式			名称									描述
+(?=exp) 		  正向前瞻							匹配后⾯满⾜表达式exp的位置
+(?:exp) 			负向前瞻							匹配后⾯不满⾜表达式exp的位置
+(?&lt;=exp) 		正向后瞻							匹配前⾯满⾜表达式exp的位置（JS不⽀持）
+(?&lt;!exp) 		负向后瞻							匹配前⾯不满⾜表达式exp的位置（JS不⽀持）</p>
+<pre><code class="language-js">1 var reg1 = /bed(?=room)/ // 匹配bed后面为room的字符串。
+2 var reg2 = /bed(?!room)/ // 匹配bed后面不为room的字符串
+3 var str1 = ‘bedroom’;
+4 var str2 = ‘bedding’;
+5 reg1.test(str1);
+6 reg2.test(str2);
+</code></pre>
+<p>如下例⼦，更能体现零宽断⾔，匹配的是⼀个位置。</p>
+<pre><code class="language-js">1 var reg = /a(?=b)c/;
+2 var str = &quot;abc&quot;;
+3 str.match(reg);
+4 // =&gt; null
+</code></pre>
+<p>第1步：匹配表达式a通过
+第2步：匹配表达式(?=b)也通过
+第3步：匹配表达式c，是从“abc”的b位置开始匹配，此时匹配到的是ac，不通过。
+第4步：从字符串“abc”的b继续开始匹配，不通过。
+第5步：从字符串“abc”的c继续开始匹配，不通过。</p>
+<p>改成如下则通过。</p>
+<pre><code class="language-js">1 var reg = /a(?=b)bc/;
+2 var str = &quot;abc&quot;;
+3 str.match(reg);
+4 // =&gt; [&quot;abc&quot;, index: 0, input: &quot;abc&quot;, groups: undefined]
+</code></pre>
+<p>应⽤：去掉除表情外的富⽂本。</p>
+<pre><code class="language-js">1 // 清空不包含class=“w_emoji”的的html标签
+2 var str = `
+3 &lt;div class=&quot;wrap&quot;&gt;
+4 &lt;img class=&quot;w_emoji&quot; src=&quot;xxxxxx&quot; title=&quot;表情&quot;/&gt;
+5 &lt;p&gt;pppp&lt;/p&gt;
+6 &lt;h3&gt;&lt;strong&gt;h3h3h3&lt;/strong&gt;&lt;/h3&gt;
+7 &lt;img calss=&quot;b&quot; src=&quot;dddd&quot; /&gt;
+8 &lt;/div&gt;
+9 `;
+10 var reg = /&lt;(?!img class=&quot;w_emoji&quot;).*?&gt;/gi;
+11 str.replace(reg, '');
+12
+13 // &lt;img class=&quot;w_emoji&quot; src=&quot;xxxxxx&quot; title=&quot;表情&quot;/&gt;
+14 // pppp
+15 // h3h3h3
+</code></pre>
+<h2><a class="header" href="#7正则表达式匹配原理" id="7正则表达式匹配原理">7、正则表达式匹配原理</a></h2>
+<h3><a class="header" href="#71原理" id="71原理">7.1、原理</a></h3>
+<p>正则表达式匹配字符串的这种⽅式，叫回溯法。
+回溯法也称试探法，它的基本思想是：从问题的某⼀种状态（初始状态）出发，搜索从这种状态出发所能
+达到的所有“状态”，当⼀条路⾛到“尽头”的时候（不能再前进），再后退⼀步或若⼲步，从另⼀种可能“状
+态”出发，继续搜索，直到所有的“路径”（状态）都试探过。这种不断“前进”、不断“回溯”寻找解的⽅
+法，就称作“回溯法”。（copy于百度百科）。</p>
+<h3><a class="header" href="#72-没有回溯的匹配" id="72-没有回溯的匹配">7.2 没有回溯的匹配</a></h3>
+<p>假设我们的正则是/ab{1,3}c/ ，其可视化形式是：</p>
+<p>当⽬标字符串是&quot;abbbc&quot;时，就没有所谓的“回溯”。其匹配过程是：
+其中⼦表达式b{1,3} 表示“b”字符连续出现1到3次。</p>
+<h3><a class="header" href="#73有回溯匹配" id="73有回溯匹配">7.3、有回溯匹配</a></h3>
+<p>如果⽬标字符串是&quot;abbc&quot;，中间就有回溯。</p>
+<p>图中第5步有红颜⾊，表示匹配不成功。此时b{1,3} 已经匹配到了2个字符“b”，准备尝试第三个时，结
+果发现接下来的字符是“c”。那么就认为b{1,3} 就已经匹配完毕。然后状态⼜回到之前的状态（即第6
+步，与第4步⼀样），最后再⽤⼦表达式c ，去匹配字符“c”。当然，此时整个表达式匹配成功了。
+量词和分⽀都可能会出现回溯现象。</p>
+<h2><a class="header" href="#8常api" id="8常api">8、常⽤API</a></h2>
+</li>
+<li>
+<p>String#search</p>
+</li>
+<li>
+<p>String#match</p>
+</li>
+<li>
+<p>String#split</p>
+</li>
+<li>
+<p>String#replace</p>
+</li>
+<li>
+<p>RegExp#test</p>
+</li>
+<li>
+<p>RegExp#exec</p>
+</li>
+</ul>
+<h3><a class="header" href="#81-search和match" id="81-search和match">8.1 search和match</a></h3>
+<p>String的4个⽅法，都⽀持正则表达式，search和match会把字符串⾃动转成正则表达式。</p>
+<pre><code class="language-js">1 var string = &quot;2017.06.27&quot;;
+2
+3 console.log( string.search(&quot;.&quot;) );
+4 // =&gt; 0
+5 //需要修改成下列形式之一
+6 console.log( string.search(&quot;\\.&quot;) );
+7 console.log( string.search(/\./) );
+8 // =&gt; 4
+9 // =&gt; 4
+10
+11 console.log( string.match(&quot;.&quot;) );
+12 // =&gt; [&quot;2&quot;, index: 0, input: &quot;2017.06.27&quot;]
+13 //需要修改成下列形式之一
+14 console.log( string.match(&quot;\\.&quot;) );
+15 console.log( string.match(/\./) );
+16 // =&gt; [&quot;.&quot;, index: 4, input: &quot;2017.06.27&quot;]
+17 // =&gt; [&quot;.&quot;, index: 4, input: &quot;2017.06.27&quot;]
+</code></pre>
+<h3><a class="header" href="#82-match返回结果" id="82-match返回结果">8.2 match返回结果</a></h3>
+<p>返回的结果的格式，与正则对象是否有修饰符g有关。</p>
+<ol>
+<li>没有g，返回的是标准匹配格式，即，数组的第⼀个元素是整体匹配的内容，接下来是分组捕获的内
+容，然后是整体匹配的第⼀个下标，最后是输⼊的⽬标字符串。</li>
+<li>有g，返回的是所有匹配的内容。</li>
+<li>当没有匹配时，不管有⽆g，都返回null。</li>
+</ol>
+<pre><code class="language-js">1 var reg1 = /\d([a-z])/;
+2 var reg2 = /\d([a-z])/g;
+3 var str = '12ab34ef';
+4 str.match(reg1);
+5 // =&gt; [&quot;2a&quot;, &quot;a&quot;, index: 1, input: &quot;12ab34ef&quot;, groups: undefined]
+6 str.match(reg2);
+7 // =&gt; [&quot;2a&quot;, &quot;4e&quot;]
+
+</code></pre>
+<h3><a class="header" href="#83-exec" id="83-exec">8.3 exec</a></h3>
+<p>⾮全局模式下，exec和match返回的结果是⼀样的。
+全局模式下(g)，可多次执⾏，匹配下标会不断变化，此值作为下次匹配的开始。下标也可以通过正则实例
+访问，如：reg.lastindex</p>
+<pre><code class="language-js">1 var reg1 = /\d([a-z])/;
+2 var reg2 = /\d([a-z])/g;
+3 var str = '12ab34ef';
+4 reg1.exec(str);
+5 // =&gt; [&quot;2a&quot;, &quot;a&quot;, index: 1, input: &quot;12ab34ef&quot;, groups: undefined]
+6
+7 reg2.exec(str);
+8 // =&gt; [&quot;2a&quot;, &quot;a&quot;, index: 1, input: &quot;12ab34ef&quot;, groups: undefined]
+9 reg2.exec(str);
+10 // =&gt; [&quot;4e&quot;, &quot;e&quot;, index: 5, input: &quot;12ab34ef&quot;, groups: undefined]
+11 reg2.exec(str);
+12 // =&gt; null
+</code></pre>
+<h3><a class="header" href="#84-replace" id="84-replace">8.4 replace</a></h3>
+<p>语法（str.replace(regexp|substr, newSubStr|function)）
+第⼀个参数可为字符或者正则表达式。
+第⼆个参数可以是要替换的字符串，或者⼀个函数，该函数的返回值将替换掉第⼀个参数匹配到的结
+果。
+函数的参数</p>
+<p>变量名							代表的值
+match 							匹配的⼦串。（对应于上述的$&amp;。）
+p1,p2, ... 						假如replace()⽅法的第⼀个参数是⼀个RegExp 对象，则代表第n个括号匹配的字符串。（对应于上述的$1，$2等。）例如，如果是⽤ /(\a+)
+(\b+)/ 这个来匹配， p1 就是匹配的 \a+ ， p2 就是匹配的 \b+ 。
+offset 							匹配到的⼦字符串在原字符串中的偏移量。（⽐如，如果原字符串
+是 'abcd' ，匹配到的⼦字符串是 'bc' ，那么这个参数将会是 1）
+string 							被匹配的原字符串。
+NamedCaptureGroup 命名捕获组匹配的对象</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../js/selection.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../js/throttle-debounce.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../js/selection.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../js/throttle-debounce.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
