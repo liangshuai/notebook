@@ -1,6 +1,6 @@
 # Summary
 
-- [JavaScript](js/README.md)
+- [JS](js/README.md)
     - [事件循环](js/event-loop.md)
     - [Composition](./js/composition.md)
     - [Selection](./js/selection.md)
